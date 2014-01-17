@@ -1,0 +1,5044 @@
+{
+    "maps": {
+        "110": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    10240,
+                    9856
+                ],
+                [
+                    12160,
+                    11648
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                1,
+                2
+            ],
+            "map_name": "The Perils of Friendship",
+            "map_rect": [
+                [
+                    -21504,
+                    -21504
+                ],
+                [
+                    24576,
+                    21504
+                ]
+            ],
+            "max_level": 3,
+            "min_level": 3,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "113": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    9856,
+                    11648
+                ],
+                [
+                    13440,
+                    14080
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Desperate Medicine",
+            "map_rect": [
+                [
+                    -43008,
+                    -27648
+                ],
+                [
+                    43008,
+                    30720
+                ]
+            ],
+            "max_level": 4,
+            "min_level": 4,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "139": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    4608,
+                    19648
+                ],
+                [
+                    7168,
+                    22208
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                3,
+                0,
+                1,
+                2
+            ],
+            "map_name": "Rata Sum",
+            "map_rect": [
+                [
+                    -30720,
+                    -30720
+                ],
+                [
+                    30720,
+                    30720
+                ]
+            ],
+            "max_level": 80,
+            "min_level": 0,
+            "region_id": 5,
+            "region_name": "Tarnished Coast"
+        },
+        "147": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    10240,
+                    9856
+                ],
+                [
+                    12160,
+                    11648
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                1,
+                2
+            ],
+            "map_name": "Breaking the Blade",
+            "map_rect": [
+                [
+                    -21504,
+                    -21504
+                ],
+                [
+                    24576,
+                    21504
+                ]
+            ],
+            "max_level": 10,
+            "min_level": 10,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "179": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    10240,
+                    9856
+                ],
+                [
+                    12160,
+                    11648
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                1,
+                2
+            ],
+            "map_name": "The Floating Grizwhirl",
+            "map_rect": [
+                [
+                    -21504,
+                    -21504
+                ],
+                [
+                    24576,
+                    21504
+                ]
+            ],
+            "max_level": 11,
+            "min_level": 11,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "180": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    10240,
+                    9856
+                ],
+                [
+                    12160,
+                    11648
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                1,
+                2
+            ],
+            "map_name": "The Floating Grizwhirl",
+            "map_rect": [
+                [
+                    -21504,
+                    -21504
+                ],
+                [
+                    24576,
+                    21504
+                ]
+            ],
+            "max_level": 11,
+            "min_level": 11,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "185": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    9344,
+                    14080
+                ],
+                [
+                    13440,
+                    16128
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Into the Woods",
+            "map_rect": [
+                [
+                    -49152,
+                    -24576
+                ],
+                [
+                    49152,
+                    24576
+                ]
+            ],
+            "max_level": 16,
+            "min_level": 16,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "190": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    10240,
+                    9856
+                ],
+                [
+                    12160,
+                    11648
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                1,
+                2
+            ],
+            "map_name": "The Orders of Tyria",
+            "map_rect": [
+                [
+                    -21504,
+                    -21504
+                ],
+                [
+                    24576,
+                    21504
+                ]
+            ],
+            "max_level": 21,
+            "min_level": 21,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "191": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    9344,
+                    14080
+                ],
+                [
+                    13440,
+                    16128
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "The Orders of Tyria",
+            "map_rect": [
+                [
+                    -49152,
+                    -24576
+                ],
+                [
+                    49152,
+                    24576
+                ]
+            ],
+            "max_level": 21,
+            "min_level": 21,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "198": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    13440,
+                    12288
+                ],
+                [
+                    17664,
+                    14336
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Speaker of the Dead",
+            "map_rect": [
+                [
+                    -49152,
+                    -24576
+                ],
+                [
+                    52224,
+                    24576
+                ]
+            ],
+            "max_level": 26,
+            "min_level": 26,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "216": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    23552,
+                    13568
+                ],
+                [
+                    25088,
+                    15616
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "The Tribune's Call",
+            "map_rect": [
+                [
+                    -18432,
+                    -24576
+                ],
+                [
+                    18432,
+                    24576
+                ]
+            ],
+            "max_level": 3,
+            "min_level": 3,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "22": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    23808,
+                    8448
+                ],
+                [
+                    27136,
+                    11264
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Fireheart Rise",
+            "map_rect": [
+                [
+                    -39936,
+                    -33792
+                ],
+                [
+                    39936,
+                    33792
+                ]
+            ],
+            "max_level": 70,
+            "min_level": 60,
+            "region_id": 2,
+            "region_name": "Ascalon"
+        },
+        "224": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    25088,
+                    13568
+                ],
+                [
+                    29184,
+                    15616
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Scrapyard Dogs",
+            "map_rect": [
+                [
+                    -49152,
+                    -24576
+                ],
+                [
+                    49152,
+                    24576
+                ]
+            ],
+            "max_level": 4,
+            "min_level": 4,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "226": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    10240,
+                    9856
+                ],
+                [
+                    12160,
+                    11648
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                1,
+                2
+            ],
+            "map_name": "On the Mend",
+            "map_rect": [
+                [
+                    -21504,
+                    -21504
+                ],
+                [
+                    24576,
+                    21504
+                ]
+            ],
+            "max_level": 3,
+            "min_level": 3,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "232": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    25088,
+                    13568
+                ],
+                [
+                    29184,
+                    15616
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Spilled Blood",
+            "map_rect": [
+                [
+                    -49152,
+                    -24576
+                ],
+                [
+                    49152,
+                    24576
+                ]
+            ],
+            "max_level": 6,
+            "min_level": 6,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "234": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    25088,
+                    13568
+                ],
+                [
+                    29184,
+                    15616
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Ghostbore Musket",
+            "map_rect": [
+                [
+                    -49152,
+                    -24576
+                ],
+                [
+                    49152,
+                    24576
+                ]
+            ],
+            "max_level": 6,
+            "min_level": 6,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "237": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    25088,
+                    13568
+                ],
+                [
+                    29184,
+                    15616
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Iron Grip of the Legion",
+            "map_rect": [
+                [
+                    -49152,
+                    -24576
+                ],
+                [
+                    49152,
+                    24576
+                ]
+            ],
+            "max_level": 6,
+            "min_level": 6,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "238": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    23552,
+                    13568
+                ],
+                [
+                    25088,
+                    15616
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "The Flame Advances",
+            "map_rect": [
+                [
+                    -18432,
+                    -24576
+                ],
+                [
+                    18432,
+                    24576
+                ]
+            ],
+            "max_level": 8,
+            "min_level": 8,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "239": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    23552,
+                    13568
+                ],
+                [
+                    25088,
+                    15616
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "The Flame Advances",
+            "map_rect": [
+                [
+                    -18432,
+                    -24576
+                ],
+                [
+                    18432,
+                    24576
+                ]
+            ],
+            "max_level": 8,
+            "min_level": 8,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "242": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    25088,
+                    13568
+                ],
+                [
+                    29184,
+                    15616
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Test Your Metal",
+            "map_rect": [
+                [
+                    -49152,
+                    -24576
+                ],
+                [
+                    49152,
+                    24576
+                ]
+            ],
+            "max_level": 8,
+            "min_level": 8,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "250": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    25088,
+                    13568
+                ],
+                [
+                    29184,
+                    15616
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Windrock Maze",
+            "map_rect": [
+                [
+                    -49152,
+                    -24576
+                ],
+                [
+                    49152,
+                    24576
+                ]
+            ],
+            "max_level": 11,
+            "min_level": 11,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "251": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    23552,
+                    13568
+                ],
+                [
+                    25088,
+                    15616
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Mired Deep",
+            "map_rect": [
+                [
+                    -18432,
+                    -24576
+                ],
+                [
+                    18432,
+                    24576
+                ]
+            ],
+            "max_level": 14,
+            "min_level": 14,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "252": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    25088,
+                    13568
+                ],
+                [
+                    29184,
+                    15616
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Mired Deep",
+            "map_rect": [
+                [
+                    -49152,
+                    -24576
+                ],
+                [
+                    49152,
+                    24576
+                ]
+            ],
+            "max_level": 14,
+            "min_level": 14,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "257": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    23552,
+                    11264
+                ],
+                [
+                    27136,
+                    13568
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "A Modest Proposal",
+            "map_rect": [
+                [
+                    -43008,
+                    -27648
+                ],
+                [
+                    43008,
+                    27648
+                ]
+            ],
+            "max_level": 16,
+            "min_level": 16,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "258": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    23552,
+                    11264
+                ],
+                [
+                    27136,
+                    13568
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "A Modest Proposal",
+            "map_rect": [
+                [
+                    -43008,
+                    -27648
+                ],
+                [
+                    43008,
+                    27648
+                ]
+            ],
+            "max_level": 16,
+            "min_level": 16,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "267": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    25088,
+                    13568
+                ],
+                [
+                    29184,
+                    15616
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "The End of the Line",
+            "map_rect": [
+                [
+                    -49152,
+                    -24576
+                ],
+                [
+                    49152,
+                    24576
+                ]
+            ],
+            "max_level": 6,
+            "min_level": 6,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "269": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    25088,
+                    13568
+                ],
+                [
+                    29184,
+                    15616
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Magic Users",
+            "map_rect": [
+                [
+                    -49152,
+                    -24576
+                ],
+                [
+                    49152,
+                    24576
+                ]
+            ],
+            "max_level": 6,
+            "min_level": 6,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "271": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    23552,
+                    13568
+                ],
+                [
+                    25088,
+                    15616
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Rage Suppression",
+            "map_rect": [
+                [
+                    -18432,
+                    -24576
+                ],
+                [
+                    18432,
+                    24576
+                ]
+            ],
+            "max_level": 8,
+            "min_level": 8,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "276": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    25088,
+                    13568
+                ],
+                [
+                    29184,
+                    15616
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Human's Lament",
+            "map_rect": [
+                [
+                    -49152,
+                    -24576
+                ],
+                [
+                    49152,
+                    24576
+                ]
+            ],
+            "max_level": 11,
+            "min_level": 11,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "284": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    23552,
+                    13568
+                ],
+                [
+                    25088,
+                    15616
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Dishonorable Discharge",
+            "map_rect": [
+                [
+                    -18432,
+                    -24576
+                ],
+                [
+                    18432,
+                    24576
+                ]
+            ],
+            "max_level": 19,
+            "min_level": 19,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "294": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    23552,
+                    11264
+                ],
+                [
+                    27136,
+                    13568
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "A Fork in the Road",
+            "map_rect": [
+                [
+                    -43008,
+                    -27648
+                ],
+                [
+                    43008,
+                    27648
+                ]
+            ],
+            "max_level": 16,
+            "min_level": 16,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "295": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    23552,
+                    13568
+                ],
+                [
+                    25088,
+                    15616
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Sins of the Father",
+            "map_rect": [
+                [
+                    -18432,
+                    -24576
+                ],
+                [
+                    18432,
+                    24576
+                ]
+            ],
+            "max_level": 19,
+            "min_level": 19,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "30": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    20736,
+                    8192
+                ],
+                [
+                    23808,
+                    11264
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Frostgorge Sound",
+            "map_rect": [
+                [
+                    -36864,
+                    -36864
+                ],
+                [
+                    36864,
+                    36864
+                ]
+            ],
+            "max_level": 80,
+            "min_level": 70,
+            "region_id": 1,
+            "region_name": "Shiverpeak Mountains"
+        },
+        "33": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    27648,
+                    13056
+                ],
+                [
+                    28928,
+                    14080
+                ]
+            ],
+            "default_floor": -2,
+            "floors": [
+                -2,
+                1
+            ],
+            "map_name": "Ascalonian Catacombs",
+            "map_rect": [
+                [
+                    -15360,
+                    -12288
+                ],
+                [
+                    15360,
+                    12288
+                ]
+            ],
+            "max_level": 30,
+            "min_level": 30,
+            "region_id": 2,
+            "region_name": "Ascalon"
+        },
+        "371": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    23552,
+                    13568
+                ],
+                [
+                    25088,
+                    15616
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                1
+            ],
+            "map_name": "Hero's Canton",
+            "map_rect": [
+                [
+                    -18432,
+                    -24576
+                ],
+                [
+                    18432,
+                    24576
+                ]
+            ],
+            "max_level": 0,
+            "min_level": 0,
+            "region_id": 2,
+            "region_name": "Ascalon"
+        },
+        "379": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    21760,
+                    11264
+                ],
+                [
+                    23552,
+                    15872
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "The Great Hunt",
+            "map_rect": [
+                [
+                    -21504,
+                    -55296
+                ],
+                [
+                    21504,
+                    55296
+                ]
+            ],
+            "max_level": 1,
+            "min_level": 1,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "380": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    21760,
+                    11264
+                ],
+                [
+                    23552,
+                    15872
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "A WeaponItem of Legend",
+            "map_rect": [
+                [
+                    -21504,
+                    -55296
+                ],
+                [
+                    21504,
+                    55296
+                ]
+            ],
+            "max_level": 3,
+            "min_level": 3,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "390": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    19456,
+                    13312
+                ],
+                [
+                    21760,
+                    14976
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                1,
+                2
+            ],
+            "map_name": "Twilight of the Wolf",
+            "map_rect": [
+                [
+                    -27648,
+                    -18432
+                ],
+                [
+                    27648,
+                    21504
+                ]
+            ],
+            "max_level": 8,
+            "min_level": 8,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "394": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    21760,
+                    11264
+                ],
+                [
+                    23552,
+                    15872
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "A Trap Foiled",
+            "map_rect": [
+                [
+                    -21504,
+                    -55296
+                ],
+                [
+                    21504,
+                    55296
+                ]
+            ],
+            "max_level": 6,
+            "min_level": 6,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "399": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    21760,
+                    11264
+                ],
+                [
+                    23552,
+                    15872
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Shape of the Spirit",
+            "map_rect": [
+                [
+                    -21504,
+                    -55296
+                ],
+                [
+                    21504,
+                    55296
+                ]
+            ],
+            "max_level": 8,
+            "min_level": 8,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "405": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    21760,
+                    11264
+                ],
+                [
+                    23552,
+                    15872
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Blessed of Bear",
+            "map_rect": [
+                [
+                    -21504,
+                    -55296
+                ],
+                [
+                    21504,
+                    55296
+                ]
+            ],
+            "max_level": 6,
+            "min_level": 6,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "419": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    21760,
+                    11264
+                ],
+                [
+                    23552,
+                    15872
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "A New Challenger",
+            "map_rect": [
+                [
+                    -21504,
+                    -55296
+                ],
+                [
+                    21504,
+                    55296
+                ]
+            ],
+            "max_level": 11,
+            "min_level": 11,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "421": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    21760,
+                    11264
+                ],
+                [
+                    23552,
+                    15872
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "The Finishing Blow",
+            "map_rect": [
+                [
+                    -21504,
+                    -55296
+                ],
+                [
+                    21504,
+                    55296
+                ]
+            ],
+            "max_level": 14,
+            "min_level": 14,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "427": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    17664,
+                    11264
+                ],
+                [
+                    21760,
+                    13312
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Among the Kodan",
+            "map_rect": [
+                [
+                    -49152,
+                    -24576
+                ],
+                [
+                    49152,
+                    24576
+                ]
+            ],
+            "max_level": 14,
+            "min_level": 14,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "429": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    19456,
+                    13312
+                ],
+                [
+                    21760,
+                    14976
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                1,
+                2
+            ],
+            "map_name": "Rage of the Minotaurs",
+            "map_rect": [
+                [
+                    -27648,
+                    -18432
+                ],
+                [
+                    27648,
+                    21504
+                ]
+            ],
+            "max_level": 4,
+            "min_level": 4,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "430": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    17664,
+                    11264
+                ],
+                [
+                    21760,
+                    13312
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Darkness at Drakentelt",
+            "map_rect": [
+                [
+                    -49152,
+                    -24576
+                ],
+                [
+                    49152,
+                    24576
+                ]
+            ],
+            "max_level": 16,
+            "min_level": 16,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "435": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    19456,
+                    13312
+                ],
+                [
+                    21760,
+                    14976
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                1,
+                2
+            ],
+            "map_name": "Means to an End",
+            "map_rect": [
+                [
+                    -27648,
+                    -18432
+                ],
+                [
+                    27648,
+                    21504
+                ]
+            ],
+            "max_level": 19,
+            "min_level": 19,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "436": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    19456,
+                    13312
+                ],
+                [
+                    21760,
+                    14976
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                1,
+                2
+            ],
+            "map_name": "Dredge Technology",
+            "map_rect": [
+                [
+                    -27648,
+                    -18432
+                ],
+                [
+                    27648,
+                    21504
+                ]
+            ],
+            "max_level": 21,
+            "min_level": 21,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "440": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    17664,
+                    11264
+                ],
+                [
+                    21760,
+                    13312
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Dredge Assault",
+            "map_rect": [
+                [
+                    -49152,
+                    -24576
+                ],
+                [
+                    49152,
+                    24576
+                ]
+            ],
+            "max_level": 24,
+            "min_level": 24,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "466": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    23552,
+                    13568
+                ],
+                [
+                    25088,
+                    15616
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Misplaced Faith",
+            "map_rect": [
+                [
+                    -18432,
+                    -24576
+                ],
+                [
+                    18432,
+                    24576
+                ]
+            ],
+            "max_level": 16,
+            "min_level": 16,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "474": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    17664,
+                    11264
+                ],
+                [
+                    21760,
+                    13312
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Whispers in the Dark",
+            "map_rect": [
+                [
+                    -49152,
+                    -24576
+                ],
+                [
+                    49152,
+                    24576
+                ]
+            ],
+            "max_level": 22,
+            "min_level": 22,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "488": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    28672,
+                    16256
+                ],
+                [
+                    31744,
+                    19328
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Killer Instinct",
+            "map_rect": [
+                [
+                    -36864,
+                    -36864
+                ],
+                [
+                    36864,
+                    36864
+                ]
+            ],
+            "max_level": 33,
+            "min_level": 33,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "489": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    15232,
+                    14336
+                ],
+                [
+                    17664,
+                    15872
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Meeting my Mentor",
+            "map_rect": [
+                [
+                    -27648,
+                    -18432
+                ],
+                [
+                    30720,
+                    18432
+                ]
+            ],
+            "max_level": 30,
+            "min_level": 30,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "497": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    17664,
+                    13312
+                ],
+                [
+                    19456,
+                    18176
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Dredging Up the Past",
+            "map_rect": [
+                [
+                    -21504,
+                    -58368
+                ],
+                [
+                    21504,
+                    58368
+                ]
+            ],
+            "max_level": 31,
+            "min_level": 31,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "499": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    23552,
+                    13568
+                ],
+                [
+                    25088,
+                    15616
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Scrapyard Dogs",
+            "map_rect": [
+                [
+                    -18432,
+                    -24576
+                ],
+                [
+                    18432,
+                    24576
+                ]
+            ],
+            "max_level": 4,
+            "min_level": 4,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "50": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    15232,
+                    14336
+                ],
+                [
+                    17664,
+                    15872
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                1
+            ],
+            "map_name": "Lion's Arch",
+            "map_rect": [
+                [
+                    -27648,
+                    -18432
+                ],
+                [
+                    30720,
+                    18432
+                ]
+            ],
+            "max_level": 80,
+            "min_level": 0,
+            "region_id": 4,
+            "region_name": "Kryta"
+        },
+        "504": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    9728,
+                    20096
+                ],
+                [
+                    11136,
+                    22144
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                3,
+                0,
+                1,
+                2
+            ],
+            "map_name": "Prayer of Protection",
+            "map_rect": [
+                [
+                    -15360,
+                    -24576
+                ],
+                [
+                    18432,
+                    24576
+                ]
+            ],
+            "max_level": 3,
+            "min_level": 3,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "515": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    9344,
+                    16128
+                ],
+                [
+                    11264,
+                    20096
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Hidden in Darkness",
+            "map_rect": [
+                [
+                    -21504,
+                    -46080
+                ],
+                [
+                    24576,
+                    49152
+                ]
+            ],
+            "max_level": 8,
+            "min_level": 8,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "518": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    9728,
+                    20096
+                ],
+                [
+                    11136,
+                    22144
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                3,
+                0,
+                1,
+                2
+            ],
+            "map_name": "The Omphalos Chamber",
+            "map_rect": [
+                [
+                    -15360,
+                    -24576
+                ],
+                [
+                    18432,
+                    24576
+                ]
+            ],
+            "max_level": 10,
+            "min_level": 10,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "519": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    9344,
+                    16128
+                ],
+                [
+                    11264,
+                    20096
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Weakness of the Heart",
+            "map_rect": [
+                [
+                    -21504,
+                    -46080
+                ],
+                [
+                    24576,
+                    49152
+                ]
+            ],
+            "max_level": 8,
+            "min_level": 8,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "521": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    9344,
+                    16128
+                ],
+                [
+                    11264,
+                    20096
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Holding Back the Darkness",
+            "map_rect": [
+                [
+                    -21504,
+                    -46080
+                ],
+                [
+                    24576,
+                    49152
+                ]
+            ],
+            "max_level": 4,
+            "min_level": 4,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "522": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    9728,
+                    20096
+                ],
+                [
+                    11136,
+                    22144
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                3,
+                0,
+                1,
+                2
+            ],
+            "map_name": "A Sly Trick",
+            "map_rect": [
+                [
+                    -15360,
+                    -24576
+                ],
+                [
+                    18432,
+                    24576
+                ]
+            ],
+            "max_level": 6,
+            "min_level": 6,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "523": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    9344,
+                    16128
+                ],
+                [
+                    11264,
+                    20096
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Deep Tangled Roots",
+            "map_rect": [
+                [
+                    -21504,
+                    -46080
+                ],
+                [
+                    24576,
+                    49152
+                ]
+            ],
+            "max_level": 8,
+            "min_level": 8,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "525": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    9344,
+                    16128
+                ],
+                [
+                    11264,
+                    20096
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Beneath a Cold Moon",
+            "map_rect": [
+                [
+                    -21504,
+                    -46080
+                ],
+                [
+                    24576,
+                    49152
+                ]
+            ],
+            "max_level": 10,
+            "min_level": 10,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "528": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    9344,
+                    16128
+                ],
+                [
+                    11264,
+                    20096
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Hammer and Steel",
+            "map_rect": [
+                [
+                    -21504,
+                    -46080
+                ],
+                [
+                    24576,
+                    49152
+                ]
+            ],
+            "max_level": 8,
+            "min_level": 8,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "534": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    9344,
+                    16128
+                ],
+                [
+                    11264,
+                    20096
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Beneath the Waves",
+            "map_rect": [
+                [
+                    -21504,
+                    -46080
+                ],
+                [
+                    24576,
+                    49152
+                ]
+            ],
+            "max_level": 14,
+            "min_level": 14,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "546": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    9344,
+                    16128
+                ],
+                [
+                    11264,
+                    20096
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "The Direct Approach",
+            "map_rect": [
+                [
+                    -21504,
+                    -46080
+                ],
+                [
+                    24576,
+                    49152
+                ]
+            ],
+            "max_level": 16,
+            "min_level": 16,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "549": {
+            "continent_id": 2,
+            "continent_name": "Mists",
+            "continent_rect": [
+                [
+                    3326,
+                    5374
+                ],
+                [
+                    4094,
+                    6142
+                ]
+            ],
+            "default_floor": 6,
+            "floors": [
+                6
+            ],
+            "map_name": "Battle of Kyhlo",
+            "map_rect": [
+                [
+                    -9216,
+                    -9216
+                ],
+                [
+                    9216,
+                    9216
+                ]
+            ],
+            "max_level": 0,
+            "min_level": 0,
+            "region_id": 6,
+            "region_name": "Player vs. Player"
+        },
+        "574": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    7168,
+                    17152
+                ],
+                [
+                    9344,
+                    20480
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "In Snaff's Footsteps",
+            "map_rect": [
+                [
+                    -24576,
+                    -39936
+                ],
+                [
+                    27648,
+                    39936
+                ]
+            ],
+            "max_level": 3,
+            "min_level": 3,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "577": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    4608,
+                    19648
+                ],
+                [
+                    7168,
+                    22208
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                3,
+                0,
+                1,
+                2
+            ],
+            "map_name": "Defusing the Problem",
+            "map_rect": [
+                [
+                    -30720,
+                    -30720
+                ],
+                [
+                    30720,
+                    30720
+                ]
+            ],
+            "max_level": 10,
+            "min_level": 10,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "578": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    7168,
+                    17152
+                ],
+                [
+                    9344,
+                    20480
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "The Things We Do For Love",
+            "map_rect": [
+                [
+                    -24576,
+                    -39936
+                ],
+                [
+                    27648,
+                    39936
+                ]
+            ],
+            "max_level": 10,
+            "min_level": 10,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "594": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    7168,
+                    17152
+                ],
+                [
+                    9344,
+                    20480
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Stand By Your Krewe",
+            "map_rect": [
+                [
+                    -24576,
+                    -39936
+                ],
+                [
+                    27648,
+                    39936
+                ]
+            ],
+            "max_level": 8,
+            "min_level": 8,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "595": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    7168,
+                    17152
+                ],
+                [
+                    9344,
+                    20480
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Unwelcome Visitors",
+            "map_rect": [
+                [
+                    -24576,
+                    -39936
+                ],
+                [
+                    27648,
+                    39936
+                ]
+            ],
+            "max_level": 8,
+            "min_level": 8,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "596": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    4608,
+                    19648
+                ],
+                [
+                    7168,
+                    22208
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                3,
+                0,
+                1,
+                2
+            ],
+            "map_name": "Where Credit Is Due",
+            "map_rect": [
+                [
+                    -30720,
+                    -30720
+                ],
+                [
+                    30720,
+                    30720
+                ]
+            ],
+            "max_level": 11,
+            "min_level": 11,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "598": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    7168,
+                    17152
+                ],
+                [
+                    9344,
+                    20480
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Short Fuse",
+            "map_rect": [
+                [
+                    -24576,
+                    -39936
+                ],
+                [
+                    27648,
+                    39936
+                ]
+            ],
+            "max_level": 14,
+            "min_level": 14,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "61": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    9856,
+                    11648
+                ],
+                [
+                    13440,
+                    14080
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Infiltration",
+            "map_rect": [
+                [
+                    -43008,
+                    -27648
+                ],
+                [
+                    43008,
+                    30720
+                ]
+            ],
+            "max_level": 6,
+            "min_level": 6,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "614": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    4608,
+                    19648
+                ],
+                [
+                    7168,
+                    22208
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                3,
+                0,
+                1,
+                2
+            ],
+            "map_name": "Magnum Opus",
+            "map_rect": [
+                [
+                    -30720,
+                    -30720
+                ],
+                [
+                    30720,
+                    30720
+                ]
+            ],
+            "max_level": 19,
+            "min_level": 19,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "619": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    4608,
+                    19648
+                ],
+                [
+                    7168,
+                    22208
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                3,
+                0,
+                1,
+                2
+            ],
+            "map_name": "Beta Test",
+            "map_rect": [
+                [
+                    -30720,
+                    -30720
+                ],
+                [
+                    30720,
+                    30720
+                ]
+            ],
+            "max_level": 14,
+            "min_level": 14,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "62": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    10112,
+                    25216
+                ],
+                [
+                    12160,
+                    29312
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Cursed Shore",
+            "map_rect": [
+                [
+                    -24576,
+                    -49152
+                ],
+                [
+                    24576,
+                    49152
+                ]
+            ],
+            "max_level": 80,
+            "min_level": 80,
+            "region_id": 3,
+            "region_name": "Ruins of Orr"
+        },
+        "620": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    4608,
+                    19648
+                ],
+                [
+                    7168,
+                    22208
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                3,
+                0,
+                1,
+                2
+            ],
+            "map_name": "Any Sufficiently Advanced Science",
+            "map_rect": [
+                [
+                    -30720,
+                    -30720
+                ],
+                [
+                    30720,
+                    30720
+                ]
+            ],
+            "max_level": 11,
+            "min_level": 11,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "621": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    7168,
+                    17152
+                ],
+                [
+                    9344,
+                    20480
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Any Sufficiently Advanced Science",
+            "map_rect": [
+                [
+                    -24576,
+                    -39936
+                ],
+                [
+                    27648,
+                    39936
+                ]
+            ],
+            "max_level": 11,
+            "min_level": 11,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "622": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    5888,
+                    14464
+                ],
+                [
+                    9344,
+                    17152
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Bad Forecast",
+            "map_rect": [
+                [
+                    -39936,
+                    -30720
+                ],
+                [
+                    43008,
+                    33792
+                ]
+            ],
+            "max_level": 16,
+            "min_level": 16,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "628": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    13440,
+                    12288
+                ],
+                [
+                    17664,
+                    14336
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Stealing Secrets",
+            "map_rect": [
+                [
+                    -49152,
+                    -24576
+                ],
+                [
+                    52224,
+                    24576
+                ]
+            ],
+            "max_level": 30,
+            "min_level": 30,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "63": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    19328,
+                    17408
+                ],
+                [
+                    20864,
+                    18944
+                ]
+            ],
+            "default_floor": -7,
+            "floors": [
+                -7,
+                1
+            ],
+            "map_name": "Sorrow's Embrace",
+            "map_rect": [
+                [
+                    -18432,
+                    -18432
+                ],
+                [
+                    18432,
+                    18432
+                ]
+            ],
+            "max_level": 60,
+            "min_level": 60,
+            "region_id": 1,
+            "region_name": "Shiverpeak Mountains"
+        },
+        "636": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    4608,
+                    19648
+                ],
+                [
+                    7168,
+                    22208
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                3,
+                0,
+                1,
+                2
+            ],
+            "map_name": "Hazardous Environment",
+            "map_rect": [
+                [
+                    -30720,
+                    -30720
+                ],
+                [
+                    30720,
+                    30720
+                ]
+            ],
+            "max_level": 22,
+            "min_level": 22,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "642": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    17664,
+                    13312
+                ],
+                [
+                    19456,
+                    18176
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "The Stone Sheath",
+            "map_rect": [
+                [
+                    -21504,
+                    -58368
+                ],
+                [
+                    21504,
+                    58368
+                ]
+            ],
+            "max_level": 36,
+            "min_level": 36,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "643": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    17664,
+                    13312
+                ],
+                [
+                    19456,
+                    18176
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Bad Blood",
+            "map_rect": [
+                [
+                    -21504,
+                    -58368
+                ],
+                [
+                    21504,
+                    58368
+                ]
+            ],
+            "max_level": 33,
+            "min_level": 33,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "645": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    13440,
+                    12288
+                ],
+                [
+                    17664,
+                    14336
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Field Test",
+            "map_rect": [
+                [
+                    -49152,
+                    -24576
+                ],
+                [
+                    52224,
+                    24576
+                ]
+            ],
+            "max_level": 26,
+            "min_level": 26,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "649": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    4608,
+                    19648
+                ],
+                [
+                    7168,
+                    22208
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                3,
+                0,
+                1,
+                2
+            ],
+            "map_name": "Snaff Memorial Lab",
+            "map_rect": [
+                [
+                    -30720,
+                    -30720
+                ],
+                [
+                    30720,
+                    30720
+                ]
+            ],
+            "max_level": 0,
+            "min_level": 0,
+            "region_id": 5,
+            "region_name": "Tarnished Coast"
+        },
+        "650": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    4608,
+                    19648
+                ],
+                [
+                    7168,
+                    22208
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                3,
+                0,
+                1,
+                2
+            ],
+            "map_name": "Applied Development Lab (Home)",
+            "map_rect": [
+                [
+                    -30720,
+                    -30720
+                ],
+                [
+                    30720,
+                    30720
+                ]
+            ],
+            "max_level": 0,
+            "min_level": 0,
+            "region_id": 5,
+            "region_name": "Tarnished Coast"
+        },
+        "651": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    4608,
+                    19648
+                ],
+                [
+                    7168,
+                    22208
+                ]
+            ],
+            "default_floor": 2,
+            "floors": [
+                3,
+                0,
+                1,
+                2
+            ],
+            "map_name": "Council Level",
+            "map_rect": [
+                [
+                    -30720,
+                    -30720
+                ],
+                [
+                    30720,
+                    30720
+                ]
+            ],
+            "max_level": 0,
+            "min_level": 0,
+            "region_id": 5,
+            "region_name": "Tarnished Coast"
+        },
+        "653": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    17664,
+                    13312
+                ],
+                [
+                    19456,
+                    18176
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Mightier than the Sword",
+            "map_rect": [
+                [
+                    -21504,
+                    -58368
+                ],
+                [
+                    21504,
+                    58368
+                ]
+            ],
+            "max_level": 39,
+            "min_level": 39,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "655": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    4608,
+                    19648
+                ],
+                [
+                    7168,
+                    22208
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                3,
+                0,
+                1,
+                2
+            ],
+            "map_name": "Lines of Communication",
+            "map_rect": [
+                [
+                    -30720,
+                    -30720
+                ],
+                [
+                    30720,
+                    30720
+                ]
+            ],
+            "max_level": 28,
+            "min_level": 28,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "658": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    15232,
+                    15872
+                ],
+                [
+                    17664,
+                    19072
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                1,
+                -3
+            ],
+            "map_name": "Base of Operations",
+            "map_rect": [
+                [
+                    -12288,
+                    -12288
+                ],
+                [
+                    12288,
+                    12288
+                ]
+            ],
+            "max_level": 39,
+            "min_level": 39,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "663": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    19456,
+                    14976
+                ],
+                [
+                    21760,
+                    18176
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Doubt",
+            "map_rect": [
+                [
+                    -27648,
+                    -36864
+                ],
+                [
+                    27648,
+                    39936
+                ]
+            ],
+            "max_level": 42,
+            "min_level": 42,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "672": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    13440,
+                    9472
+                ],
+                [
+                    16640,
+                    12288
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Rat-Tastrophe",
+            "map_rect": [
+                [
+                    -36864,
+                    -33792
+                ],
+                [
+                    39936,
+                    33792
+                ]
+            ],
+            "max_level": 42,
+            "min_level": 42,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "673": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    19456,
+                    14976
+                ],
+                [
+                    21760,
+                    18176
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Salvation Through Heresy",
+            "map_rect": [
+                [
+                    -27648,
+                    -36864
+                ],
+                [
+                    27648,
+                    39936
+                ]
+            ],
+            "max_level": 45,
+            "min_level": 45,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "68": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    8704,
+                    16000
+                ],
+                [
+                    9984,
+                    17024
+                ]
+            ],
+            "default_floor": -6,
+            "floors": [
+                -6,
+                1
+            ],
+            "map_name": "Twilight Arbor",
+            "map_rect": [
+                [
+                    -15360,
+                    -12288
+                ],
+                [
+                    15360,
+                    12288
+                ]
+            ],
+            "max_level": 50,
+            "min_level": 50,
+            "region_id": 5,
+            "region_name": "Tarnished Coast"
+        },
+        "682": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    29184,
+                    12160
+                ],
+                [
+                    31232,
+                    16256
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Untamed Wilds",
+            "map_rect": [
+                [
+                    -24576,
+                    -49152
+                ],
+                [
+                    24576,
+                    49152
+                ]
+            ],
+            "max_level": 42,
+            "min_level": 42,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "693": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    17664,
+                    13312
+                ],
+                [
+                    19456,
+                    18176
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Library Science",
+            "map_rect": [
+                [
+                    -21504,
+                    -58368
+                ],
+                [
+                    21504,
+                    58368
+                ]
+            ],
+            "max_level": 39,
+            "min_level": 39,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "697": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    15232,
+                    15872
+                ],
+                [
+                    17664,
+                    19072
+                ]
+            ],
+            "default_floor": -3,
+            "floors": [
+                -3,
+                1
+            ],
+            "map_name": "Critical Blowback",
+            "map_rect": [
+                [
+                    -12288,
+                    -12288
+                ],
+                [
+                    12288,
+                    12288
+                ]
+            ],
+            "max_level": 57,
+            "min_level": 57,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "70": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    21760,
+                    8064
+                ],
+                [
+                    23040,
+                    9216
+                ]
+            ],
+            "default_floor": 8,
+            "floors": [
+                6,
+                7,
+                8,
+                1
+            ],
+            "map_name": "Honor of the Waves",
+            "map_rect": [
+                [
+                    -15360,
+                    -12288
+                ],
+                [
+                    15360,
+                    15360
+                ]
+            ],
+            "max_level": 76,
+            "min_level": 76,
+            "region_id": 1,
+            "region_name": "Shiverpeak Mountains"
+        },
+        "701": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    15232,
+                    14336
+                ],
+                [
+                    17664,
+                    15872
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "On Red Alert",
+            "map_rect": [
+                [
+                    -27648,
+                    -18432
+                ],
+                [
+                    30720,
+                    18432
+                ]
+            ],
+            "max_level": 48,
+            "min_level": 48,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "705": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    15232,
+                    14336
+                ],
+                [
+                    17664,
+                    15872
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "The Ghost Rite",
+            "map_rect": [
+                [
+                    -27648,
+                    -18432
+                ],
+                [
+                    30720,
+                    18432
+                ]
+            ],
+            "max_level": 51,
+            "min_level": 51,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "728": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    17792,
+                    21376
+                ],
+                [
+                    21632,
+                    23808
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Volcanic Extraction",
+            "map_rect": [
+                [
+                    -46080,
+                    -27648
+                ],
+                [
+                    46080,
+                    30720
+                ]
+            ],
+            "max_level": 66,
+            "min_level": 66,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "741": {
+            "continent_id": 2,
+            "continent_name": "Mists",
+            "continent_rect": [
+                [
+                    8574,
+                    6910
+                ],
+                [
+                    9342,
+                    7678
+                ]
+            ],
+            "default_floor": 8,
+            "floors": [
+                8
+            ],
+            "map_name": "Raid on the Capricorn",
+            "map_rect": [
+                [
+                    -9216,
+                    -9216
+                ],
+                [
+                    9216,
+                    9216
+                ]
+            ],
+            "max_level": 0,
+            "min_level": 0,
+            "region_id": 6,
+            "region_name": "Player vs. Player"
+        },
+        "744": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    14464,
+                    22400
+                ],
+                [
+                    17792,
+                    25216
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "A Sad Duty",
+            "map_rect": [
+                [
+                    -39936,
+                    -33792
+                ],
+                [
+                    39936,
+                    33792
+                ]
+            ],
+            "max_level": 71,
+            "min_level": 71,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "745": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    18944,
+                    18176
+                ],
+                [
+                    21248,
+                    21376
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Striking off the Chains",
+            "map_rect": [
+                [
+                    -27648,
+                    -36864
+                ],
+                [
+                    27648,
+                    39936
+                ]
+            ],
+            "max_level": 64,
+            "min_level": 64,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "746": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    14464,
+                    22400
+                ],
+                [
+                    17792,
+                    25216
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Delivering Justice",
+            "map_rect": [
+                [
+                    -39936,
+                    -33792
+                ],
+                [
+                    39936,
+                    33792
+                ]
+            ],
+            "max_level": 71,
+            "min_level": 71,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "747": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    17792,
+                    21376
+                ],
+                [
+                    21632,
+                    23808
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Intercepting the Orb",
+            "map_rect": [
+                [
+                    -46080,
+                    -27648
+                ],
+                [
+                    46080,
+                    30720
+                ]
+            ],
+            "max_level": 68,
+            "min_level": 68,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "75": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    12416,
+                    11392
+                ],
+                [
+                    13440,
+                    12416
+                ]
+            ],
+            "default_floor": 4,
+            "floors": [
+                -4,
+                4,
+                5,
+                1
+            ],
+            "map_name": "Caudecus's Manor",
+            "map_rect": [
+                [
+                    -12288,
+                    -12288
+                ],
+                [
+                    12288,
+                    12288
+                ]
+            ],
+            "max_level": 40,
+            "min_level": 40,
+            "region_id": 4,
+            "region_name": "Kryta"
+        },
+        "762": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    10368,
+                    23168
+                ],
+                [
+                    14464,
+                    25216
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Hunters and Prey",
+            "map_rect": [
+                [
+                    -49152,
+                    -24576
+                ],
+                [
+                    49152,
+                    24576
+                ]
+            ],
+            "max_level": 78,
+            "min_level": 78,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "764": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    10368,
+                    23168
+                ],
+                [
+                    14464,
+                    25216
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Marching Orders",
+            "map_rect": [
+                [
+                    -49152,
+                    -24576
+                ],
+                [
+                    49152,
+                    24576
+                ]
+            ],
+            "max_level": 78,
+            "min_level": 78,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "767": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    10368,
+                    23168
+                ],
+                [
+                    14464,
+                    25216
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Estate of Decay",
+            "map_rect": [
+                [
+                    -49152,
+                    -24576
+                ],
+                [
+                    49152,
+                    24576
+                ]
+            ],
+            "max_level": 75,
+            "min_level": 75,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "769": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    10368,
+                    23168
+                ],
+                [
+                    14464,
+                    25216
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Conscript the Dead Ships",
+            "map_rect": [
+                [
+                    -49152,
+                    -24576
+                ],
+                [
+                    49152,
+                    24576
+                ]
+            ],
+            "max_level": 79,
+            "min_level": 79,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "77": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    10240,
+                    9856
+                ],
+                [
+                    12160,
+                    11648
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                1,
+                2
+            ],
+            "map_name": "Search the Premises",
+            "map_rect": [
+                [
+                    -21504,
+                    -21504
+                ],
+                [
+                    24576,
+                    21504
+                ]
+            ],
+            "max_level": 8,
+            "min_level": 8,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "772": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    10368,
+                    23168
+                ],
+                [
+                    14464,
+                    25216
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Ossuary of Unquiet Dead",
+            "map_rect": [
+                [
+                    -49152,
+                    -24576
+                ],
+                [
+                    49152,
+                    24576
+                ]
+            ],
+            "max_level": 76,
+            "min_level": 76,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "775": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    14464,
+                    22400
+                ],
+                [
+                    17792,
+                    25216
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Temple of the Forgotten God",
+            "map_rect": [
+                [
+                    -39936,
+                    -33792
+                ],
+                [
+                    39936,
+                    33792
+                ]
+            ],
+            "max_level": 72,
+            "min_level": 72,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "777": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    14464,
+                    22400
+                ],
+                [
+                    17792,
+                    25216
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Temple of the Forgotten God",
+            "map_rect": [
+                [
+                    -39936,
+                    -33792
+                ],
+                [
+                    39936,
+                    33792
+                ]
+            ],
+            "max_level": 72,
+            "min_level": 72,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "779": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    14464,
+                    22400
+                ],
+                [
+                    17792,
+                    25216
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Starving the Beast",
+            "map_rect": [
+                [
+                    -39936,
+                    -33792
+                ],
+                [
+                    39936,
+                    33792
+                ]
+            ],
+            "max_level": 75,
+            "min_level": 75,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "780": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    10112,
+                    25216
+                ],
+                [
+                    12160,
+                    29312
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Against the Corruption",
+            "map_rect": [
+                [
+                    -24576,
+                    -49152
+                ],
+                [
+                    24576,
+                    49152
+                ]
+            ],
+            "max_level": 80,
+            "min_level": 80,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "781": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    10112,
+                    25216
+                ],
+                [
+                    12160,
+                    29312
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "The Source of Orr",
+            "map_rect": [
+                [
+                    -24576,
+                    -49152
+                ],
+                [
+                    24576,
+                    49152
+                ]
+            ],
+            "max_level": 80,
+            "min_level": 80,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "787": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    14464,
+                    22400
+                ],
+                [
+                    17792,
+                    25216
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Source of Orr",
+            "map_rect": [
+                [
+                    -39936,
+                    -33792
+                ],
+                [
+                    39936,
+                    33792
+                ]
+            ],
+            "max_level": 80,
+            "min_level": 80,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "796": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    9856,
+                    11648
+                ],
+                [
+                    13440,
+                    14080
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "The Informant",
+            "map_rect": [
+                [
+                    -43008,
+                    -27648
+                ],
+                [
+                    43008,
+                    30720
+                ]
+            ],
+            "max_level": 6,
+            "min_level": 6,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "80": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    10240,
+                    9856
+                ],
+                [
+                    12160,
+                    11648
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                1,
+                2
+            ],
+            "map_name": "A Society Function",
+            "map_rect": [
+                [
+                    -21504,
+                    -21504
+                ],
+                [
+                    24576,
+                    21504
+                ]
+            ],
+            "max_level": 8,
+            "min_level": 8,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "806": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    9344,
+                    16128
+                ],
+                [
+                    11264,
+                    20096
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Awakening",
+            "map_rect": [
+                [
+                    -21504,
+                    -46080
+                ],
+                [
+                    24576,
+                    49152
+                ]
+            ],
+            "max_level": 3,
+            "min_level": 3,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "807": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    24576,
+                    4864
+                ],
+                [
+                    25856,
+                    6144
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Eye of the North",
+            "map_rect": [
+                [
+                    -15360,
+                    -15360
+                ],
+                [
+                    15360,
+                    15360
+                ]
+            ],
+            "max_level": 0,
+            "min_level": 0,
+            "region_id": 1,
+            "region_name": "Shiverpeak Mountains"
+        },
+        "833": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    23552,
+                    13568
+                ],
+                [
+                    25088,
+                    15616
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                1
+            ],
+            "map_name": "Ash Tribune Quarters",
+            "map_rect": [
+                [
+                    -18432,
+                    -24576
+                ],
+                [
+                    18432,
+                    24576
+                ]
+            ],
+            "max_level": 0,
+            "min_level": 0,
+            "region_id": 2,
+            "region_name": "Ascalon"
+        },
+        "845": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    9728,
+                    20096
+                ],
+                [
+                    11136,
+                    22144
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                3,
+                0,
+                1,
+                2
+            ],
+            "map_name": "Shattered Light",
+            "map_rect": [
+                [
+                    -15360,
+                    -24576
+                ],
+                [
+                    18432,
+                    24576
+                ]
+            ],
+            "max_level": 19,
+            "min_level": 19,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "866": {
+            "continent_id": 2,
+            "continent_name": "Mists",
+            "continent_rect": [
+                [
+                    1792,
+                    13696
+                ],
+                [
+                    2560,
+                    14464
+                ]
+            ],
+            "default_floor": -27,
+            "floors": [
+                -27,
+                1
+            ],
+            "map_name": "Mad King's Labyrinth",
+            "map_rect": [
+                [
+                    -9216,
+                    -9216
+                ],
+                [
+                    9216,
+                    9216
+                ]
+            ],
+            "max_level": 80,
+            "min_level": 80,
+            "region_id": 25,
+            "region_name": "Mad King's Realm"
+        },
+        "881": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    14592,
+                    15616
+                ],
+                [
+                    15360,
+                    16384
+                ]
+            ],
+            "default_floor": 15,
+            "floors": [
+                15
+            ],
+            "map_name": "Bell Choir Ensemble",
+            "map_rect": [
+                [
+                    -9216,
+                    -9216
+                ],
+                [
+                    9216,
+                    9216
+                ]
+            ],
+            "max_level": 0,
+            "min_level": 0,
+            "region_id": 1,
+            "region_name": "Shiverpeak Mountains"
+        },
+        "897": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    22528,
+                    9984
+                ],
+                [
+                    25088,
+                    12544
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "Cragstead",
+            "map_rect": [
+                [
+                    -30720,
+                    -30720
+                ],
+                [
+                    30720,
+                    30720
+                ]
+            ],
+            "max_level": 80,
+            "min_level": 0,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "919": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    22784,
+                    22270
+                ],
+                [
+                    23808,
+                    23294
+                ]
+            ],
+            "default_floor": 34,
+            "floors": [
+                12
+            ],
+            "map_name": "Sanctum Sprint",
+            "map_rect": [
+                [
+                    -12288,
+                    -12288
+                ],
+                [
+                    12288,
+                    12288
+                ]
+            ],
+            "max_level": 0,
+            "min_level": 0,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        },
+        "929": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    10266,
+                    10496
+                ],
+                [
+                    11034,
+                    11264
+                ]
+            ],
+            "default_floor": 38,
+            "floors": [
+                38,
+                1
+            ],
+            "map_name": "The Crown Pavilion",
+            "map_rect": [
+                [
+                    -9216,
+                    -9216
+                ],
+                [
+                    9216,
+                    9216
+                ]
+            ],
+            "max_level": 80,
+            "min_level": 80,
+            "region_id": 4,
+            "region_name": "Kryta"
+        },
+        "935": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    1574,
+                    5972
+                ],
+                [
+                    2854,
+                    8532
+                ]
+            ],
+            "default_floor": 20,
+            "floors": [
+                20
+            ],
+            "map_name": "Super Adventure Box",
+            "map_rect": [
+                [
+                    -15360,
+                    -30720
+                ],
+                [
+                    15360,
+                    30720
+                ]
+            ],
+            "max_level": 80,
+            "min_level": 1,
+            "region_id": 29,
+            "region_name": "Super Adventure Box"
+        },
+        "946": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    8576,
+                    13952
+                ],
+                [
+                    12672,
+                    16000
+                ]
+            ],
+            "default_floor": 45,
+            "floors": [
+                0,
+                1,
+                2
+            ],
+            "map_name": "The Nightmare Incarnate",
+            "map_rect": [
+                [
+                    -49152,
+                    -24576
+                ],
+                [
+                    49152,
+                    24576
+                ]
+            ],
+            "max_level": 80,
+            "min_level": 80,
+            "region_id": 4,
+            "region_name": "Kryta"
+        },
+        "948": {
+            "continent_id": 2,
+            "continent_name": "Mists",
+            "continent_rect": [
+                [
+                    10880,
+                    3328
+                ],
+                [
+                    13952,
+                    6400
+                ]
+            ],
+            "default_floor": 19,
+            "floors": [
+                19
+            ],
+            "map_name": "Fractals of the Mists",
+            "map_rect": [
+                [
+                    -36864,
+                    -36864
+                ],
+                [
+                    36864,
+                    36864
+                ]
+            ],
+            "max_level": 80,
+            "min_level": 80,
+            "region_id": 26,
+            "region_name": "Fractals of the Mists"
+        },
+        "950": {
+            "continent_id": 2,
+            "continent_name": "Mists",
+            "continent_rect": [
+                [
+                    10880,
+                    3328
+                ],
+                [
+                    13952,
+                    6400
+                ]
+            ],
+            "default_floor": 13,
+            "floors": [
+                13
+            ],
+            "map_name": "Fractals of the Mists",
+            "map_rect": [
+                [
+                    -36864,
+                    -36864
+                ],
+                [
+                    36864,
+                    36864
+                ]
+            ],
+            "max_level": 80,
+            "min_level": 80,
+            "region_id": 26,
+            "region_name": "Fractals of the Mists"
+        },
+        "954": {
+            "continent_id": 2,
+            "continent_name": "Mists",
+            "continent_rect": [
+                [
+                    10880,
+                    3328
+                ],
+                [
+                    13952,
+                    6400
+                ]
+            ],
+            "default_floor": 25,
+            "floors": [
+                25
+            ],
+            "map_name": "Fractals of the Mists",
+            "map_rect": [
+                [
+                    -36864,
+                    -36864
+                ],
+                [
+                    36864,
+                    36864
+                ]
+            ],
+            "max_level": 80,
+            "min_level": 80,
+            "region_id": 26,
+            "region_name": "Fractals of the Mists"
+        },
+        "956": {
+            "continent_id": 2,
+            "continent_name": "Mists",
+            "continent_rect": [
+                [
+                    11970,
+                    4414
+                ],
+                [
+                    12482,
+                    5182
+                ]
+            ],
+            "default_floor": 28,
+            "floors": [
+                28
+            ],
+            "map_name": "Fractals of the Mists",
+            "map_rect": [
+                [
+                    -6144,
+                    -9216
+                ],
+                [
+                    6144,
+                    9216
+                ]
+            ],
+            "max_level": 80,
+            "min_level": 80,
+            "region_id": 26,
+            "region_name": "Fractals of the Mists"
+        },
+        "958": {
+            "continent_id": 2,
+            "continent_name": "Mists",
+            "continent_rect": [
+                [
+                    10880,
+                    3328
+                ],
+                [
+                    13952,
+                    6400
+                ]
+            ],
+            "default_floor": 14,
+            "floors": [
+                14
+            ],
+            "map_name": "Fractals of the Mists",
+            "map_rect": [
+                [
+                    -36864,
+                    -36864
+                ],
+                [
+                    36864,
+                    36864
+                ]
+            ],
+            "max_level": 80,
+            "min_level": 80,
+            "region_id": 26,
+            "region_name": "Fractals of the Mists"
+        },
+        "959": {
+            "continent_id": 2,
+            "continent_name": "Mists",
+            "continent_rect": [
+                [
+                    11690,
+                    4414
+                ],
+                [
+                    12714,
+                    5182
+                ]
+            ],
+            "default_floor": 29,
+            "floors": [
+                29
+            ],
+            "map_name": "Fractals of the Mists",
+            "map_rect": [
+                [
+                    -12288,
+                    -9216
+                ],
+                [
+                    12288,
+                    9216
+                ]
+            ],
+            "max_level": 80,
+            "min_level": 80,
+            "region_id": 26,
+            "region_name": "Fractals of the Mists"
+        },
+        "96": {
+            "continent_id": 2,
+            "continent_name": "Mists",
+            "continent_rect": [
+                [
+                    12798,
+                    10878
+                ],
+                [
+                    15358,
+                    14462
+                ]
+            ],
+            "default_floor": 3,
+            "floors": [
+                3
+            ],
+            "map_name": " Borderlands",
+            "map_rect": [
+                [
+                    -30720,
+                    -43008
+                ],
+                [
+                    30720,
+                    43008
+                ]
+            ],
+            "max_level": 80,
+            "min_level": 80,
+            "region_id": 7,
+            "region_name": "World vs. World"
+        },
+        "961": {
+            "continent_id": 2,
+            "continent_name": "Mists",
+            "continent_rect": [
+                [
+                    11804,
+                    4414
+                ],
+                [
+                    12572,
+                    5182
+                ]
+            ],
+            "default_floor": 30,
+            "floors": [
+                30
+            ],
+            "map_name": "Fractals of the Mists",
+            "map_rect": [
+                [
+                    -9216,
+                    -9216
+                ],
+                [
+                    9216,
+                    9216
+                ]
+            ],
+            "max_level": 80,
+            "min_level": 80,
+            "region_id": 26,
+            "region_name": "Fractals of the Mists"
+        },
+        "97": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    10240,
+                    9856
+                ],
+                [
+                    12160,
+                    11648
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                1,
+                2
+            ],
+            "map_name": "Infiltration",
+            "map_rect": [
+                [
+                    -21504,
+                    -21504
+                ],
+                [
+                    24576,
+                    21504
+                ]
+            ],
+            "max_level": 6,
+            "min_level": 6,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "item_id": "20211",
+  "name": "Mini Black Moa",
+  "description": "Double-click to summon this miniature to follow you around. Only one miniature may be in use at a time.",
+  "type": "MiniPet",
+  "level": "0",
+  "rarity": "Exotic",
+  "vendor_value": "100",
+  "icon_file_id": "220516",
+  "icon_file_signature": "F0350D36C73DCE3EA29A0451A4403BC3A8A172ED",
+  "game_types": ["Activity",
+    "Dungeon",
+    "Pve",
+    "PvpLobby",
+    "Wvw"
+  ],
+  "flags": ["NoSell"],
+  "restrictions": []
+}

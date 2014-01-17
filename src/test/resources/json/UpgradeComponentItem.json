@@ -1,0 +1,57 @@
+{
+  "item_id": "49424",
+  "name": "+1 Agony Infusion",
+  "description": "Double-click to apply to an unused agony-infusion slot.",
+  "type": "UpgradeComponent",
+  "level": "80",
+  "rarity": "Ascended",
+  "vendor_value": "330",
+  "icon_file_id": "511838",
+  "icon_file_signature": "AE7C224D02E7F16F19FAFAE1CC50B80E5DC80214",
+  "game_types": ["Activity",
+    "Dungeon",
+    "Pve",
+    "Wvw"
+  ],
+  "flags": ["NoMysticForge",
+    "NoSalvage",
+    "NoSell"
+  ],
+  "restrictions": [],
+  "upgrade_component": {
+    "type": "Default",
+    "flags": ["HeavyArmor",
+      "LightArmor",
+      "MediumArmor",
+      "Trinket",
+      "Axe",
+      "LongBow",
+      "ShortBow",
+      "Dagger",
+      "Focus",
+      "Greatsword",
+      "Hammer",
+      "Harpoon",
+      "Mace",
+      "Pistol",
+      "Rifle",
+      "Scepter",
+      "Shield",
+      "Speargun",
+      "Staff",
+      "Sword",
+      "Torch",
+      "Trident",
+      "Warhorn"
+    ],
+    "infusion_upgrade_flags": [],
+    "infix_upgrade": {
+      "buff": {
+        "skill_id": "22100",
+        "description": "+1 Agony Resistance"
+      },
+      "attributes": []
+    },
+    "suffix": ""
+  }
+}

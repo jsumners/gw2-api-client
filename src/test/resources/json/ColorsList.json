@@ -1,0 +1,204 @@
+{
+  "colors": {
+    "668": {
+      "name": "Pink Ice",
+      "base_rgb": [128,
+          26,
+          26
+      ],
+      "cloth": {
+          "brightness": 50,
+          "contrast": 1.36719,
+          "hue": 8,
+          "saturation": 0.351563,
+          "lightness": 1.36719,
+          "rgb": [216,
+              172,
+              164
+          ]
+      },
+      "leather": {
+          "brightness": 47,
+          "contrast": 1.71875,
+          "hue": 8,
+          "saturation": 0.234375,
+          "lightness": 1.71875,
+          "rgb": [207,
+              170,
+              163
+          ]
+      },
+      "metal": {
+          "brightness": 47,
+          "contrast": 1.64063,
+          "hue": 8,
+          "saturation": 0.429688,
+          "lightness": 1.48438,
+          "rgb": [211,
+              145,
+              134
+          ]
+      }
+    },
+    "657": {
+      "name": "Pastel Pink",
+      "base_rgb": [128,
+          26,
+          26
+      ],
+      "cloth": {
+          "brightness": 52,
+          "contrast": 1.40625,
+          "hue": 8,
+          "saturation": 0.585938,
+          "lightness": 1.40625,
+          "rgb": [247,
+              170,
+              157
+          ]
+      },
+      "leather": {
+          "brightness": 52,
+          "contrast": 1.40625,
+          "hue": 8,
+          "saturation": 0.546875,
+          "lightness": 1.40625,
+          "rgb": [243,
+              172,
+              159
+          ]
+      },
+      "metal": {
+          "brightness": 47,
+          "contrast": 1.5625,
+          "hue": 8,
+          "saturation": 0.546875,
+          "lightness": 1.40625,
+          "rgb": [220,
+              141,
+              126
+          ]
+      }
+    },
+    "699": {
+      "name": "Strawberry Breeze",
+      "base_rgb": [128,
+          26,
+          26
+      ],
+      "cloth": {
+          "brightness": 44,
+          "contrast": 1.17188,
+          "hue": 5,
+          "saturation": 0.78125,
+          "lightness": 1.32813,
+          "rgb": [243,
+              154,
+              145
+          ]
+      },
+      "leather": {
+          "brightness": 47,
+          "contrast": 1.36719,
+          "hue": 5,
+          "saturation": 0.585938,
+          "lightness": 1.40625,
+          "rgb": [235,
+              158,
+              150
+          ]
+      },
+      "metal": {
+          "brightness": 35,
+          "contrast": 1.48438,
+          "hue": 5,
+          "saturation": 0.585938,
+          "lightness": 1.40625,
+          "rgb": [195,
+              111,
+              102
+          ]
+      }
+    },
+    "669": {
+      "name": "Primrose",
+      "base_rgb": [128,
+          26,
+          26
+      ],
+      "cloth": {
+          "brightness": 37,
+          "contrast": 1.17188,
+          "hue": 5,
+          "saturation": 0.859375,
+          "lightness": 1.28906,
+          "rgb": [225,
+              128,
+              118
+          ]
+      },
+      "leather": {
+          "brightness": 37,
+          "contrast": 1.17188,
+          "hue": 5,
+          "saturation": 0.703125,
+          "lightness": 1.28906,
+          "rgb": [213,
+              133,
+              125
+          ]
+      },
+      "metal": {
+          "brightness": 32,
+          "contrast": 1.40625,
+          "hue": 5,
+          "saturation": 0.703125,
+          "lightness": 1.28906,
+          "rgb": [191,
+              95,
+              85
+          ]
+      }
+    },
+    "121": {
+      "name": "Pink",
+      "base_rgb": [128,
+          26,
+          26
+      ],
+      "cloth": {
+          "brightness": 27,
+          "contrast": 1.28906,
+          "hue": 355,
+          "saturation": 0.703125,
+          "lightness": 1.40625,
+          "rgb": [194,
+              97,
+              106
+          ]
+      },
+      "leather": {
+          "brightness": 32,
+          "contrast": 1.36719,
+          "hue": 355,
+          "saturation": 0.664063,
+          "lightness": 1.52344,
+          "rgb": [212,
+              115,
+              124
+          ]
+      },
+      "metal": {
+          "brightness": 22,
+          "contrast": 1.32813,
+          "hue": 355,
+          "saturation": 0.78125,
+          "lightness": 1.40625,
+          "rgb": [185,
+              74,
+              85
+          ]
+      }
+    }
+  }
+}

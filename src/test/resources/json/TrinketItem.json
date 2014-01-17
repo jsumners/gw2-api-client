@@ -1,0 +1,25 @@
+{
+  "item_id": "13500",
+  "name": "Opal Orichalcum Amulet of the Explorer",
+  "description": "",
+  "type": "Trinket",
+  "level": "80",
+  "rarity": "Exotic",
+  "vendor_value": "528",
+  "icon_file_id": "455602",
+  "icon_file_signature": "02E9EFDEF9587130A25F17AC396913FBBE3C716D",
+  "game_types": ["Activity",
+    "Dungeon",
+    "Pve",
+    "Wvw"
+  ],
+  "flags": ["AccountBound",
+    "SoulBindOnUse"
+  ],
+  "restrictions": [],
+  "trinket": {
+    "type": "Amulet",
+    "infusion_slots": [],
+    "suffix_item_id": "24545"
+  }
+}

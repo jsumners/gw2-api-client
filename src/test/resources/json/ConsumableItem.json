@@ -1,0 +1,22 @@
+{
+  "item_id": "10000",
+  "name": "Recipe: Satchel of Rejuvenating Masquerade Armor (Rare)",
+  "description": "Double-click to learn the Tailor recipe for Satchel of Rejuvenating Masquerade Armor (Rare)",
+  "type": "Consumable",
+  "level": "0",
+  "rarity": "Rare",
+  "vendor_value": "0",
+  "icon_file_id": "63127",
+  "icon_file_signature": "027D1D382447933D074BE45F405EA1F379471DEB",
+  "game_types": ["Dungeon",
+    "Pve",
+    "Wvw"
+  ],
+  "flags": ["NoSalvage"],
+  "restrictions": [],
+  "consumable": {
+    "type": "Unlock",
+    "unlock_type": "CraftingRecipe",
+    "recipe_id": "2756"
+  }
+}
