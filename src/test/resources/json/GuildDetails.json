@@ -1,0 +1,13 @@
+{
+  "guild_id": "1717E59C-A998-4F11-B33E-6DBF992282B2",
+  "guild_name": "Illustrious Chromatic Enigmas",
+  "tag": "ICE",
+  "emblem": {
+    "background_id": 23,
+    "foreground_id": 43,
+    "flags": [],
+    "background_color_id": 137,
+    "foreground_primary_color_id": 443,
+    "foreground_secondary_color_id": 9
+  }
+}
