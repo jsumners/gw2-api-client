@@ -5,11 +5,9 @@ import java.util.ArrayList;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.jrfom.gw2.annotations.Gw2ApiVersion;
 import com.jrfom.gw2.api.model.Coins;
 import com.jrfom.gw2.jackson.deserializers.ItemDeserializer;
-import com.jrfom.gw2.jackson.serializers.CoinsToValueSerializer;
 
 @JsonSubTypes({
   @JsonSubTypes.Type(value = ArmorItem.class)
@@ -24,7 +22,6 @@ public abstract class Item {
   private String type; // TODO: object-ify this
   private int level;
   private String rarity; // TODO: object-ify this
-  @JsonSerialize(using = CoinsToValueSerializer.class)
   @JsonProperty("vendor_value")
   private Coins vendorValue;
   @JsonProperty("icon_file_id")

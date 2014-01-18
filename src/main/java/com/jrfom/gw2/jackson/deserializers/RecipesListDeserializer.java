@@ -10,7 +10,7 @@ import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.jrfom.gw2.annotations.Gw2ApiVersion;
-import com.jrfom.gw2.api.model.RecipesList;
+import com.jrfom.gw2.api.model.crafting.RecipesList;
 
 @Gw2ApiVersion("v1")
 public class RecipesListDeserializer extends JsonDeserializer<RecipesList> {

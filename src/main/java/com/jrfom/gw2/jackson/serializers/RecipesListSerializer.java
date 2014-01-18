@@ -6,7 +6,7 @@ import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;
-import com.jrfom.gw2.api.model.RecipesList;
+import com.jrfom.gw2.api.model.crafting.RecipesList;
 
 public class RecipesListSerializer extends JsonSerializer<RecipesList> {
   @Override

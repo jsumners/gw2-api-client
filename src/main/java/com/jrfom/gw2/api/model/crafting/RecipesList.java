@@ -1,4 +1,4 @@
-package com.jrfom.gw2.api.model;
+package com.jrfom.gw2.api.model.crafting;
 
 import java.util.ArrayList;
 

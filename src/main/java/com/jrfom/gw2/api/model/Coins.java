@@ -1,5 +1,9 @@
 package com.jrfom.gw2.api.model;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.jrfom.gw2.jackson.serializers.CoinsToValueSerializer;
+
+@JsonSerialize(using = CoinsToValueSerializer.class)
 public class Coins {
   private double amount;
 
