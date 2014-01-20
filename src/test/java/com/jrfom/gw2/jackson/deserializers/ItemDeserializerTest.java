@@ -2,11 +2,8 @@ package com.jrfom.gw2.jackson.deserializers;
 
 import java.io.IOException;
 
-import com.fasterxml.jackson.core.Version;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.jrfom.gw2.api.model.items.*;
-import org.junit.Before;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,19 +13,7 @@ import static org.junit.Assert.assertTrue;
 public class ItemDeserializerTest {
   private static final Logger log = LoggerFactory.getLogger(ItemDeserializerTest.class);
 
-  private ObjectMapper mapper;
-
-  @Before
-  public void setup() {
-    ItemDeserializer deserializer = new ItemDeserializer();
-    this.mapper = new ObjectMapper();
-    SimpleModule simpleModule = new SimpleModule(
-      "my_module",
-      new Version(1, 0, 0, null, "com.jrfom", "foo")
-    );
-    simpleModule.addDeserializer(Item.class, deserializer);
-    mapper.registerModule(simpleModule);
-  }
+  private ObjectMapper mapper = new ObjectMapper();
 
   @Test
   public void testWeaponDeserialization() throws IOException {

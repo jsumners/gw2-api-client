@@ -2,9 +2,7 @@ package com.jrfom.gw2.jackson.deserializers;
 
 import java.io.IOException;
 
-import com.fasterxml.jackson.core.Version;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.google.common.base.Optional;
 import com.jrfom.gw2.api.model.colors.Color;
 import com.jrfom.gw2.api.model.colors.ColorsList;
@@ -39,15 +37,7 @@ public class ColorsListDeserializerTest {
 
   @Test
   public void test() throws IOException {
-    ColorsListDeserializer deserializer = new ColorsListDeserializer();
     ObjectMapper mapper = new ObjectMapper();
-    SimpleModule simpleModule = new SimpleModule(
-      "my_module",
-      new Version(1, 0, 0, null, "com.jrfom", "foo")
-    );
-    simpleModule.addDeserializer(ColorsList.class, deserializer);
-    mapper.registerModule(simpleModule);
-
     ColorsList colorsList = mapper.readValue(
       this.getClass().getResourceAsStream("/json/ColorsList.json"),
       ColorsList.class

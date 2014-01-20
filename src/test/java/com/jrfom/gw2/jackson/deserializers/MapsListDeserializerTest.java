@@ -2,9 +2,7 @@ package com.jrfom.gw2.jackson.deserializers;
 
 import java.io.IOException;
 
-import com.fasterxml.jackson.core.Version;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.google.common.base.Optional;
 import com.jrfom.gw2.api.model.geography.Map;
 import com.jrfom.gw2.api.model.geography.MapsList;
@@ -20,15 +18,7 @@ public class MapsListDeserializerTest {
   @Test
   public void test() throws IOException {
     log.info("Running test for MapsList custom deserializer");
-    MapsListDeserializer deserializer = new MapsListDeserializer();
     ObjectMapper mapper = new ObjectMapper();
-    SimpleModule simpleModule = new SimpleModule(
-      "my_module",
-      new Version(1, 0, 0, null, "com.jrfom", "foo")
-    );
-    simpleModule.addDeserializer(MapsList.class, deserializer);
-    mapper.registerModule(simpleModule);
-
     MapsList mapsList = mapper.readValue(
       this.getClass().getResourceAsStream("/json/MapsList.json"),
       MapsList.class
