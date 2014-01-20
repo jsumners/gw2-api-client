@@ -1,4 +1,4 @@
-package com.jrfom.gw2.api.model.events;
+package com.jrfom.gw2.api.model;
 
 import java.util.ArrayList;
 
