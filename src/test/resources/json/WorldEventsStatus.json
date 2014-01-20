@@ -1,0 +1,32 @@
+{"events": [
+  {
+    "world_id": 1001,
+    "map_id": 39,
+    "event_id": "40B2CE06-F55B-41E5-BEEC-E5AEA1A1BC81",
+    "state": "Active"
+  },
+  {
+    "world_id": 1001,
+    "map_id": 39,
+    "event_id": "BC6495A4-6CE9-4E12-A26F-6BDF8CFA74D6",
+    "state": "Preparation"
+  },
+  {
+    "world_id": 1009,
+    "map_id": 39,
+    "event_id": "598CF3BD-0DF4-4FC7-97EA-AB4515497F5E",
+    "state": "Preparation"
+  },
+  {
+    "world_id": 1009,
+    "map_id": 39,
+    "event_id": "3ED4FEB4-A976-4597-94E8-8BFD9053522F",
+    "state": "Warmup"
+  },
+  {
+    "world_id": 1011,
+    "map_id": 40,
+    "event_id": "A7E0F553-C4E1-452F-B39F-7BDBEC8B0BB1",
+    "state": "Success"
+  }
+]}
