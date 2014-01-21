@@ -1,0 +1,370 @@
+{"match_id": "1-4",
+  "scores": [84925,
+  89164,
+  184617],
+  "maps": [
+  {
+    "type": "RedHome",
+    "scores": [34359,
+      12337,
+      29238],
+    "objectives": [
+      {
+        "id": 32,
+        "owner": "Red"
+      },
+      {
+        "id": 33,
+        "owner": "Red"
+      },
+      {
+        "id": 34,
+        "owner": "Blue"
+      },
+      {
+        "id": 35,
+        "owner": "Blue"
+      },
+      {
+        "id": 36,
+        "owner": "Green"
+      },
+      {
+        "id": 37,
+        "owner": "Red"
+      },
+      {
+        "id": 38,
+        "owner": "Red",
+        "owner_guild": "B414DD70-D99D-4233-BBFF-265EC8DD6782"
+      },
+      {
+        "id": 39,
+        "owner": "Green"
+      },
+      {
+        "id": 40,
+        "owner": "Red"
+      },
+      {
+        "id": 50,
+        "owner": "Blue"
+      },
+      {
+        "id": 51,
+        "owner": "Green"
+      },
+      {
+        "id": 52,
+        "owner": "Green"
+      },
+      {
+        "id": 53,
+        "owner": "Green"
+      },
+      {
+        "id": 62,
+        "owner": "Neutral"
+      },
+      {
+        "id": 63,
+        "owner": "Neutral"
+      },
+      {
+        "id": 64,
+        "owner": "Neutral"
+      },
+      {
+        "id": 65,
+        "owner": "Neutral"
+      },
+      {
+        "id": 66,
+        "owner": "Neutral"
+      }
+    ],
+    "bonuses": [
+      {
+        "type": "bloodlust",
+        "owner": "Red"
+      }
+    ]
+  },
+  {
+    "type": "GreenHome",
+    "scores": [10724,
+      10108,
+      54782],
+    "objectives": [
+      {
+        "id": 41,
+        "owner": "Green",
+        "owner_guild": "EEC669B3-CA87-4CF2-ADD7-9DFEDF372914"
+      },
+      {
+        "id": 42,
+        "owner": "Green"
+      },
+      {
+        "id": 43,
+        "owner": "Green"
+      },
+      {
+        "id": 44,
+        "owner": "Green"
+      },
+      {
+        "id": 45,
+        "owner": "Blue"
+      },
+      {
+        "id": 46,
+        "owner": "Green",
+        "owner_guild": "F40FE319-3B68-4936-B0D7-785AFF339B1B"
+      },
+      {
+        "id": 47,
+        "owner": "Green"
+      },
+      {
+        "id": 48,
+        "owner": "Green"
+      },
+      {
+        "id": 49,
+        "owner": "Green"
+      },
+      {
+        "id": 54,
+        "owner": "Green"
+      },
+      {
+        "id": 55,
+        "owner": "Green"
+      },
+      {
+        "id": 56,
+        "owner": "Green"
+      },
+      {
+        "id": 57,
+        "owner": "Green"
+      },
+      {
+        "id": 72,
+        "owner": "Neutral"
+      },
+      {
+        "id": 73,
+        "owner": "Neutral"
+      },
+      {
+        "id": 74,
+        "owner": "Neutral"
+      },
+      {
+        "id": 75,
+        "owner": "Neutral"
+      },
+      {
+        "id": 76,
+        "owner": "Neutral"
+      }
+    ],
+    "bonuses": [
+      {
+        "type": "bloodlust",
+        "owner": "Green"
+      }
+    ]
+  },
+  {
+    "type": "BlueHome",
+    "scores": [11347,
+      37744,
+      27302],
+    "objectives": [
+      {
+        "id": 23,
+        "owner": "Blue",
+        "owner_guild": "6CDD99E8-0E4A-4DB1-BEC9-30B6B3A34F8B"
+      },
+      {
+        "id": 24,
+        "owner": "Blue"
+      },
+      {
+        "id": 25,
+        "owner": "Blue"
+      },
+      {
+        "id": 26,
+        "owner": "Blue"
+      },
+      {
+        "id": 27,
+        "owner": "Blue"
+      },
+      {
+        "id": 28,
+        "owner": "Blue"
+      },
+      {
+        "id": 29,
+        "owner": "Blue"
+      },
+      {
+        "id": 30,
+        "owner": "Blue"
+      },
+      {
+        "id": 31,
+        "owner": "Blue"
+      },
+      {
+        "id": 58,
+        "owner": "Blue"
+      },
+      {
+        "id": 59,
+        "owner": "Green"
+      },
+      {
+        "id": 60,
+        "owner": "Blue"
+      },
+      {
+        "id": 61,
+        "owner": "Blue"
+      },
+      {
+        "id": 67,
+        "owner": "Neutral"
+      },
+      {
+        "id": 68,
+        "owner": "Neutral"
+      },
+      {
+        "id": 69,
+        "owner": "Neutral"
+      },
+      {
+        "id": 70,
+        "owner": "Neutral"
+      },
+      {
+        "id": 71,
+        "owner": "Neutral"
+      }
+    ],
+    "bonuses": [
+      {
+        "type": "bloodlust",
+        "owner": "Blue"
+      }
+    ]
+  },
+  {
+    "type": "Center",
+    "scores": [28495,
+      28975,
+      73295],
+    "objectives": [
+      {
+        "id": 1,
+        "owner": "Red",
+        "owner_guild": "B414DD70-D99D-4233-BBFF-265EC8DD6782"
+      },
+      {
+        "id": 2,
+        "owner": "Blue"
+      },
+      {
+        "id": 3,
+        "owner": "Green",
+        "owner_guild": "7C0CF3B5-C87C-44A6-A104-37A7D82F61A1"
+      },
+      {
+        "id": 4,
+        "owner": "Green"
+      },
+      {
+        "id": 5,
+        "owner": "Red"
+      },
+      {
+        "id": 6,
+        "owner": "Red"
+      },
+      {
+        "id": 7,
+        "owner": "Blue"
+      },
+      {
+        "id": 8,
+        "owner": "Red"
+      },
+      {
+        "id": 9,
+        "owner": "Blue"
+      },
+      {
+        "id": 10,
+        "owner": "Red"
+      },
+      {
+        "id": 11,
+        "owner": "Green"
+      },
+      {
+        "id": 12,
+        "owner": "Red"
+      },
+      {
+        "id": 13,
+        "owner": "Green",
+        "owner_guild": "AA3452FF-03E2-4CBD-8E95-6CC7657732A7"
+      },
+      {
+        "id": 14,
+        "owner": "Blue"
+      },
+      {
+        "id": 15,
+        "owner": "Blue"
+      },
+      {
+        "id": 16,
+        "owner": "Blue"
+      },
+      {
+        "id": 17,
+        "owner": "Red"
+      },
+      {
+        "id": 18,
+        "owner": "Red"
+      },
+      {
+        "id": 19,
+        "owner": "Red",
+        "owner_guild": "5F4D2084-3896-4AFA-8ADA-E6FBF36C445D"
+      },
+      {
+        "id": 20,
+        "owner": "Red",
+        "owner_guild": "0F04B7DE-34DF-4F41-9583-BE99C3900475"
+      },
+      {
+        "id": 21,
+        "owner": "Blue"
+      },
+      {
+        "id": 22,
+        "owner": "Blue"
+      }
+    ],
+    "bonuses": []
+  }
+]}
