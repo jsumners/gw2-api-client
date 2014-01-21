@@ -11,17 +11,19 @@ import com.jrfom.gw2.annotations.Gw2ApiVersion;
 @Gw2ApiVersion("v1")
 public class Build {
   @JsonProperty("build_id")
-  private String buildId;
+  private int buildId;
 
-  public Build(String buildId) {
+  public Build() {}
+
+  public Build(int buildId) {
     this.buildId = buildId;
   }
 
-  public String getBuildId() {
+  public int getBuildId() {
     return this.buildId;
   }
 
-  public void setBuildId(String buildId) {
+  public void setBuildId(int buildId) {
     this.buildId = buildId;
   }
 }
