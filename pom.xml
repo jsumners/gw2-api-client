@@ -19,6 +19,7 @@
     <logback.version>1.0.13</logback.version>
     <restlet.version>2.1.6</restlet.version>
     <slf4j.version>1.7.5</slf4j.version>
+    <threeten.version>0.8.1</threeten.version>
   </properties>
 
   <dependencies>
@@ -76,6 +77,12 @@
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
       <version>${slf4j.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.threeten</groupId>
+      <artifactId>threetenbp</artifactId>
+      <version>${threeten.version}</version>
     </dependency>
   </dependencies>
 
