@@ -10,6 +10,7 @@ import com.jrfom.gw2.api.model.GwApiError;
 import com.jrfom.gw2.api.model.colors.ColorsList;
 import com.jrfom.gw2.api.model.events.EventDetails;
 import com.jrfom.gw2.api.model.events.EventNamesList;
+import com.jrfom.gw2.api.model.events.WorldEventsStatusList;
 import com.jrfom.gw2.api.model.geography.Continents;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -255,5 +256,180 @@ public class ApiClient extends RestTemplate {
     }
 
     return this.getForObject(this.baseUrl + url, EventNamesList.class, lang);
+  }
+
+  /**
+   * <p>Retrieve a list of event statuses. See
+   * {@link com.jrfom.gw2.ApiClient#getEventStatusesForWorldAndMapAndEvent(int, int, String)}
+   * for full details.</p>
+   *
+   * <p><strong>Important:</strong> this method literally returns all possible
+   * event statuses across all game worlds and game maps. It is extremely
+   * unlikely that you want this, and it is a very slow process. You should
+   * really use one of the narrower methods for getting event statuses.</p>
+   *
+   * @return A list of all possible statuses.
+   */
+  public WorldEventsStatusList getEventStatuses() {
+    return this.getEventStatusesForWorldAndMapAndEvent(-1, -1, null);
+  }
+
+  /**
+   * <p>Retrieve a list of event statuses. See
+   * {@link com.jrfom.gw2.ApiClient#getEventStatusesForWorldAndMapAndEvent(int, int, String)}
+   * for full details.</p>
+   *
+   * <p>The result of this method will be a list that is constrained to only
+   * one world. It will be all events for that world across all game maps.</p>
+   *
+   * @param worldId A valid world id or {@code -1} for all worlds.
+   *
+   * @return Either a list of statuses or an empty list.
+   */
+  public WorldEventsStatusList getEventStatusesForWorld(int worldId) {
+    return this.getEventStatusesForWorldAndMapAndEvent(worldId, -1, null);
+  }
+
+  /**
+   * <p>Retrieve a list of event statuses. See
+   * {@link com.jrfom.gw2.ApiClient#getEventStatusesForWorldAndMapAndEvent(int, int, String)}
+   * for full details.</p>
+   *
+   * <p>The result of this method will be list that is constrained to only
+   * a certain game map. The list will consists of all events in that map
+   * <em>for all game worlds</em>.</p>
+   *
+   * @param mapId A valid map id or {@code -1} for all maps.
+   *
+   * @return Either a list of statuses or an empty list.
+   */
+  public WorldEventsStatusList getEventStatusesForMap(int mapId) {
+    return this.getEventStatusesForWorldAndMapAndEvent(-1, mapId, null);
+  }
+
+  /**
+   * <p>Retrieve a list of event statuses. See
+   * {@link com.jrfom.gw2.ApiClient#getEventStatusesForWorldAndMapAndEvent(int, int, String)}
+   * for full details.</p>
+   *
+   * <p>The result of this method will be a list that is constrained to a
+   * specific map on a specific world. Thus, this should be a fast response.</p>
+   *
+   * @param worldId A valid world id or {@code -1} for all worlds.
+   * @param mapId A valid map id or {@code -1} for all maps.
+   *
+   * @return Either a list of statuses or an empty list.
+   */
+  public WorldEventsStatusList getEventStatusesForWorldAndMap(int worldId, int mapId) {
+    return this.getEventStatusesForWorldAndMapAndEvent(worldId, mapId, null);
+  }
+
+  /**
+   * <p>Retrieve a list of event statuses. See
+   * {@link com.jrfom.gw2.ApiClient#getEventStatusesForWorldAndMapAndEvent(int, int, String)}
+   * for full details.</p>
+   *
+   * <p>The result of this method will be a list of event statuses for a single
+   * event across <em>all</em> game worlds and, potentially, all game maps.</p>
+   *
+   * @param eventId A valid event identifier.
+   *                See {@link com.jrfom.gw2.ApiClient#getEventNamesForLang(String)}
+   *                for a way to get a list of valid identifiers.
+   *
+   * @return A list of statuses for the given {@code eventId} or a list of all
+   * possible event statuses if the {@code eventId} is invalid. Hint: use a
+   * valid event identifier. You don't want the full list.
+   */
+  public WorldEventsStatusList getEventStatusesForEvent(String eventId) {
+    return this.getEventStatusesForWorldAndMapAndEvent(-1, -1, eventId);
+  }
+
+  /**
+   * <p>Retrieve a list of event statuses. See
+   * {@link com.jrfom.gw2.ApiClient#getEventStatusesForWorldAndMapAndEvent(int, int, String)}
+   * for full details.</p>
+   *
+   * <p>The result of this method will be a list that is constrained to a
+   * specific game world, but will contain all events with the given event
+   * identifier.</p>
+   *
+   * @param worldId A valid world id or {@code -1} for all worlds.
+   * @param eventId A valid event identifier.
+   *                See {@link com.jrfom.gw2.ApiClient#getEventNamesForLang(String)}
+   *                for a way to get a list of valid identifiers.
+   *
+   * @return Either a list of statuses or an empty list.
+   */
+  public WorldEventsStatusList getEventStatusesForWorldAndEvent(int worldId, String eventId) {
+    return this.getEventStatusesForWorldAndMapAndEvent(worldId, -1, eventId);
+  }
+
+  /**
+   * <p>Retrieve a list of event statuses. See
+   * {@link com.jrfom.gw2.ApiClient#getEventStatusesForWorldAndMapAndEvent(int, int, String)}
+   * for full details.</p>
+   *
+   * <p>The result of this method will be list of event statuses that are
+   * constrained to a specific game map but across <em>all game worlds</em>.</p>
+   *
+   * @param mapId A valid map id or {@code -1} for all maps.
+   * @param eventId A valid event identifier.
+   *                See {@link com.jrfom.gw2.ApiClient#getEventNamesForLang(String)}
+   *                for a way to get a list of valid identifiers.
+   *
+   * @return Either a list of statuses or an empty list.
+   */
+  public WorldEventsStatusList getEventStatusesForMapAndEvent(int mapId, String eventId) {
+    return this.getEventStatusesForWorldAndMapAndEvent(-1, mapId, eventId);
+  }
+
+  /**
+   * <p>Retrieve a list of event statuses from
+   * <a href="http://wiki.guildwars2.com/wiki/API:1/events">/v1/events</a>. This
+   * list can be filtered by any combination of the method parameters.</p>
+   *
+   * <p><strong>Note:</strong> if you give any parameter that is invalid, no
+   * error will be returned by the remote API. If either the {@code worldId}
+   * or {@code mapId} are incorrect then an empty list will be returned. If
+   * the only invalid parameter is the {@code eventId} then it will be ignore.
+   * If the only given parameter is the {@code eventId}, that is {@code worldId}
+   * and {@code mapId} are {@code -1}, then the whole list of events for every
+   * world and map will be retrieved.</p>
+   *
+   * @param worldId A valid world id or {@code -1} for all worlds.
+   * @param mapId A valid map id or {@code -1} for all maps.
+   * @param eventId A valid event identifier.
+   *                See {@link com.jrfom.gw2.ApiClient#getEventNamesForLang(String)}
+   *                for a way to get a list of valid identifiers.
+   *
+   * @return Either a list of statuses or an empty list.
+   */
+  public WorldEventsStatusList getEventStatusesForWorldAndMapAndEvent(int worldId, int mapId, String eventId) {
+    log.debug(
+      "Attempting to get event statuses with [world: `{}`, map: `{}`, event: `{}]",
+      worldId,
+      mapId,
+      eventId
+    );
+
+    HashMap<String, String> params = new HashMap<>(0);
+    String url = "events.json";
+
+    if (worldId != -1) {
+      url = url + "?world_id={world_id}";
+      params.put("world_id", worldId + "");
+    }
+
+    if (mapId != -1) {
+      url = url + ((url.indexOf("?") != -1) ? "&map_id={map_id}" : "?map_id={map_id}");
+      params.put("map_id", mapId + "");
+    }
+
+    if (eventId != null) {
+      url = url + ((url.indexOf("?") != -1) ? "&event_id={event_id}" : "?event_id={event_id}");
+      params.put("event_id", eventId);
+    }
+
+    return this.getForObject(this.baseUrl + url, WorldEventsStatusList.class, params);
   }
 }
