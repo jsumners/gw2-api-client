@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 
 import com.jrfom.gw2.api.model.Build;
 import com.jrfom.gw2.api.model.colors.ColorsList;
+import com.jrfom.gw2.api.model.geography.Continents;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -77,6 +78,17 @@ public class ApiClientTest {
     assertTrue(list.size() == 5);
     assertTrue(list.get(0).getColorId() == 668);
     assertTrue(list.get(0).getName().equals("Pink Ice"));
+  }
+
+  @Test
+  public void testContinents() throws IOException {
+    log.info("Running ApiClient.getContinents() test");
+    String expectedResponse = this.loadExpectedResponse("/json/Continents.json");
+    this.setupMockServerSuccess("continents.json", expectedResponse);
+
+    Continents continents = this.apiClient.getContinents();
+    assertTrue(continents.size() == 2);
+    assertTrue(continents.getContinentWithName("Tyria").isPresent());
   }
 
   private String loadExpectedResponse(String reponseFile) throws IOException {

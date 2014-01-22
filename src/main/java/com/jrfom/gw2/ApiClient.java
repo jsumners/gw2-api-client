@@ -2,6 +2,7 @@ package com.jrfom.gw2;
 
 import com.jrfom.gw2.api.model.Build;
 import com.jrfom.gw2.api.model.colors.ColorsList;
+import com.jrfom.gw2.api.model.geography.Continents;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -65,5 +66,17 @@ public class ApiClient extends RestTemplate {
     }
 
     return this.getForObject(this.baseUrl + url, ColorsList.class, lang);
+  }
+
+  /**
+   * Retrieve the list of continents. See
+   * <a href="http://wiki.guildwars2.com/wiki/API:1/continents">API:1/continents</a>
+   * for more information.
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.geography.Continents}.
+   */
+  public Continents getContinents() {
+    log.debug("Attempting to get continents");
+    return this.getForObject(this.baseUrl + "continents.json", Continents.class);
   }
 }
