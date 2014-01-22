@@ -6,6 +6,10 @@ import com.jrfom.gw2.annotations.Gw2ApiVersion;
 import com.jrfom.gw2.jackson.deserializers.EventCenterCoordinateDeserializer;
 import com.jrfom.gw2.jackson.serializers.EventCenterCoordinateSerializer;
 
+/**
+ * Represents a three-dimensional point in game space that is the center point
+ * of an {@link com.jrfom.gw2.api.model.events.Event}.
+ */
 @JsonDeserialize(using = EventCenterCoordinateDeserializer.class)
 @JsonSerialize(using = EventCenterCoordinateSerializer.class)
 @Gw2ApiVersion("v1")

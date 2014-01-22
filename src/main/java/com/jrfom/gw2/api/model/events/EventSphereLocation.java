@@ -4,6 +4,11 @@ import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.jrfom.gw2.annotations.Gw2ApiVersion;
 
+/**
+ * Represents an {@link com.jrfom.gw2.api.model.events.Event}
+ * {@link com.jrfom.gw2.api.model.events.Location} that is described by
+ * a sphere.
+ */
 @JsonDeserialize(using = JsonDeserializer.None.class)
 @Gw2ApiVersion("v1")
 public class EventSphereLocation extends EventLocation {
@@ -14,6 +19,9 @@ public class EventSphereLocation extends EventLocation {
     this.setType("sphere");
   }
 
+  /**
+   * {@inheritDoc}
+   */
   public Double getRadius() {
     return this.radius;
   }
@@ -22,6 +30,11 @@ public class EventSphereLocation extends EventLocation {
     this.radius = radius;
   }
 
+  /**
+   * The degree(?) rotation of the sphere.
+   *
+   * @return The rotation as returned by the remote API.
+   */
   public Double getRotation() {
     return this.rotation;
   }

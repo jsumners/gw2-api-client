@@ -4,6 +4,11 @@ import java.util.ArrayList;
 
 import com.jrfom.gw2.annotations.Gw2ApiVersion;
 
+/**
+ * A generic implementation of {@link com.jrfom.gw2.api.model.events.EventLocation}
+ * to be used during deserialization and serialization. This has no purpose
+ * outside of the API modeling.
+ */
 @Gw2ApiVersion("v2")
 public class EventLocation implements Location {
   private String type;

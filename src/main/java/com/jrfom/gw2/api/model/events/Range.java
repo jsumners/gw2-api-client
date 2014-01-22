@@ -7,6 +7,11 @@ import com.jrfom.gw2.annotations.Gw2ApiVersion;
 import com.jrfom.gw2.jackson.deserializers.RangeDeserializer;
 import com.jrfom.gw2.jackson.serializers.RangeSerializer;
 
+/**
+ * Represents a pair of numbers that define a range in the z-plane. This is
+ * used by the {@link com.jrfom.gw2.api.model.events.EventPolyLocation}
+ * {@link com.jrfom.gw2.api.model.events.Location} type.
+ */
 @JsonDeserialize(using = RangeDeserializer.class)
 @JsonSerialize(using = RangeSerializer.class)
 @JsonSubTypes({@JsonSubTypes.Type(Point.class)})
