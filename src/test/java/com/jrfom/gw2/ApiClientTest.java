@@ -6,6 +6,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 import com.jrfom.gw2.api.model.Build;
+import com.jrfom.gw2.api.model.colors.ColorsList;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -45,13 +46,37 @@ public class ApiClientTest {
   @Test
   public void testBuild() throws IOException {
     log.info("Running ApiClient.getBuild() test");
-    String expectedReponse = this.loadExpectedResponse("/json/Build.json");
-    this.mockServer.expect(requestTo(this.apiClient.getBaseUrl() + "build.json"))
-      .andExpect(method(HttpMethod.GET))
-      .andRespond(withSuccess(expectedReponse, MediaType.APPLICATION_JSON));
+    String expectedResponse = this.loadExpectedResponse("/json/Build.json");
+    this.setupMockServerSuccess("build.json", expectedResponse);
 
     Build build = this.apiClient.getBuild();
     assertTrue(build.getBuildId() == 22120);
+  }
+
+  @Test
+  public void testColors() throws IOException {
+    log.info("Running ApiClient.getColors() test");
+    String expectedResponse = this.loadExpectedResponse("/json/ColorsList.json");
+    this.setupMockServerSuccess("colors.json", expectedResponse);
+
+    ColorsList list = this.apiClient.getColors();
+    assertTrue(list.size() == 5);
+    assertTrue(list.get(0).getColorId() == 668);
+    assertTrue(list.get(0).getName().equals("Pink Ice"));
+
+
+  }
+
+  @Test
+  public void testColorsWithParam() throws IOException {
+    log.info("Running ApiClient.getColors(lang) test");
+    String expectedResponse = this.loadExpectedResponse("/json/ColorsList.json");
+    this.setupMockServerSuccess("colors.json?lang=en", expectedResponse);
+
+    ColorsList list = this.apiClient.getColors("en");
+    assertTrue(list.size() == 5);
+    assertTrue(list.get(0).getColorId() == 668);
+    assertTrue(list.get(0).getName().equals("Pink Ice"));
   }
 
   private String loadExpectedResponse(String reponseFile) throws IOException {
@@ -70,6 +95,12 @@ public class ApiClientTest {
     } while (readBytes != -1);
 
     return stringBuilder.toString();
+  }
+
+  private void setupMockServerSuccess(String dest, String expectedResponse) {
+    this.mockServer.expect(requestTo(this.apiClient.getBaseUrl() + dest))
+      .andExpect(method(HttpMethod.GET))
+      .andRespond(withSuccess(expectedResponse, MediaType.APPLICATION_JSON));
   }
 }
 
