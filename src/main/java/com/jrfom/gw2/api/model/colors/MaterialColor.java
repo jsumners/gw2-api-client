@@ -1,5 +1,14 @@
 package com.jrfom.gw2.api.model.colors;
 
+import com.jrfom.gw2.annotations.Gw2ApiVersion;
+
+/**
+ * <p>Represents an {@link com.jrfom.gw2.api.model.colors.Color} after it has
+ * been applied to an in-game material ("cloth", "leather", or "metal"). See
+ * <a href="http://wiki.guildwars2.com/wiki/API:1/colors">/v1/colors</a> for
+ * more information.
+ */
+@Gw2ApiVersion("v1")
 public class MaterialColor {
   int brightness;
   double contrast;
