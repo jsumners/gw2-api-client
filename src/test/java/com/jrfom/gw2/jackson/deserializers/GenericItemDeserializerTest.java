@@ -10,8 +10,8 @@ import org.slf4j.LoggerFactory;
 
 import static org.junit.Assert.assertTrue;
 
-public class ItemDeserializerTest {
-  private static final Logger log = LoggerFactory.getLogger(ItemDeserializerTest.class);
+public class GenericItemDeserializerTest {
+  private static final Logger log = LoggerFactory.getLogger(GenericItemDeserializerTest.class);
 
   private ObjectMapper mapper = new ObjectMapper();
 

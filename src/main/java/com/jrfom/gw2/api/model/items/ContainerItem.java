@@ -12,7 +12,7 @@ import com.jrfom.gw2.annotations.Gw2ApiVersion;
 )
 @JsonDeserialize(using = JsonDeserializer.None.class)
 @Gw2ApiVersion("v1")
-public class ContainerItem extends Item {
+public class ContainerItem extends GenericItem {
   private ContainerItemProperties container;
 
   public ContainerItem() {}

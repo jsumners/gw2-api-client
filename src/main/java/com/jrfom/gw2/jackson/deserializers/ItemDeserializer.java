@@ -13,8 +13,8 @@ import com.jrfom.gw2.annotations.Gw2ApiVersion;
 import com.jrfom.gw2.api.model.items.*;
 
 @Gw2ApiVersion("v1")
-public class ItemDeserializer extends JsonDeserializer<Item> {
-  private HashMap<String, Class<? extends Item>> classRegistry;
+public class ItemDeserializer extends JsonDeserializer<GenericItem> {
+  private HashMap<String, Class<? extends GenericItem>> classRegistry;
 
   public ItemDeserializer() {
     this.classRegistry = new HashMap<>(11);
@@ -32,7 +32,7 @@ public class ItemDeserializer extends JsonDeserializer<Item> {
   }
 
   @Override
-  public Item deserialize(JsonParser jp, DeserializationContext ctxt)
+  public GenericItem deserialize(JsonParser jp, DeserializationContext ctxt)
     throws IOException, JsonProcessingException
   {
     ObjectCodec codec = jp.getCodec();

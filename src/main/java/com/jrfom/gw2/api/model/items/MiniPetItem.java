@@ -12,5 +12,5 @@ import com.jrfom.gw2.annotations.Gw2ApiVersion;
 )
 @JsonDeserialize(using = JsonDeserializer.None.class)
 @Gw2ApiVersion("v1")
-public class MiniPetItem extends Item {
+public class MiniPetItem extends GenericItem {
 }

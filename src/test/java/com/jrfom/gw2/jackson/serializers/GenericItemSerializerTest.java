@@ -12,8 +12,8 @@ import org.slf4j.LoggerFactory;
 
 import static org.junit.Assert.assertTrue;
 
-public class ItemSerializerTest {
-  private static final Logger log = LoggerFactory.getLogger(ItemSerializerTest.class);
+public class GenericItemSerializerTest {
+  private static final Logger log = LoggerFactory.getLogger(GenericItemSerializerTest.class);
 
   private ObjectMapper mapper;
 
@@ -99,7 +99,7 @@ public class ItemSerializerTest {
 
     CraftingMaterialItem item2 = this.mapper.readValue(json, CraftingMaterialItem.class);
     assertTrue(item.getType().equals(item2.getType()));
-    assertTrue(item.getItemId() == item2.getItemId());
+    assertTrue(item.getItemId().equals(item2.getItemId()));
   }
 
   @Test
@@ -131,7 +131,7 @@ public class ItemSerializerTest {
 
     MiniPetItem item2 = this.mapper.readValue(json, MiniPetItem.class);
     assertTrue(item.getType().equals(item2.getType()));
-    assertTrue(item.getItemId() == item2.getItemId());
+    assertTrue(item.getItemId().equals(item2.getItemId()));
   }
 
   @Test
@@ -163,7 +163,7 @@ public class ItemSerializerTest {
 
     TrophyItem item2 = this.mapper.readValue(json, TrophyItem.class);
     assertTrue(item.getType().equals(item2.getType()));
-    assertTrue(item.getItemId() == item2.getItemId());
+    assertTrue(item.getItemId().equals(item2.getItemId()));
   }
 
   @Test

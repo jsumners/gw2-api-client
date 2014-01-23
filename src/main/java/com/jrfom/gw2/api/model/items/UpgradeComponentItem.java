@@ -13,7 +13,7 @@ import com.jrfom.gw2.annotations.Gw2ApiVersion;
 )
 @JsonDeserialize(using = JsonDeserializer.None.class)
 @Gw2ApiVersion("v2")
-public class UpgradeComponentItem extends Item {
+public class UpgradeComponentItem extends GenericItem {
   @JsonProperty("upgrade_component")
   private UpgradeComponentItemProperties upgradeComponent;
 

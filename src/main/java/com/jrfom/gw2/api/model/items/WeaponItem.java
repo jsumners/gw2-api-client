@@ -10,7 +10,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
   property = "weapon"
 )
 @JsonDeserialize(using = JsonDeserializer.None.class)
-public class WeaponItem extends Item {
+public class WeaponItem extends GenericItem {
   private WeaponItemProperties weapon;
 
   public WeaponItemProperties getWeapon() {
