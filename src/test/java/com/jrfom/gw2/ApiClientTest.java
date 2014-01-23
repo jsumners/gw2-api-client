@@ -11,6 +11,7 @@ import com.jrfom.gw2.api.model.GwApiError;
 import com.jrfom.gw2.api.model.colors.ColorsList;
 import com.jrfom.gw2.api.model.events.EventDetails;
 import com.jrfom.gw2.api.model.events.EventNamesList;
+import com.jrfom.gw2.api.model.events.WorldEventsStatusList;
 import com.jrfom.gw2.api.model.geography.Continents;
 import org.junit.Before;
 import org.junit.Test;
@@ -205,6 +206,126 @@ public class ApiClientTest {
     assertTrue(list.get(0).getId().equals("AD31D52F-C650-473D-8637-5792868828D7"));
   }
 
+  /*~~~~ Begin tests for Event Statuses ~~~~*/
+  @Test
+  public void testEventStatuses() throws IOException {
+    log.info("Running ApiClient.getEventStatuses() test");
+    String expectedResponse = this.loadExpectedResponse("/json/WorldEventsStatus.json");
+    this.setupMockServerSuccess("events.json", expectedResponse);
+
+    WorldEventsStatusList list = this.apiClient.getEventStatuses();
+    assertTrue(list.size() == 5);
+    assertTrue(list.get(0).getWorldId() == 1001);
+    assertTrue(list.get(0).getMapId() == 39);
+    assertTrue(list.get(0).getState().equals("Active"));
+  }
+
+  @Test
+  public void testEventStatusesForWorld() throws IOException {
+    log.info("Running ApiClient.getEventStatusesForWorld(worldId) test");
+    String expectedResponse = this.loadExpectedResponse("/json/event-statuses/World.json");
+    this.setupMockServerSuccess("events.json?world_id=1011", expectedResponse);
+
+    WorldEventsStatusList list = this.apiClient.getEventStatusesForWorld(1011);
+    assertTrue(list.size() == 1);
+    assertTrue(list.get(0).getWorldId() == 1011);
+    assertTrue(list.get(0).getMapId() == 40);
+    assertTrue(list.get(0).getState().equals("Success"));
+  }
+
+  @Test
+  public void testEventStatusesForMap() throws IOException {
+    log.info("Running ApiClient.getEventStatusesForMap(mapId) test");
+    String expectedResponse = this.loadExpectedResponse("/json/event-statuses/Map.json");
+    this.setupMockServerSuccess("events.json?map_id=40", expectedResponse);
+
+    WorldEventsStatusList list = this.apiClient.getEventStatusesForMap(40);
+    assertTrue(list.size() == 1);
+    assertTrue(list.get(0).getWorldId() == 1011);
+    assertTrue(list.get(0).getMapId() == 40);
+    assertTrue(list.get(0).getState().equals("Success"));
+  }
+
+  @Test
+  public void testEventStatusesForWorldAndMap() throws IOException {
+    log.info("Running ApiClient.getEventStatusesForWorldAndMap(worldId, mapId) test");
+    String expectedResponse = this.loadExpectedResponse("/json/event-statuses/WorldAndMap.json");
+    this.setupMockServerSuccess("events.json?world_id=1011&map_id=40", expectedResponse);
+
+    WorldEventsStatusList list = this.apiClient.getEventStatusesForWorldAndMap(1011, 40);
+    assertTrue(list.size() == 1);
+    assertTrue(list.get(0).getWorldId() == 1011);
+    assertTrue(list.get(0).getMapId() == 40);
+    assertTrue(list.get(0).getState().equals("Success"));
+  }
+
+  @Test
+  public void testEventStatusesForEvent() throws IOException {
+    log.info("Running ApiClient.getEventStatusesForEvent(eventId) test");
+    String expectedResponse = this.loadExpectedResponse("/json/event-statuses/Event.json");
+    this.setupMockServerSuccess(
+      "events.json?event_id=40B2CE06-F55B-41E5-BEEC-E5AEA1A1BC81",
+      expectedResponse
+    );
+
+    WorldEventsStatusList list =
+      this.apiClient.getEventStatusesForEvent("40B2CE06-F55B-41E5-BEEC-E5AEA1A1BC81");
+    assertTrue(list.size() == 1);
+    assertTrue(list.get(0).getWorldId() == 1001);
+    assertTrue(list.get(0).getMapId() == 39);
+    assertTrue(list.get(0).getState().equals("Active"));
+  }
+
+  @Test
+  public void testEventStatusesForWorldAndEvent() throws IOException {
+    log.info("Running ApiClient.getEventStatusesForWorldAndEvent(worldId, eventId) test");
+    String expectedResponse = this.loadExpectedResponse("/json/event-statuses/Event.json");
+    this.setupMockServerSuccess(
+      "events.json?world_id=1001&event_id=40B2CE06-F55B-41E5-BEEC-E5AEA1A1BC81",
+      expectedResponse
+    );
+
+    WorldEventsStatusList list =
+      this.apiClient.getEventStatusesForWorldAndEvent(1001, "40B2CE06-F55B-41E5-BEEC-E5AEA1A1BC81");
+    assertTrue(list.size() == 1);
+    assertTrue(list.get(0).getWorldId() == 1001);
+    assertTrue(list.get(0).getMapId() == 39);
+    assertTrue(list.get(0).getState().equals("Active"));
+  }
+
+  @Test
+  public void testEventStatusesForMapAndEvent() throws IOException {
+    log.info("Running ApiClient.getEventStatusesForMapAndEvent(mapId, eventId) test");
+    String expectedResponse = this.loadExpectedResponse("/json/event-statuses/Event.json");
+    this.setupMockServerSuccess(
+      "events.json?map_id=39&event_id=40B2CE06-F55B-41E5-BEEC-E5AEA1A1BC81",
+      expectedResponse
+    );
+
+    WorldEventsStatusList list =
+      this.apiClient.getEventStatusesForMapAndEvent(39, "40B2CE06-F55B-41E5-BEEC-E5AEA1A1BC81");
+    assertTrue(list.size() == 1);
+    assertTrue(list.get(0).getWorldId() == 1001);
+    assertTrue(list.get(0).getMapId() == 39);
+    assertTrue(list.get(0).getState().equals("Active"));
+  }
+
+  @Test
+  public void testEventStatusesForWorldAndMapAndEvent() throws IOException {
+    log.info("Running ApiClient.getEventStatusesForWorldAndMapAndEvent(worldId, mapId, eventId) test");
+    String expectedResponse = this.loadExpectedResponse("/json/event-statuses/Event.json");
+    this.setupMockServerSuccess(
+      "events.json?world_id=1001&map_id=39&event_id=40B2CE06-F55B-41E5-BEEC-E5AEA1A1BC81",
+      expectedResponse
+    );
+
+    WorldEventsStatusList list =
+      this.apiClient.getEventStatusesForWorldAndMapAndEvent(1001, 39, "40B2CE06-F55B-41E5-BEEC-E5AEA1A1BC81");
+    assertTrue(list.size() == 1);
+    assertTrue(list.get(0).getWorldId() == 1001);
+    assertTrue(list.get(0).getMapId() == 39);
+    assertTrue(list.get(0).getState().equals("Active"));
+  }
 
   /*~~~~ Begin private utility methods. ~~~~*/
   private String loadExpectedResponse(String reponseFile) throws IOException {
