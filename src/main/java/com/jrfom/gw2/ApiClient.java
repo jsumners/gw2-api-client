@@ -6,6 +6,7 @@ import java.util.HashMap;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.base.Optional;
 import com.jrfom.gw2.api.model.Build;
+import com.jrfom.gw2.api.model.Guild;
 import com.jrfom.gw2.api.model.GwApiError;
 import com.jrfom.gw2.api.model.colors.ColorsList;
 import com.jrfom.gw2.api.model.events.EventDetails;
@@ -431,5 +432,69 @@ public class ApiClient extends RestTemplate {
     }
 
     return this.getForObject(this.baseUrl + url, WorldEventsStatusList.class, params);
+  }
+
+  /**
+   * <p>Retrieves details for a guild with the specified {@code guildId}.</p>
+   *
+   * <p>If the id you supply cannot be found, the remote service will return
+   * an error object. Thus, a {@link com.jrfom.gw2.api.model.GwApiError} will
+   * be thrown. You can trap that error if you would like more details.
+   * Otherwise, simply check for the presence of a value in this method's
+   * result.</p>
+   *
+   * @param guildId The UUID for the guild to lookup.
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.Guild} wrapped in
+   * an {@link com.google.common.base.Optional} on success. On failure, the
+   * {@code Optional} will be empty.
+   */
+  public Optional<Guild> getGuildDetailsForGuildId(String guildId) {
+    log.debug("Attempting to get guild information for guildId: `{}`", guildId);
+    Optional<Guild> result = Optional.absent();
+    String url = "guild_details.json?guild_id={guild_id}";
+
+    try {
+      Guild guild = this.getForObject(this.baseUrl + url, Guild.class, guildId);
+      result = Optional.of(guild);
+    } catch (RestClientException e) {
+      log.error("Could not retrieve details for guild: `{}`", e.getMessage());
+      log.debug(e.toString());
+    }
+
+    return result;
+  }
+
+  /**
+   * <p>Retrieves details for a guild with the specified {@code name}. If the
+   * name includes spaces, do <em>not</em> URI encode them. This method will
+   * take care of encoding for you.</p>
+   *
+   * <p>If the name you supply cannot be found, the remote service will return
+   * an error object. Thus, a {@link com.jrfom.gw2.api.model.GwApiError} will
+   * be thrown. You can trap that error if you would like more details.
+   * Otherwise, simply check for the presence of a value in this method's
+   * result.</p>
+   *
+   * @param name The name of the guild to lookup.
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.Guild} wrapped in
+   * an {@link com.google.common.base.Optional} on success. On failure, the
+   * {@code Optional} will be empty.
+   */
+  public Optional<Guild> getGuildDetailsForGuildName(String name) {
+    log.debug("Attempting to get guild information for guild named: `{}`", name);
+    Optional<Guild> result = Optional.absent();
+    String url = "guild_details.json?guild_name={guild_name}";
+
+    try {
+      Guild guild = this.getForObject(this.baseUrl + url, Guild.class, name);
+      result = Optional.of(guild);
+    } catch (RestClientException e) {
+      log.error("Could not retrieve details for guild: `{}`", e.getMessage());
+      log.debug(e.toString());
+    }
+
+    return result;
   }
 }
