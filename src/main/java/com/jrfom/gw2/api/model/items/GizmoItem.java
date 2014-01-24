@@ -5,6 +5,9 @@ import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.jrfom.gw2.annotations.Gw2ApiVersion;
 
+/**
+ * Represents and in-game item that is a gizmo.
+ */
 @JsonTypeInfo(
   use = JsonTypeInfo.Id.NONE,
   include = JsonTypeInfo.As.WRAPPER_OBJECT,
@@ -17,6 +20,11 @@ public class GizmoItem extends GenericItem {
 
   public GizmoItem() {}
 
+  /**
+   * Retrieve the set of properties that is specific to
+   * {@link com.jrfom.gw2.api.model.items.GizmoItem}.
+   * @return
+   */
   public GizmoItemProperties getGizmo() {
     return this.gizmo;
   }

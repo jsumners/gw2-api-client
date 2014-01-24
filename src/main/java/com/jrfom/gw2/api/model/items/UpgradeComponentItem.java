@@ -6,6 +6,9 @@ import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.jrfom.gw2.annotations.Gw2ApiVersion;
 
+/**
+ * Represents and in-game item that is an upgrade component.
+ */
 @JsonTypeInfo(
   use = JsonTypeInfo.Id.NONE,
   include = JsonTypeInfo.As.WRAPPER_OBJECT,
@@ -19,6 +22,11 @@ public class UpgradeComponentItem extends GenericItem {
 
   public UpgradeComponentItem() {}
 
+  /**
+   * Retrieve the set of properties that are specific to an
+   * {@link com.jrfom.gw2.api.model.items.UpgradeComponentItem}.
+   * @return
+   */
   public UpgradeComponentItemProperties getUpgradeComponent() {
     return this.upgradeComponent;
   }

@@ -71,5 +71,17 @@ public class CoinsTest {
     coins.addSilver(40);
     assertTrue(coins.silverValue() == 0);
     assertTrue(coins.goldValue() == 2);
+
+    coins.addGold(1);
+    assertTrue(coins.goldValue() == 3);
+
+    coins.subtractGold(1);
+    assertTrue(coins.goldValue() == 2);
+
+    coins.subtractSilver(49);
+    assertTrue(coins.silverValue() == 51);
+
+    coins.subtractCopper(60);
+    assertTrue(coins.copperValue() == 40);
   }
 }

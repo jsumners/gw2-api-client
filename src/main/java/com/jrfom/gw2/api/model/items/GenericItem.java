@@ -9,6 +9,10 @@ import com.jrfom.gw2.annotations.Gw2ApiVersion;
 import com.jrfom.gw2.api.model.Coins;
 import com.jrfom.gw2.jackson.deserializers.ItemDeserializer;
 
+/**
+ * See {@link com.jrfom.gw2.api.model.items.Item}.
+ */
+// TODO: add missing "BackItem" type
 @JsonSubTypes({
   @JsonSubTypes.Type(value = ArmorItem.class),
   @JsonSubTypes.Type(value = BagItem.class),
@@ -45,6 +49,9 @@ public class GenericItem implements Item {
 
   public GenericItem() {}
 
+  /**
+   * {@inheritDoc}
+   */
   public Integer getItemId() {
     return this.itemId;
   }
@@ -53,6 +60,9 @@ public class GenericItem implements Item {
     this.itemId = itemId;
   }
 
+  /**
+   * {@inheritDoc}
+   */
   public String getName() {
     return this.name;
   }
@@ -61,6 +71,9 @@ public class GenericItem implements Item {
     this.name = name;
   }
 
+  /**
+   * {@inheritDoc}
+   */
   public String getDescription() {
     return this.description;
   }
@@ -69,6 +82,9 @@ public class GenericItem implements Item {
     this.description = description;
   }
 
+  /**
+   * {@inheritDoc}
+   */
   public String getType() {
     return this.type;
   }
@@ -77,6 +93,9 @@ public class GenericItem implements Item {
     this.type = type;
   }
 
+  /**
+   * {@inheritDoc}
+   */
   public Integer getLevel() {
     return this.level;
   }
@@ -85,6 +104,9 @@ public class GenericItem implements Item {
     this.level = level;
   }
 
+  /**
+   * {@inheritDoc}
+   */
   public String getRarity() {
     return this.rarity;
   }
@@ -93,6 +115,9 @@ public class GenericItem implements Item {
     this.rarity = rarity;
   }
 
+  /**
+   * {@inheritDoc}
+   */
   public Coins getVendorValue() {
     return this.vendorValue;
   }
@@ -101,6 +126,9 @@ public class GenericItem implements Item {
     this.vendorValue = vendorValue;
   }
 
+  /**
+   * {@inheritDoc}
+   */
   public Integer getIconFileId() {
     return this.iconFileId;
   }
@@ -109,6 +137,9 @@ public class GenericItem implements Item {
     this.iconFileId = iconFileId;
   }
 
+  /**
+   * {@inheritDoc}
+   */
   public String getIconFileSignature() {
     return this.iconFileSignature;
   }
@@ -117,6 +148,9 @@ public class GenericItem implements Item {
     this.iconFileSignature = iconFileSignature;
   }
 
+  /**
+   * {@inheritDoc}
+   */
   public ArrayList<String> getGameTypes() {
     return this.gameTypes;
   }
@@ -125,6 +159,9 @@ public class GenericItem implements Item {
     this.gameTypes = gameTypes;
   }
 
+  /**
+   * {@inheritDoc}
+   */
   public ArrayList<String> getFlags() {
     return this.flags;
   }
@@ -133,11 +170,86 @@ public class GenericItem implements Item {
     this.flags = flags;
   }
 
+  /**
+   * {@inheritDoc}
+   */
   public ArrayList<String> getRestrictions() {
     return this.restrictions;
   }
 
   public void setRestrictions(ArrayList<String> restrictions) {
     this.restrictions = restrictions;
+  }
+
+  /**
+   * See {@link com.jrfom.gw2.api.model.items.ArmorItem}.
+   * @return
+   */
+  @Override
+  public ArmorItemProperties getArmor() {
+    return null;
+  }
+
+  /**
+   * See {@link com.jrfom.gw2.api.model.items.BagItem}.
+   * @return
+   */
+  @Override
+  public BagItemProperties getBag() {
+    return null;
+  }
+
+  /**
+   * See {@link com.jrfom.gw2.api.model.items.ConsumableItem}.
+   * @return
+   */
+  @Override
+  public ConsumableItemProperties getConsumable() {
+    return null;
+  }
+
+  /**
+   * See {@link com.jrfom.gw2.api.model.items.ContainerItem}.
+   * @return
+   */
+  @Override
+  public ContainerItemProperties getContainer() {
+    return null;
+  }
+
+  /**
+   * See {@link com.jrfom.gw2.api.model.items.GizmoItem}.
+   * @return
+   */
+  @Override
+  public GizmoItemProperties getGizmo() {
+    return null;
+  }
+
+  /**
+   * See {@link com.jrfom.gw2.api.model.items.TrinketItem}.
+   * @return
+   */
+  @Override
+  public TrinketItemProperties getTrinket() {
+    return null;
+  }
+
+  /**
+   * See {@link com.jrfom.gw2.api.model.items.UpgradeComponentItem}.
+   * @return
+   */
+  @Override
+  public UpgradeComponentItemProperties getUpgradeComponent() {
+    return null;
+  }
+
+  /**
+   * See {@link com.jrfom.gw2.api.model.items.WeaponItem}.
+   * @return
+   */
+  @Override
+  public WeaponItemProperties getWeapon() {
+    return null;
   }
 }

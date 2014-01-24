@@ -5,6 +5,9 @@ import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.jrfom.gw2.annotations.Gw2ApiVersion;
 
+/**
+ * Represents and in-game item that is a container.
+ */
 @JsonTypeInfo(
   use = JsonTypeInfo.Id.NONE,
   include = JsonTypeInfo.As.WRAPPER_OBJECT,
@@ -17,6 +20,11 @@ public class ContainerItem extends GenericItem {
 
   public ContainerItem() {}
 
+  /**
+   * Retreive the container specific properties for this item.
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.items.ConsumableItemProperties}.
+   */
   public ContainerItemProperties getContainer() {
     return this.container;
   }

@@ -8,6 +8,10 @@ import com.jrfom.gw2.annotations.Gw2ApiVersion;
 import com.jrfom.gw2.jackson.deserializers.ItemIdListDeserializer;
 import com.jrfom.gw2.jackson.serializers.ItemIdListSerializer;
 
+/**
+ * Represents a list of item identifiers as returned by
+ * <a href="http://wiki.guildwars2.com/wiki/API:1/items">/v1/items</a>.
+ */
 @JsonDeserialize(using = ItemIdListDeserializer.class)
 @JsonSerialize(using = ItemIdListSerializer.class)
 @Gw2ApiVersion("v1")

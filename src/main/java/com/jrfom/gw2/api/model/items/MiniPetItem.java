@@ -5,6 +5,10 @@ import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.jrfom.gw2.annotations.Gw2ApiVersion;
 
+/**
+ * Represents and in-game item that is a mini-pet. It is technically
+ * no different from a {@link com.jrfom.gw2.api.model.items.GenericItem}.
+ */
 @JsonTypeInfo(
   use = JsonTypeInfo.Id.NONE,
   include = JsonTypeInfo.As.WRAPPER_OBJECT,

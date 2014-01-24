@@ -3,6 +3,10 @@ package com.jrfom.gw2.api.model.items;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.jrfom.gw2.annotations.Gw2ApiVersion;
 
+/**
+ * Represents a set of properties that are specific to a
+ * {@link com.jrfom.gw2.api.model.items.WeaponItem}.
+ */
 @Gw2ApiVersion("v1")
 public class WeaponItemProperties extends ItemProperties {
   @JsonProperty("damage_type")
@@ -15,6 +19,19 @@ public class WeaponItemProperties extends ItemProperties {
 
   public WeaponItemProperties() {}
 
+  /**
+   * <p>Details what sort of damage the weapon will inflict. Possible
+   * values are:</p>
+   *
+   * <ul>
+   *   <li>Physical</li>
+   *   <li>Fire</li>
+   *   <li>Ice</li>
+   *   <li>Lightning</li>
+   * </ul>
+   *
+   * @return The type of weapon damage as a string.
+   */
   public String getDamageType() {
     return this.damageType;
   }
@@ -23,6 +40,11 @@ public class WeaponItemProperties extends ItemProperties {
     this.damageType = damageType;
   }
 
+  /**
+   * The minimum damage the weapon will inflict.
+   *
+   * @return An integer representing the minimum damage.
+   */
   public int getMinPower() {
     return this.minPower;
   }
@@ -31,6 +53,11 @@ public class WeaponItemProperties extends ItemProperties {
     this.minPower = minPower;
   }
 
+  /**
+   * The maximum damage the weapon will inflict.
+   *
+   * @return An integer representing the maximum damage.
+   */
   public int getMaxPower() {
     return this.maxPower;
   }
@@ -39,6 +66,11 @@ public class WeaponItemProperties extends ItemProperties {
     this.maxPower = maxPower;
   }
 
+  /**
+   * The amount of defense the weapon will provide (e.g a shield).
+   *
+   * @return An integer representing the defense rating of the weapon.
+   */
   public int getDefense() {
     return this.defense;
   }

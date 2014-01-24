@@ -4,6 +4,9 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
+/**
+ * Represents and in-game item that is a piece of armor.
+ */
 @JsonTypeInfo(
   use = JsonTypeInfo.Id.NONE,
   include = JsonTypeInfo.As.WRAPPER_OBJECT,
@@ -15,6 +18,11 @@ public class ArmorItem extends GenericItem {
 
   public ArmorItem() {}
 
+  /**
+   * Retrieve the armor specific properties for this item.
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.items.ArmorItemProperties}.
+   */
   public ArmorItemProperties getArmor() {
     return this.armor;
   }

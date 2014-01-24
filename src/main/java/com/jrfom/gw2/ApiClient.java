@@ -13,6 +13,9 @@ import com.jrfom.gw2.api.model.events.EventDetails;
 import com.jrfom.gw2.api.model.events.EventNamesList;
 import com.jrfom.gw2.api.model.events.WorldEventsStatusList;
 import com.jrfom.gw2.api.model.geography.Continents;
+import com.jrfom.gw2.api.model.items.GenericItem;
+import com.jrfom.gw2.api.model.items.Item;
+import com.jrfom.gw2.api.model.items.ItemIdList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -492,6 +495,101 @@ public class ApiClient extends RestTemplate {
       result = Optional.of(guild);
     } catch (RestClientException e) {
       log.error("Could not retrieve details for guild: `{}`", e.getMessage());
+      log.debug(e.toString());
+    }
+
+    return result;
+  }
+
+  /**
+   * <p>Retrieves a list of all known item identifiers. Your application should
+   * probably cache this result for some amount of time.</p>
+   *
+   * <p>See <a href="http://wiki.guildwars2.com/wiki/API:1/items">/v1/items</a>
+   * for more details.</p>
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.items.ItemIdList}.
+   */
+  public ItemIdList getItems() {
+    log.debug("Attempting to get the list of item identifiers");
+    return this.getForObject(this.baseUrl + "items.json", ItemIdList.class);
+  }
+
+  /**
+   * Retrieves details for a specified item localized to the English language.
+   * See {@link com.jrfom.gw2.ApiClient#getItemDetailsInLang(int, String)} for
+   * more information.
+   *
+   * @param itemId A valid game item identifier.
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.items.Item} wrapped
+   * in an {@link com.google.common.base.Optional} if successful, otherwise an
+   * empty {@code Optional}.
+   */
+  public Optional<Item> getItemDetails(int itemId) {
+    return this.getItemDetailsInLang(itemId, null);
+  }
+
+  /**
+   * <p>Retrieves details for a specified item localized to the specified
+   * language. If the given language identifier is invalid, the English
+   * language will be used. Possible language identifiers are:</p>
+   *
+   * <ul>
+   *   <li>"en" for English</li>
+   *   <li>"de" for German</li>
+   *   <li>"es" for Spanish</li>
+   *   <li>"fr" for French</li>
+   * </ul>
+   *
+   * <p>The result of this method will be wrapped in an
+   * {@link com.google.common.base.Optional}. If an invalid item identifier is
+   * given, then this {@code Optional} will be empty and a
+   * {@link com.jrfom.gw2.api.model.GwApiError} will be thrown (trap it for
+   * more details). Otherwise, the {@code Optional} will contain an instance
+   * of {@link com.jrfom.gw2.api.model.items.Item}. Possible types for
+   * {@code Item} are:</p>
+   *
+   * <ul>
+   *   <li>{@link com.jrfom.gw2.api.model.items.ArmorItem}</li>
+   *   <li>{@link com.jrfom.gw2.api.model.items.BagItem}</li>
+   *   <li>{@link com.jrfom.gw2.api.model.items.ConsumableItem}</li>
+   *   <li>{@link com.jrfom.gw2.api.model.items.ContainerItem}</li>
+   *   <li>{@link com.jrfom.gw2.api.model.items.CraftingMaterialItem}</li>
+   *   <li>{@link com.jrfom.gw2.api.model.items.GizmoItem}</li>
+   *   <li>{@link com.jrfom.gw2.api.model.items.MiniPetItem}</li>
+   *   <li>{@link com.jrfom.gw2.api.model.items.TrinketItem}</li>
+   *   <li>{@link com.jrfom.gw2.api.model.items.TrophyItem}</li>
+   *   <li>{@link com.jrfom.gw2.api.model.items.UpgradeComponentItem}</li>
+   *   <li>{@link com.jrfom.gw2.api.model.items.WeaponItem}</li>
+   * </ul>
+   *
+   * @param itemId A valid game item identifier.
+   * @param lang A valid language abbreviation. For example, "en" for English or
+   *             "de" for German. An invalid abbreviation will equate to using
+   *             "en".
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.items.Item} wrapped
+   * in an {@link com.google.common.base.Optional} if successful, otherwise an
+   * empty {@code Optional}.
+   */
+  public Optional<Item> getItemDetailsInLang(int itemId, String lang) {
+    log.debug("Attempting to get details for [itemId: `{}`, lang: `{}`]", itemId, lang);
+    Optional<Item> result = Optional.absent();
+    HashMap<String, String> params = new HashMap<>(1);
+    String url = "item_details.json?item_id={item_id}";
+
+    params.put("item_id", itemId + "");
+    if (lang != null) {
+      url = url + "&lang={lang}";
+      params.put("lang", lang);
+    }
+
+    try {
+      Item item = this.getForObject(this.baseUrl + url, GenericItem.class, params);
+      result = Optional.of(item);
+    } catch (RestClientException e) {
+      log.error("Could not retrieve details for item: `{}`", e.getMessage());
       log.debug(e.toString());
     }
 

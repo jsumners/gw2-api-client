@@ -14,6 +14,8 @@ import com.jrfom.gw2.api.model.events.EventDetails;
 import com.jrfom.gw2.api.model.events.EventNamesList;
 import com.jrfom.gw2.api.model.events.WorldEventsStatusList;
 import com.jrfom.gw2.api.model.geography.Continents;
+import com.jrfom.gw2.api.model.items.Item;
+import com.jrfom.gw2.api.model.items.ItemIdList;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -405,6 +407,63 @@ public class ApiClientTest {
       assertTrue(e.getModule() == 1);
       assertTrue(e.getLine() == 561);
       assertNull(e.getText());
+    }
+  }
+
+  /*~~~~ Begin tests for item ids list ~~~~*/
+  @Test
+  public void testGetItemIds() throws IOException {
+    log.info("Running ApiClient.getItems() test");
+    String expectedResponse = this.loadExpectedResponse("/json/Items.json");
+    this.setupMockServerSuccess("items.json", expectedResponse);
+
+    ItemIdList list = this.apiClient.getItems();
+    assertTrue(list.get(0) == 12546);
+  }
+
+  /*~~~~ Begin tests for item details ~~~~*/
+  @Test
+  public void testGetArmorItemDetails() throws IOException {
+    log.info("Running ApiClient.getItemDetails(itemId) for armor test");
+    String expectedResponse = this.loadExpectedResponse("/json/ArmorItem.json");
+    this.setupMockServerSuccess("item_details.json?item_id=100", expectedResponse);
+
+    Optional<Item> result = this.apiClient.getItemDetails(100);
+    assertTrue(result.isPresent());
+
+    Item item = result.get();
+    assertTrue(item.getType().equals("Armor"));
+    assertTrue(item.getArmor().getType().equals("Coat"));
+  }
+
+  @Test
+  public void testGetArmorItemDetailsInLang() throws IOException {
+    log.info("Running ApiClient.getItemDetailsInLang(itemId, lang) for armor test");
+    String expectedResponse = this.loadExpectedResponse("/json/ArmorItem.json");
+    this.setupMockServerSuccess("item_details.json?item_id=100&lang=en", expectedResponse);
+
+    Optional<Item> result = this.apiClient.getItemDetailsInLang(100, "en");
+    assertTrue(result.isPresent());
+
+    Item item = result.get();
+    assertTrue(item.getType().equals("Armor"));
+    assertTrue(item.getArmor().getType().equals("Coat"));
+  }
+
+  @Test
+  public void testGetInvalidItemDetails() throws IOException {
+    log.info("Running ApiClient.getItemDetails(itemId) failure test");
+    String expectedResponse = this.loadExpectedResponse("/json/errors/InvalidItem.json");
+    this.setupMockServerFail("item_details.json?item_id=-1", expectedResponse);
+
+    try {
+      Optional<Item> result = this.apiClient.getItemDetails(-1);
+    } catch (GwApiError e) {
+      assertTrue(e.getError() == 10);
+      assertTrue(e.getProduct() == 0);
+      assertTrue(e.getModule() == 2);
+      assertTrue(e.getLine() == 382);
+      assertTrue(e.getText().equals("invalid item_id"));
     }
   }
 

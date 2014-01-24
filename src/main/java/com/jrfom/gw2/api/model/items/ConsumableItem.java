@@ -5,6 +5,9 @@ import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.jrfom.gw2.annotations.Gw2ApiVersion;
 
+/**
+ * Represents and in-game item that is consumable.
+ */
 @JsonTypeInfo(
   use = JsonTypeInfo.Id.NONE,
   include = JsonTypeInfo.As.WRAPPER_OBJECT,
@@ -17,6 +20,11 @@ public class ConsumableItem extends GenericItem {
 
   public ConsumableItem() {}
 
+  /**
+   * Retrieve the consumable specific properties for this item.
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.items.ConsumableItemProperties}.
+   */
   public ConsumableItemProperties getConsumable() {
     return this.consumable;
   }
