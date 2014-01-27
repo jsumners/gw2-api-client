@@ -15,6 +15,7 @@ import com.jrfom.gw2.api.model.events.EventNamesList;
 import com.jrfom.gw2.api.model.events.WorldEventsStatusList;
 import com.jrfom.gw2.api.model.geography.Continents;
 import com.jrfom.gw2.api.model.geography.Map;
+import com.jrfom.gw2.api.model.geography.MapNamesList;
 import com.jrfom.gw2.api.model.geography.MapsList;
 import com.jrfom.gw2.api.model.items.Item;
 import com.jrfom.gw2.api.model.items.ItemIdList;
@@ -543,6 +544,30 @@ public class ApiClientTest {
     assertTrue(list.size() == 3);
     assertTrue(list.get(0).getContinentId() == 1);
     assertTrue(list.get(0).getFloors().size() == 2);
+  }
+
+  @Test
+  public void testGetMapNames() throws IOException {
+    log.info("Running ApiClient.getMapNames() test");
+    String expectedResponse = this.loadExpectedResponse("/json/MapNames.json");
+    this.setupMockServerSuccess("map_names.json", expectedResponse);
+
+    MapNamesList list = this.apiClient.getMapNames();
+    assertTrue(list.size() == 3);
+    assertTrue(list.get(0).getId() == 50);
+    assertTrue(list.get(0).getName().equals("Lion's Arch"));
+  }
+
+  @Test
+  public void testGetMapNamesInLang() throws IOException {
+    log.info("Running ApiClient.getMapNamesInLang(lang) test");
+    String expectedResponse = this.loadExpectedResponse("/json/MapNames.json");
+    this.setupMockServerSuccess("map_names.json?lang=en", expectedResponse);
+
+    MapNamesList list = this.apiClient.getMapNamesInLang("en");
+    assertTrue(list.size() == 3);
+    assertTrue(list.get(0).getId() == 50);
+    assertTrue(list.get(0).getName().equals("Lion's Arch"));
   }
 
   /*~~~~ Begin private utility methods. ~~~~*/

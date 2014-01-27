@@ -14,6 +14,7 @@ import com.jrfom.gw2.api.model.events.EventNamesList;
 import com.jrfom.gw2.api.model.events.WorldEventsStatusList;
 import com.jrfom.gw2.api.model.geography.Continents;
 import com.jrfom.gw2.api.model.geography.Map;
+import com.jrfom.gw2.api.model.geography.MapNamesList;
 import com.jrfom.gw2.api.model.geography.MapsList;
 import com.jrfom.gw2.api.model.items.GenericItem;
 import com.jrfom.gw2.api.model.items.Item;
@@ -701,6 +702,7 @@ public class ApiClient extends RestTemplate {
    * {@code Optional}.
    */
   public Optional<MapsList> getMapsInLang(int mapId, String lang) {
+    log.debug("Attempting to get maps for [mapId: `{}`, lang: `{}`]", mapId, lang);
     Optional<MapsList> result = Optional.absent();
     HashMap<String, String> params = new HashMap<>(0);
     String url = "maps.json";
@@ -724,5 +726,39 @@ public class ApiClient extends RestTemplate {
     }
 
     return result;
+  }
+
+  /**
+   * Retrieve a list of map names and their associated map identifiers. The
+   * names will be localized to the English language.
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.geography.MapNamesList}.
+   */
+  public MapNamesList getMapNames() {
+    return this.getMapNamesInLang(null);
+  }
+
+  /**
+   * Retrieve a list of map names and their associated map identifiers. The
+   * names will be localized to the specified language.
+   *
+   * @param lang A valid language abbreviation. For example, "en" for English or
+   *             "de" for German. An invalid abbreviation will equate to using
+   *             "en".
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.geography.MapNamesList}.
+   */
+  public MapNamesList getMapNamesInLang(String lang) {
+    log.error("Attemping to get map names for lang: `{}`", lang);
+    MapNamesList list = new MapNamesList();
+    String url = "map_names.json";
+
+    if (lang != null) {
+      url = url + "?lang={lang}";
+    }
+
+    list = this.getForObject(this.baseUrl + url, MapNamesList.class, lang);
+
+    return list;
   }
 }
