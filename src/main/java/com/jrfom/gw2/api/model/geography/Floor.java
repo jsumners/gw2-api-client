@@ -1,5 +1,6 @@
 package com.jrfom.gw2.api.model.geography;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.jrfom.gw2.annotations.Gw2ApiVersion;
 import com.jrfom.gw2.api.model.Dimension;
@@ -8,6 +9,7 @@ import com.jrfom.gw2.api.model.Dimension;
  * Represents an in-game map floor as returned by
  * <a href="http://wiki.guildwars2.com/wiki/API:1/map_floor">/v1/map_floor</a>.
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Gw2ApiVersion("v1")
 public class Floor {
   @JsonProperty("texture_dims")
@@ -39,11 +41,12 @@ public class Floor {
    * textures. Every tile coordinate outside this rectangle is not available
    * on the tile server."</blockquote>
    *
-   * <p>The author of this API has not been able to find any instances of this
-   * being used. Therefore, the format is unknown.</p>
-   * @return
+   * <p>As far as the author of this model can discern, it's nothing more
+   * than an instance of {@link com.jrfom.gw2.api.model.geography.MapRectangle}.</p>
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.geography.MapRectangle}.
    */
-  public Object getClampedView() {
+  public MapRectangle getClampedView() {
     return this.clampedView;
   }
 

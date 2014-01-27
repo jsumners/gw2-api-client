@@ -12,10 +12,7 @@ import com.jrfom.gw2.api.model.colors.ColorsList;
 import com.jrfom.gw2.api.model.events.EventDetails;
 import com.jrfom.gw2.api.model.events.EventNamesList;
 import com.jrfom.gw2.api.model.events.WorldEventsStatusList;
-import com.jrfom.gw2.api.model.geography.Continents;
-import com.jrfom.gw2.api.model.geography.Map;
-import com.jrfom.gw2.api.model.geography.MapNamesList;
-import com.jrfom.gw2.api.model.geography.MapsList;
+import com.jrfom.gw2.api.model.geography.*;
 import com.jrfom.gw2.api.model.items.GenericItem;
 import com.jrfom.gw2.api.model.items.Item;
 import com.jrfom.gw2.api.model.items.ItemIdList;
@@ -749,7 +746,7 @@ public class ApiClient extends RestTemplate {
    * @return An instance of {@link com.jrfom.gw2.api.model.geography.MapNamesList}.
    */
   public MapNamesList getMapNamesInLang(String lang) {
-    log.error("Attemping to get map names for lang: `{}`", lang);
+    log.debug("Attemping to get map names for lang: `{}`", lang);
     MapNamesList list = new MapNamesList();
     String url = "map_names.json";
 
@@ -760,5 +757,114 @@ public class ApiClient extends RestTemplate {
     list = this.getForObject(this.baseUrl + url, MapNamesList.class, lang);
 
     return list;
+  }
+
+  /**
+   * <p>Retrieve details about a map floor on the "Tyria" continent. See
+   * {@link com.jrfom.gw2.ApiClient#getFloorInLang(int, int, String)} for
+   * more deatils.</p>
+   *
+   * @param floorId A valid {@link com.jrfom.gw2.api.model.geography.Floor}
+   *                identifier.
+   *
+   * @return
+   */
+  public Optional<Floor> getTyriaFloor(int floorId) {
+    return this.getFloorInLang(1, floorId, null);
+  }
+
+  /**
+   * <p>Retrieve details about a map floor on the "Tyria" continent. See
+   * {@link com.jrfom.gw2.ApiClient#getFloorInLang(int, int, String)} for
+   * more deatils.</p>
+   *
+   * @param floorId A valid {@link com.jrfom.gw2.api.model.geography.Floor}
+   *                identifier.
+   * @param lang A valid language abbreviation. For example, "en" for English or
+   *             "de" for German. An invalid abbreviation will equate to using
+   *             "en".
+   *
+   * @return
+   */
+  public Optional<Floor> getTyriaFloorInLang(int floorId, String lang) {
+    return this.getFloorInLang(1, floorId, lang);
+  }
+
+  /**
+   * <p>Retrieve details about a map floor on the "Mists" continent. See
+   * {@link com.jrfom.gw2.ApiClient#getFloorInLang(int, int, String)} for
+   * more deatils.</p>
+   *
+   * @param floorId A valid {@link com.jrfom.gw2.api.model.geography.Floor}
+   *                identifier.
+   *
+   * @return
+   */
+  public Optional<Floor> getMistsFloor(int floorId) {
+    return this.getFloorInLang(2, floorId, null);
+  }
+
+  /**
+   * <p>Retrieve details about a map floor on the "Mists" continent. See
+   * {@link com.jrfom.gw2.ApiClient#getFloorInLang(int, int, String)} for
+   * more deatils.</p>
+   *
+   * @param floorId A valid {@link com.jrfom.gw2.api.model.geography.Floor}
+   *                identifier.
+   * @param lang A valid language abbreviation. For example, "en" for English or
+   *             "de" for German. An invalid abbreviation will equate to using
+   *             "en".
+   *
+   * @return
+   */
+  public Optional<Floor> getMistsFloorInLang(int floorId, String lang) {
+    return this.getFloorInLang(2, floorId, lang);
+  }
+
+  /**
+   * <p>Retrieve details about a map floor given the appropriate
+   * {@code continentId}, {@code floorId}, and {@code lang}. The given
+   * {@code lang} will localize all strings to said language.</p>
+   *
+   * @param continentId A valid {@link com.jrfom.gw2.api.model.geography.Continent}
+   *                    identifier.
+   * @param floorId A valid {@link com.jrfom.gw2.api.model.geography.Floor}
+   *                identifier.
+   * @param lang A valid language abbreviation. For example, "en" for English or
+   *             "de" for German. An invalid abbreviation will equate to using
+   *             "en".
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.geography.Floor}
+   * wrapped in an {@link com.google.common.base.Optional} or an empty
+   * {@code Optional}. The empty {@code Optional} will be returned when either
+   * an invalid {@code continentId} or {@code floorId} is given. This method
+   * will <em>not</em> throw an instance of
+   * {@link com.jrfom.gw2.api.model.GwApiError} in such instances. This is
+   * because the remote ArenaNet API does not generate an error in this case.
+   */
+  public Optional<Floor> getFloorInLang(int continentId, int floorId, String lang) {
+    log.debug(
+      "Attempting to get floor for [continentId: `{}`, floorId: `{}`, lang: `{}`]",
+      continentId,
+      floorId,
+      lang
+    );
+    Optional<Floor> result = Optional.absent();
+    HashMap<String, String> params = new HashMap<>(2);
+    String url = "map_floor.json?continent_id={continent_id}&floor={floor_id}";
+
+    params.put("continent_id", continentId + "");
+    params.put("floor_id", floorId + "");
+    if (lang != null) {
+      url = url + "&lang={lang}";
+      params.put("lang", lang);
+    }
+
+    Floor floor = this.getForObject(this.baseUrl + url, Floor.class, params);
+    if (floor.getRegions() != null) {
+      result = Optional.of(floor);
+    }
+
+    return result;
   }
 }

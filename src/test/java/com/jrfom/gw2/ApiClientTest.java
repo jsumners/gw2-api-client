@@ -13,10 +13,7 @@ import com.jrfom.gw2.api.model.colors.ColorsList;
 import com.jrfom.gw2.api.model.events.EventDetails;
 import com.jrfom.gw2.api.model.events.EventNamesList;
 import com.jrfom.gw2.api.model.events.WorldEventsStatusList;
-import com.jrfom.gw2.api.model.geography.Continents;
-import com.jrfom.gw2.api.model.geography.Map;
-import com.jrfom.gw2.api.model.geography.MapNamesList;
-import com.jrfom.gw2.api.model.geography.MapsList;
+import com.jrfom.gw2.api.model.geography.*;
 import com.jrfom.gw2.api.model.items.Item;
 import com.jrfom.gw2.api.model.items.ItemIdList;
 import org.junit.Before;
@@ -38,6 +35,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.web.client.MockRestServiceServer;
 import org.springframework.test.web.client.ResponseCreator;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.method;
@@ -568,6 +566,56 @@ public class ApiClientTest {
     assertTrue(list.size() == 3);
     assertTrue(list.get(0).getId() == 50);
     assertTrue(list.get(0).getName().equals("Lion's Arch"));
+  }
+
+  /*~~~~ Begin tests for Floor ~~~~*/
+  @Test
+  public void testGetTyriaFloor() throws IOException {
+    log.info("Running ApiClient.getTyriaFloor(floorId) test");
+    String expectedResponse = this.loadExpectedResponse("/json/Floor.json");
+    this.setupMockServerSuccess("map_floor.json?continent_id=1&floor=4", expectedResponse);
+
+    Optional<Floor> result = this.apiClient.getTyriaFloor(4);
+    assertTrue(result.isPresent());
+
+    Floor floor = result.get();
+    assertTrue(floor.getTextureDimensions().getWidth() == 32768);
+    assertTrue(floor.getTextureDimensions().getHeight() == 32768);
+    assertTrue(floor.getClampedView().getUpperLeft().getX().equals(12160));
+    assertTrue(floor.getClampedView().getUpperLeft().getY().equals(11136));
+    assertTrue(floor.getClampedView().getLowerRight().getX().equals(13696));
+    assertTrue(floor.getClampedView().getLowerRight().getY().equals(12672));
+    assertTrue(floor.getRegions().size() == 1);
+    assertTrue(floor.getRegions().getRegionWithId(4).isPresent());
+  }
+
+  @Test
+  public void testGetTyriaFloorInLang() throws IOException {
+    log.info("Running ApiClient.getTyriaFloorInLang(floorId, lang) test");
+    String expectedResponse = this.loadExpectedResponse("/json/Floor.json");
+    this.setupMockServerSuccess("map_floor.json?continent_id=1&floor=4&lang=en", expectedResponse);
+
+    Optional<Floor> result = this.apiClient.getTyriaFloorInLang(4, "en");
+    assertTrue(result.isPresent());
+
+    Floor floor = result.get();
+    assertTrue(floor.getTextureDimensions().getWidth() == 32768);
+    assertTrue(floor.getTextureDimensions().getHeight() == 32768);
+    assertTrue(floor.getClampedView().getUpperLeft().getX().equals(12160));
+    assertTrue(floor.getClampedView().getUpperLeft().getY().equals(11136));
+    assertTrue(floor.getClampedView().getLowerRight().getX().equals(13696));
+    assertTrue(floor.getClampedView().getLowerRight().getY().equals(12672));
+    assertTrue(floor.getRegions().size() == 1);
+    assertTrue(floor.getRegions().getRegionWithId(4).isPresent());
+  }
+
+  @Test
+  public void testGetTyriaFloorWithBadId() throws IOException {
+    log.info("Running ApiClient.getTyriaFloor(floorId) failure test");
+    this.setupMockServerSuccess("map_floor.json?continent_id=1&floor=-1", "{}");
+
+    Optional<Floor> result = this.apiClient.getTyriaFloor(-1);
+    assertFalse(result.isPresent());
   }
 
   /*~~~~ Begin private utility methods. ~~~~*/
