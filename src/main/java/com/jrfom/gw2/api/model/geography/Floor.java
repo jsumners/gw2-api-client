@@ -4,6 +4,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.jrfom.gw2.annotations.Gw2ApiVersion;
 import com.jrfom.gw2.api.model.Dimension;
 
+/**
+ * Represents an in-game map floor as returned by
+ * <a href="http://wiki.guildwars2.com/wiki/API:1/map_floor">/v1/map_floor</a>.
+ */
 @Gw2ApiVersion("v1")
 public class Floor {
   @JsonProperty("texture_dims")
@@ -14,6 +18,11 @@ public class Floor {
 
   public Floor() {}
 
+  /**
+   * The width and height of the map texture.
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.Dimension}.
+   */
   public Dimension getTextureDimensions() {
     return this.textureDimensions;
   }
@@ -22,6 +31,18 @@ public class Floor {
     this.textureDimensions = textureDimensions;
   }
 
+  // TODO: find an instance of "clamped view" and add proper support for it
+  /**
+   * <p>According to the wiki:</p>
+   *
+   * <blockquote>"If present, it represents a rectangle of downloadable
+   * textures. Every tile coordinate outside this rectangle is not available
+   * on the tile server."</blockquote>
+   *
+   * <p>The author of this API has not been able to find any instances of this
+   * being used. Therefore, the format is unknown.</p>
+   * @return
+   */
   public Object getClampedView() {
     return this.clampedView;
   }
@@ -30,6 +51,12 @@ public class Floor {
     this.clampedView = clampedView;
   }
 
+  /**
+   * Retrieve the list of {@link com.jrfom.gw2.api.model.geography.Region}s
+   * contained in the floor.
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.geography.RegionList}.
+   */
   public RegionList getRegions() {
     return this.regions;
   }

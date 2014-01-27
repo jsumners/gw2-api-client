@@ -5,6 +5,9 @@ import java.util.Collection;
 
 import com.jrfom.gw2.annotations.Gw2ApiVersion;
 
+/**
+ * Represents a set of {@link com.jrfom.gw2.api.model.geography.MapCoordinate}s.
+ */
 @Gw2ApiVersion("v1")
 public class MapRectangle extends ArrayList<MapCoordinate> {
   MapRectangle() {
@@ -16,6 +19,12 @@ public class MapRectangle extends ArrayList<MapCoordinate> {
     this.addAll(0, list);
   }
 
+  /**
+   * To be used during deserialization.
+   *
+   * @param coordinate
+   * @return
+   */
   public boolean add(MapCoordinate coordinate) {
     int index = this.indexOf(null);
     if (index != -1) {
@@ -29,10 +38,20 @@ public class MapRectangle extends ArrayList<MapCoordinate> {
     return super.addAll(0, collection);
   }
 
+  /**
+   * Retrieve the coordinate of the upper left corner of a rectangle.
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.geography.MapCoordinate}.
+   */
   public MapCoordinate getUpperLeft() {
     return this.get(0);
   }
 
+  /**
+   * Retrieve the coordinate of the lower right corner of a rectangle.
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.geography.MapCoordinate}.
+   */
   public MapCoordinate getLowerRight() {
     return this.get(1);
   }

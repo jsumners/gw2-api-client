@@ -18,6 +18,11 @@ public class Task {
 
   public Task() {}
 
+  /**
+   * The unique identifier for the task.
+   *
+   * @return An integer identifier.
+   */
   public int getTaskId() {
     return this.taskId;
   }
@@ -26,6 +31,11 @@ public class Task {
     this.taskId = taskId;
   }
 
+  /**
+   * The objective description for this task.
+   *
+   * @return A string description.
+   */
   public String getObjective() {
     return this.objective;
   }
@@ -34,6 +44,11 @@ public class Task {
     this.objective = objective;
   }
 
+  /**
+   * The game character level of the task.
+   *
+   * @return An integer character level.
+   */
   public int getLevel() {
     return this.level;
   }
@@ -42,6 +57,11 @@ public class Task {
     this.level = level;
   }
 
+  /**
+   * The location of the task within the parent map.
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.geography.MapCoordinate}.
+   */
   public MapCoordinate getCoordinate() {
     return this.coordinate;
   }

@@ -6,6 +6,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.jrfom.gw2.annotations.Gw2ApiVersion;
 import com.jrfom.gw2.api.model.Dimension;
 
+/**
+ * Represents the details of an in-game continent.
+ */
 @Gw2ApiVersion("v1")
 public class Continent {
   private String name;
@@ -19,6 +22,10 @@ public class Continent {
 
   public Continent() {}
 
+  /**
+   * The in-game name of the continent. For example, "Tyria".
+   * @return
+   */
   public String getName() {
     return this.name;
   }
@@ -27,6 +34,11 @@ public class Continent {
     this.name = name;
   }
 
+  /**
+   * The WIDTHxHEIGHT of the continent.
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.Dimension}.
+   */
   public Dimension getDimensions() {
     return this.dimensions;
   }
@@ -35,6 +47,11 @@ public class Continent {
     this.dimensions = dimensions;
   }
 
+  /**
+   * The minimum zoom level of the continent on the world map.
+   *
+   * @return An integer zoom level.
+   */
   public int getMinZoom() {
     return this.minZoom;
   }
@@ -43,6 +60,11 @@ public class Continent {
     this.minZoom = minZoom;
   }
 
+  /**
+   * The maximum zoom level of the continent on the world map.
+   *
+   * @return An integer zoom level.
+   */
   public int getMaxZoom() {
     return this.maxZoom;
   }
@@ -51,6 +73,12 @@ public class Continent {
     this.maxZoom = maxZoom;
   }
 
+  /**
+   * A list of all the {@link com.jrfom.gw2.api.model.geography.Floor}
+   * identifiers contained within the continent.
+   *
+   * @return An array of floor identifiers.
+   */
   public ArrayList<Integer> getFloors() {
     return this.floors;
   }

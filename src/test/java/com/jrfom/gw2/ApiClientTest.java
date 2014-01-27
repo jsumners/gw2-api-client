@@ -14,6 +14,8 @@ import com.jrfom.gw2.api.model.events.EventDetails;
 import com.jrfom.gw2.api.model.events.EventNamesList;
 import com.jrfom.gw2.api.model.events.WorldEventsStatusList;
 import com.jrfom.gw2.api.model.geography.Continents;
+import com.jrfom.gw2.api.model.geography.Map;
+import com.jrfom.gw2.api.model.geography.MapsList;
 import com.jrfom.gw2.api.model.items.Item;
 import com.jrfom.gw2.api.model.items.ItemIdList;
 import org.junit.Before;
@@ -418,7 +420,7 @@ public class ApiClientTest {
     this.setupMockServerSuccess("items.json", expectedResponse);
 
     ItemIdList list = this.apiClient.getItems();
-    assertTrue(list.get(0) == 12546);
+    assertTrue(list.get(0).equals(12546));
   }
 
   /*~~~~ Begin tests for item details ~~~~*/
@@ -465,6 +467,82 @@ public class ApiClientTest {
       assertTrue(e.getLine() == 382);
       assertTrue(e.getText().equals("invalid item_id"));
     }
+  }
+
+  /*~~~~ Begin tests for Maps ~~~~*/
+  @Test
+  public void testGetMap() throws IOException {
+    log.info("Running ApiClient.getMap(mapId) test");
+    String expectedResponse = this.loadExpectedResponse("/json/maps/SingleMap.json");
+    this.setupMockServerSuccess("maps.json?map_id=110", expectedResponse);
+
+    Optional<Map> result = this.apiClient.getMap(110);
+    assertTrue(result.isPresent());
+
+    Map map = result.get();
+    assertTrue(map.getContinentId() == 1);
+    assertTrue(map.getFloors().size() == 2);
+  }
+
+  @Test
+  public void testGetMapInLang() throws IOException {
+    log.info("Running ApiClient.getMapInLang(mapId, lang) test");
+    String expectedResponse = this.loadExpectedResponse("/json/maps/SingleMap.json");
+    this.setupMockServerSuccess("maps.json?map_id=110&lang=en", expectedResponse);
+
+    Optional<Map> result = this.apiClient.getMapInLang(110, "en");
+    assertTrue(result.isPresent());
+
+    Map map = result.get();
+    assertTrue(map.getContinentId() == 1);
+    assertTrue(map.getFloors().size() == 2);
+  }
+
+  @Test
+  public void testGetBadMapId() throws IOException {
+    log.info("Running ApiClient.getMap(mapId) failure test");
+    String expectedResponse = this.loadExpectedResponse("/json/errors/InvalidMap.json");
+    this.setupMockServerFail("maps.json?map_id=42", expectedResponse);
+
+    try {
+      Optional<Map> result = this.apiClient.getMap(42);
+    } catch (GwApiError e) {
+      assertTrue(e.getError() == 10);
+      assertTrue(e.getProduct() == 0);
+      assertTrue(e.getModule() == 4);
+      assertTrue(e.getLine() == 228);
+      assertTrue(e.getText().equals("invalid map_id"));
+    }
+  }
+
+  @Test
+  public void testGetMaps() throws IOException {
+    log.info("Running ApiClient.getMaps() test");
+    String expectedResponse = this.loadExpectedResponse("/json/maps/MultipleMaps.json");
+    this.setupMockServerSuccess("maps.json", expectedResponse);
+
+    Optional<MapsList> result = this.apiClient.getMaps();
+    assertTrue(result.isPresent());
+
+    MapsList list = result.get();
+    assertTrue(list.size() == 3);
+    assertTrue(list.get(0).getContinentId() == 1);
+    assertTrue(list.get(0).getFloors().size() == 2);
+  }
+
+  @Test
+  public void testGetMapsInLang() throws IOException {
+    log.info("Running ApiClient.getMapsInLang() test");
+    String expectedResponse = this.loadExpectedResponse("/json/maps/MultipleMaps.json");
+    this.setupMockServerSuccess("maps.json?lang=en", expectedResponse);
+
+    Optional<MapsList> result = this.apiClient.getMapsInLang("en");
+    assertTrue(result.isPresent());
+
+    MapsList list = result.get();
+    assertTrue(list.size() == 3);
+    assertTrue(list.get(0).getContinentId() == 1);
+    assertTrue(list.get(0).getFloors().size() == 2);
   }
 
   /*~~~~ Begin private utility methods. ~~~~*/

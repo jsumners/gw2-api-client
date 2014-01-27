@@ -6,6 +6,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.jrfom.gw2.annotations.Gw2ApiVersion;
 
+/**
+ * Represents the details of a game map as returned by
+ * <a href="http://wiki.guildwars2.com/wiki/API:1/maps">/v1/maps</a>.
+ */
 @Gw2ApiVersion("v1")
 public class Map {
   @JsonIgnore
@@ -34,6 +38,11 @@ public class Map {
 
   Map() {}
 
+  /**
+   * Retrieve the numeric identifier for the map.
+   *
+   * @return An integer that uniquely identifies the map.
+   */
   public int getMapId() {
     return this.mapId;
   }
@@ -42,6 +51,11 @@ public class Map {
     this.mapId = mapId;
   }
 
+  /**
+   * The in-game name of the map. For example, "Queensdale".
+   *
+   * @return The string name of the map.
+   */
   public String getMapName() {
     return this.mapName;
   }
@@ -50,6 +64,11 @@ public class Map {
     this.mapName = mapName;
   }
 
+  /**
+   * The minimum target character level for the map.
+   *
+   * @return An integer character level.
+   */
   public int getMinLevel() {
     return this.minLevel;
   }
@@ -58,6 +77,11 @@ public class Map {
     this.minLevel = minLevel;
   }
 
+  /**
+   * The maximum target character level for the map.
+   *
+   * @return An integer character level.
+   */
   public int getMaxLevel() {
     return this.maxLevel;
   }
@@ -66,6 +90,11 @@ public class Map {
     this.maxLevel = maxLevel;
   }
 
+  /**
+   * The default {@link com.jrfom.gw2.api.model.geography.Floor} for this map.
+   *
+   * @return An integer that identifies the default floor.
+   */
   public int getDefaultFloor() {
     return this.defaultFloor;
   }
@@ -74,6 +103,12 @@ public class Map {
     this.defaultFloor = defaultFloor;
   }
 
+  /**
+   * A list of identifiers that detail the
+   * {@link com.jrfom.gw2.api.model.geography.Floor}s available on the map.
+   *
+   * @return A list of floor ids.
+   */
   public ArrayList<Integer> getFloors() {
     return this.floors;
   }
@@ -82,6 +117,12 @@ public class Map {
     this.floors = floors;
   }
 
+  /**
+   * An identifier for the {@link com.jrfom.gw2.api.model.geography.Region} in
+   * which the map is located.
+   *
+   * @return An integer region id.
+   */
   public int getRegionId() {
     return this.regionId;
   }
@@ -90,6 +131,12 @@ public class Map {
     this.regionId = regionId;
   }
 
+  /**
+   * The in-game name of the {@link com.jrfom.gw2.api.model.geography.Region} in
+   * which the map is location. For exmaple, "Kryta".
+   *
+   * @return The name of the map's parent region.
+   */
   public String getRegionName() {
     return this.regionName;
   }
@@ -98,6 +145,12 @@ public class Map {
     this.regionName = regionName;
   }
 
+  /**
+   * An identifier for the {@link com.jrfom.gw2.api.model.geography.Continent}
+   * which the map is a part of.
+   *
+   * @return An integer continent id.
+   */
   public int getContinentId() {
     return this.continentId;
   }
@@ -106,6 +159,12 @@ public class Map {
     this.continentId = continentId;
   }
 
+  /**
+   * The in-game name of the {@link com.jrfom.gw2.api.model.geography.Continent}
+   * which the map is a part of. For example, "Tyria".
+   *
+   * @return The name of the map's parent continent.
+   */
   public String getContinentName() {
     return this.continentName;
   }
@@ -114,6 +173,11 @@ public class Map {
     this.continentName = continentName;
   }
 
+  /**
+   * The dimensions of the map.
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.geography.MapRectangle}.
+   */
   public MapRectangle getMapRect() {
     return this.mapRect;
   }
@@ -122,6 +186,11 @@ public class Map {
     this.mapRect = mapRect;
   }
 
+  /**
+   * The dimensions of the map according to the game coordinate system.
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.geography.MapRectangle}.
+   */
   public MapRectangle getContinentRect() {
     return this.continentRect;
   }

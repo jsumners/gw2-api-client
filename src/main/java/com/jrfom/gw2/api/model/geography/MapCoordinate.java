@@ -5,6 +5,9 @@ import java.util.Collection;
 
 import com.jrfom.gw2.annotations.Gw2ApiVersion;
 
+/**
+ * Represents an (x,y) coordinate in a cartesian plane.
+ */
 @Gw2ApiVersion("v1")
 public class MapCoordinate extends ArrayList<Number> {
   public MapCoordinate() {
@@ -16,6 +19,12 @@ public class MapCoordinate extends ArrayList<Number> {
     this.addAll(list);
   }
 
+  /**
+   * To be used during deserialization.
+   *
+   * @param value
+   * @return
+   */
   public boolean add(Number value) {
     int index = this.indexOf(Integer.MIN_VALUE);
     if (index != -1) {
@@ -29,6 +38,11 @@ public class MapCoordinate extends ArrayList<Number> {
     return super.addAll(0, collection);
   }
 
+  /**
+   * Retrieve the x part of the coordinate.
+   *
+   * @return An instance of {@link java.lang.Number}.
+   */
   public Number getX() {
     return this.get(0);
   }
@@ -37,6 +51,11 @@ public class MapCoordinate extends ArrayList<Number> {
     this.set(0, x);
   }
 
+  /**
+   * Retrieve the y part of the coordinate.
+   *
+   * @return An instance of {@link java.lang.Number}.
+   */
   public Number getY() {
     return this.get(1);
   }

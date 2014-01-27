@@ -1,0 +1,38 @@
+{
+    "maps": {
+        "110": {
+            "continent_id": 1,
+            "continent_name": "Tyria",
+            "continent_rect": [
+                [
+                    10240,
+                    9856
+                ],
+                [
+                    12160,
+                    11648
+                ]
+            ],
+            "default_floor": 1,
+            "floors": [
+                1,
+                2
+            ],
+            "map_name": "The Perils of Friendship",
+            "map_rect": [
+                [
+                    -21504,
+                    -21504
+                ],
+                [
+                    24576,
+                    21504
+                ]
+            ],
+            "max_level": 3,
+            "min_level": 3,
+            "region_id": 8,
+            "region_name": "Steamspur Mountains"
+        }
+    }
+}

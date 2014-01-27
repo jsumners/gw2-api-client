@@ -13,6 +13,8 @@ import com.jrfom.gw2.api.model.events.EventDetails;
 import com.jrfom.gw2.api.model.events.EventNamesList;
 import com.jrfom.gw2.api.model.events.WorldEventsStatusList;
 import com.jrfom.gw2.api.model.geography.Continents;
+import com.jrfom.gw2.api.model.geography.Map;
+import com.jrfom.gw2.api.model.geography.MapsList;
 import com.jrfom.gw2.api.model.items.GenericItem;
 import com.jrfom.gw2.api.model.items.Item;
 import com.jrfom.gw2.api.model.items.ItemIdList;
@@ -590,6 +592,134 @@ public class ApiClient extends RestTemplate {
       result = Optional.of(item);
     } catch (RestClientException e) {
       log.error("Could not retrieve details for item: `{}`", e.getMessage());
+      log.debug(e.toString());
+    }
+
+    return result;
+  }
+
+  /**
+   * <p>Retrieve the details for a given {@code mapId} localized
+   * to the English language. See
+   * {@link com.jrfom.gw2.ApiClient#getMapInLang(int, String)} for
+   * more detail.</p>
+   *
+   * @param mapId A valid map id.
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.geography.Map}
+   * wrapped in an {@link com.google.common.base.Optional} or an empty
+   * {@code Optional}.
+   */
+  public Optional<Map> getMap(int mapId) {
+    return this.getMapInLang(mapId, null);
+  }
+
+  /**
+   * <p>Retrieve the details for a given {@code mapId} localized to the
+   * specified {@code lang}.</p>
+   *
+   * <p>If the {@code mapId} is invalid then an instance of
+   * {@link com.jrfom.gw2.api.model.GwApiError} will be thrown and an empty
+   * {@link com.google.common.base.Optional} will be returned.</p>
+   *
+   * <p>If an invalid {@code lang} is given, then the default language of
+   * English ("en") will be used instead.</p>
+   *
+   * @param mapId A valid map id.
+   * @param lang A valid language abbreviation. For example, "en" for English or
+   *             "de" for German. An invalid abbreviation will equate to using
+   *             "en".
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.geography.Map}
+   * wrapped in an {@link com.google.common.base.Optional} or an empty
+   * {@code Optional}.
+   */
+  public Optional<Map> getMapInLang(int mapId, String lang) {
+    Optional<Map> result = Optional.absent();
+    Optional<MapsList> mapsListOptional = this.getMapsInLang(mapId, lang);
+
+    if (mapsListOptional.isPresent()) {
+      MapsList list = mapsListOptional.get();
+      // There should only be one map that matches the given id
+      result = list.getMapWithId(mapId);
+    }
+
+    return result;
+  }
+
+  /**
+   * <p>Retrieve the complete list of maps localized to the English
+   * language. See {@link com.jrfom.gw2.ApiClient#getMapsInLang(int, String)}
+   * for more detail.</p>
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.geography.MapsList}
+   * wrapped in an {@link com.google.common.base.Optional} or an empty
+   * {@code Optional}.
+   */
+  public Optional<MapsList> getMaps() {
+    return this.getMapsInLang(-1, null);
+  }
+
+  /**
+   * <p>Retrieve the complete list of maps localized to the specified
+   * language. See {@link com.jrfom.gw2.ApiClient#getMapsInLang(int, String)}
+   * for more detail.</p>
+   *
+   * @param lang A valid language abbreviation. For example, "en" for English or
+   *             "de" for German. An invalid abbreviation will equate to using
+   *             "en".
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.geography.MapsList}
+   * wrapped in an {@link com.google.common.base.Optional} or an empty
+   * {@code Optional}.
+   */
+  public Optional<MapsList> getMapsInLang(String lang) {
+    return this.getMapsInLang(-1, lang);
+  }
+
+  /**
+   * <p>Retrieves a list of maps for the specified {@code mapId} and
+   * localized to the specified {@code lang}. In theory, if you supply a
+   * {@mapId} then you should get back a list with only one element. So, to
+   * retrieve a list of <em>all</em> maps, supply a {@mapId} set to
+   * {@code -1}.</p>
+   *
+   * <p>If the {@mapId} is invalid, a {@link com.jrfom.gw2.api.model.GwApiError}
+   * will be thrown and an empty {@link com.google.common.base.Optional} will
+   * be returned.</p>
+   *
+   * <p>If the specified {@code lang} is invalid, then the default language of
+   * English ("en") will be used.</p>
+   *
+   * @param mapId A valid map id or {@code -1} for all maps.
+   * @param lang A valid language abbreviation. For example, "en" for English or
+   *             "de" for German. An invalid abbreviation will equate to using
+   *             "en".
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.geography.MapsList}
+   * wrapped in an {@link com.google.common.base.Optional} or an empty
+   * {@code Optional}.
+   */
+  public Optional<MapsList> getMapsInLang(int mapId, String lang) {
+    Optional<MapsList> result = Optional.absent();
+    HashMap<String, String> params = new HashMap<>(0);
+    String url = "maps.json";
+
+    if (mapId != -1) {
+      url = url + "?map_id={map_id}";
+      params.put("map_id", mapId + "");
+    }
+
+    if (lang != null) {
+      url = url + ((url.indexOf("?") != -1) ? "&lang={lang}" : "?lang={lang}");
+      params.put("lang", lang);
+    }
+
+    try {
+      MapsList list = this.getForObject(this.baseUrl + url, MapsList.class, params);
+      result = Optional.of(list);
+    } catch (RestClientException e) {
+      log.error("Could not retrieve maps list for [mapId: `{}`, lang: `{}`]", mapId, lang);
       log.debug(e.toString());
     }
 
