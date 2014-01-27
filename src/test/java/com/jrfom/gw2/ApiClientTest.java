@@ -9,6 +9,7 @@ import com.google.common.base.Optional;
 import com.jrfom.gw2.api.model.Build;
 import com.jrfom.gw2.api.model.Guild;
 import com.jrfom.gw2.api.model.GwApiError;
+import com.jrfom.gw2.api.model.WorldNamesList;
 import com.jrfom.gw2.api.model.colors.ColorsList;
 import com.jrfom.gw2.api.model.crafting.Recipe;
 import com.jrfom.gw2.api.model.crafting.RecipesList;
@@ -678,6 +679,31 @@ public class ApiClientTest {
       assertTrue(e.getLine() == 440);
       assertTrue(e.getText().equals("invalid recipe_id"));
     }
+  }
+
+  /*~~~~ Begin tests for World Names ~~~~*/
+  @Test
+  public void testGetWorldNames() throws IOException {
+    log.info("Running ApiClient.getWorldNames() test");
+    String expectedResponse = this.loadExpectedResponse("/json/WorldNames.json");
+    this.setupMockServerSuccess("world_names.json", expectedResponse);
+
+    WorldNamesList list = this.apiClient.getWorldNames();
+    assertTrue(list.size() == 5);
+    assertTrue(list.get(0).getId() == 2010);
+    assertTrue(list.get(0).getName().equals("Seafarer's Rest"));
+  }
+
+  @Test
+  public void testGetWorldNamesInLang() throws IOException {
+    log.info("Running ApiClient.getWorldNamesInLang(lang) test");
+    String expectedResponse = this.loadExpectedResponse("/json/WorldNames.json");
+    this.setupMockServerSuccess("world_names.json?lang=en", expectedResponse);
+
+    WorldNamesList list = this.apiClient.getWorldNamesInLang("en");
+    assertTrue(list.size() == 5);
+    assertTrue(list.get(0).getId() == 2010);
+    assertTrue(list.get(0).getName().equals("Seafarer's Rest"));
   }
 
   /*~~~~ Begin private utility methods. ~~~~*/

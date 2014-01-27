@@ -8,6 +8,7 @@ import com.google.common.base.Optional;
 import com.jrfom.gw2.api.model.Build;
 import com.jrfom.gw2.api.model.Guild;
 import com.jrfom.gw2.api.model.GwApiError;
+import com.jrfom.gw2.api.model.WorldNamesList;
 import com.jrfom.gw2.api.model.colors.ColorsList;
 import com.jrfom.gw2.api.model.crafting.Recipe;
 import com.jrfom.gw2.api.model.crafting.RecipesList;
@@ -934,5 +935,36 @@ public class ApiClient extends RestTemplate {
     }
 
     return result;
+  }
+
+  /**
+   * Retrieve a list of available game world (server) names localized to
+   * the English language.
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.WorldNamesList}.
+   */
+  public WorldNamesList getWorldNames() {
+    return this.getWorldNamesInLang(null);
+  }
+
+  /**
+   * Retrieve a list of the available game world (server) names localized to
+   * the specified {@code lang}.
+   *
+   * @param lang A valid language abbreviation. For example, "en" for English or
+   *             "de" for German. An invalid abbreviation will equate to using
+   *             "en".
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.WorldNamesList}.
+   */
+  public WorldNamesList getWorldNamesInLang(String lang) {
+    log.debug("Attempting to get list of world names with lang: `{}`", lang);
+    String url = "world_names.json";
+
+    if (lang != null) {
+      url = url + "?lang={lang}";
+    }
+
+    return this.getForObject(this.baseUrl + url, WorldNamesList.class, lang);
   }
 }
