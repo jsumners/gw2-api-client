@@ -10,6 +10,8 @@ import com.jrfom.gw2.api.model.Build;
 import com.jrfom.gw2.api.model.Guild;
 import com.jrfom.gw2.api.model.GwApiError;
 import com.jrfom.gw2.api.model.colors.ColorsList;
+import com.jrfom.gw2.api.model.crafting.Recipe;
+import com.jrfom.gw2.api.model.crafting.RecipesList;
 import com.jrfom.gw2.api.model.events.EventDetails;
 import com.jrfom.gw2.api.model.events.EventNamesList;
 import com.jrfom.gw2.api.model.events.WorldEventsStatusList;
@@ -616,6 +618,66 @@ public class ApiClientTest {
 
     Optional<Floor> result = this.apiClient.getTyriaFloor(-1);
     assertFalse(result.isPresent());
+  }
+
+  /*~~~~ Begin tests for Recipes ~~~~*/
+  @Test
+  public void testGetRecipes() throws IOException {
+    log.info("Running ApiClient.getRecipes() test");
+    String expectedResponse = this.loadExpectedResponse("/json/Recipes.json");
+    this.setupMockServerSuccess("recipes.json", expectedResponse);
+
+    RecipesList list = this.apiClient.getRecipes();
+    assertTrue(list.size() == 5);
+    assertTrue(list.get(0) == 1275);
+  }
+
+  @Test
+  public void testGetRecipe() throws IOException {
+    log.info("Running ApiClient.getRecipe(recipeId) test");
+    String expectedResponse = this.loadExpectedResponse("/json/Recipe.json");
+    this.setupMockServerSuccess("recipe_details.json?recipe_id=1275", expectedResponse);
+
+    Optional<Recipe> result = this.apiClient.getRecipe(1275);
+    assertTrue(result.isPresent());
+
+    Recipe recipe = result.get();
+    assertTrue(recipe.getRecipeId() == 1275);
+    assertTrue(recipe.getType().equals("Coat"));
+  }
+
+  @Test
+  public void testGetRecipeInLang() throws IOException {
+    log.info("Running ApiClient.getRecipeInLang(recipeId, lang) test");
+    String expectedResponse = this.loadExpectedResponse("/json/Recipe.json");
+    this.setupMockServerSuccess(
+      "recipe_details.json?recipe_id=1275&lang=en",
+      expectedResponse
+    );
+
+    Optional<Recipe> result = this.apiClient.getRecipeInLang(1275, "en");
+    assertTrue(result.isPresent());
+
+    Recipe recipe = result.get();
+    assertTrue(recipe.getRecipeId() == 1275);
+    assertTrue(recipe.getType().equals("Coat"));
+  }
+
+  @Test
+  public void testGetRecipeFail() throws IOException {
+    log.info("Running ApiClient.getRecipe(recipeId) failure test");
+    String expectedResponse = this.loadExpectedResponse("/json/errors/InvalidRecipe.json");
+    this.setupMockServerFail("recipe_details.json?recipe_id=-1", expectedResponse);
+
+    try {
+      Optional<Recipe> result = this.apiClient.getRecipe(-1);
+    } catch (GwApiError e) {
+      assertTrue(e.getError() == 10);
+      assertTrue(e.getProduct() == 0);
+      assertTrue(e.getModule() == 2);
+      assertTrue(e.getLine() == 440);
+      assertTrue(e.getText().equals("invalid recipe_id"));
+    }
   }
 
   /*~~~~ Begin private utility methods. ~~~~*/

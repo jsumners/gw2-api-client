@@ -9,6 +9,8 @@ import com.jrfom.gw2.api.model.Build;
 import com.jrfom.gw2.api.model.Guild;
 import com.jrfom.gw2.api.model.GwApiError;
 import com.jrfom.gw2.api.model.colors.ColorsList;
+import com.jrfom.gw2.api.model.crafting.Recipe;
+import com.jrfom.gw2.api.model.crafting.RecipesList;
 import com.jrfom.gw2.api.model.events.EventDetails;
 import com.jrfom.gw2.api.model.events.EventNamesList;
 import com.jrfom.gw2.api.model.events.WorldEventsStatusList;
@@ -863,6 +865,72 @@ public class ApiClient extends RestTemplate {
     Floor floor = this.getForObject(this.baseUrl + url, Floor.class, params);
     if (floor.getRegions() != null) {
       result = Optional.of(floor);
+    }
+
+    return result;
+  }
+
+  /**
+   * Retrieve the list of {@link com.jrfom.gw2.api.model.crafting.Recipe}
+   * identifiers.
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.crafting.RecipesList}.
+   */
+  public RecipesList getRecipes() {
+    log.debug("Attempting to get the list of recipe ids");
+    return this.getForObject(this.baseUrl + "recipes.json", RecipesList.class);
+  }
+
+  /**
+   * Retrieve details for a specific recipe localized to the English language.
+   * See {@link com.jrfom.gw2.ApiClient#getRecipeInLang(int, String)} for more
+   * details.
+   *
+   * @param recipeId A valid recipe identifier.
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.crafting.Recipe}
+   * wrapped in an {@link com.google.common.base.Optional} or an empty
+   * {@code Optional}. If an empty {@code Optional} was returned, an instance
+   * of {@link com.jrfom.gw2.api.model.GwApiError} was also thrown.
+   */
+  public Optional<Recipe> getRecipe(int recipeId) {
+    return this.getRecipeInLang(recipeId, null);
+  }
+
+  /**
+   * <p>Retrieve details about a specific recipe identified by {@code recipeId}.
+   * The details will be localized to the specified {@code lang}. If an
+   * invalid {@code recipeId} is given, a
+   * {@link com.jrfom.gw2.api.model.GwApiError} will be thrown.</p>
+   *
+   * @param recipeId A valid recipe identifier.
+   * @param lang A valid language abbreviation. For example, "en" for English or
+   *             "de" for German. An invalid abbreviation will equate to using
+   *             "en".
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.crafting.Recipe}
+   * wrapped in an {@link com.google.common.base.Optional} or an empty
+   * {@code Optional}. If an empty {@code Optional} was returned, an instance
+   * of {@link com.jrfom.gw2.api.model.GwApiError} was also thrown.
+   */
+  public Optional<Recipe> getRecipeInLang(int recipeId, String lang) {
+    log.debug("Attempting to get recipe with [recipeId: `{}`, lang: `{}`]", recipeId, lang);
+    Optional<Recipe> result = Optional.absent();
+    HashMap<String, String> params = new HashMap<>(1);
+    String url = "recipe_details.json?recipe_id={recipe_id}";
+
+    params.put("recipe_id", recipeId + "");
+    if (lang != null) {
+      url = url + "&lang={lang}";
+      params.put("lang", lang);
+    }
+
+    try {
+      Recipe recipe = this.getForObject(this.baseUrl + url, Recipe.class, params);
+      result = Optional.of(recipe);
+    } catch (RestClientException e) {
+      log.error("Could not retrieve recipe details: `{}`", e.getMessage());
+      log.debug(e.toString());
     }
 
     return result;
