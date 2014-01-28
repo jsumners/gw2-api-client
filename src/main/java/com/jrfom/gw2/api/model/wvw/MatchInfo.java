@@ -1,6 +1,5 @@
 package com.jrfom.gw2.api.model.wvw;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -8,11 +7,10 @@ import com.jrfom.gw2.annotations.Gw2ApiVersion;
 import com.jrfom.gw2.jackson.deserializers.MatchTimeDeserializer;
 import com.jrfom.gw2.jackson.serializers.MatchTimeSerializer;
 import org.threeten.bp.OffsetDateTime;
-import org.threeten.bp.format.DateTimeFormatter;
 
 /**
  * Represents a match information object as returned by
- * {@code /v1/matches.json}.
+ * <a href="http://wiki.guildwars2.com/wiki/API:1/wvw/matches">/v1/wvw/matches</a>.
  */
 @Gw2ApiVersion("v1")
 public class MatchInfo {
@@ -32,13 +30,14 @@ public class MatchInfo {
   @JsonDeserialize(using = MatchTimeDeserializer.class)
   @JsonSerialize(using = MatchTimeSerializer.class)
   private OffsetDateTime endTime;
-  @JsonIgnore
-  private DateTimeFormatter timeFormatter;
 
-  public MatchInfo() {
-    //this.timeFormatter = new DateTimeFormatter();
-  }
+  public MatchInfo() {}
 
+  /**
+   * The unique identifier for the match.
+   *
+   * @return A string identifier (usually something like "1-1").
+   */
   public String getMatchId() {
     return this.matchId;
   }
@@ -47,6 +46,13 @@ public class MatchInfo {
     this.matchId = matchId;
   }
 
+  /**
+   * The unique id for the world that is the red team. This can be used with
+   * {@link com.jrfom.gw2.api.model.WorldNamesList} to look up the name of the
+   * world.
+   *
+   * @return An integer world id.
+   */
   public int getRedWorldId() {
     return this.redWorldId;
   }
@@ -55,6 +61,13 @@ public class MatchInfo {
     this.redWorldId = redWorldId;
   }
 
+  /**
+   * The unique id for the world that is the blue team. This can be used with
+   * {@link com.jrfom.gw2.api.model.WorldNamesList} to look up the name of the
+   * world.
+   *
+   * @return An integer world id.
+   */
   public int getBlueWorldId() {
     return this.blueWorldId;
   }
@@ -63,6 +76,13 @@ public class MatchInfo {
     this.blueWorldId = blueWorldId;
   }
 
+  /**
+   * The unique id for the world that is the green team. This can be used with
+   * {@link com.jrfom.gw2.api.model.WorldNamesList} to look up the name of the
+   * world.
+   *
+   * @return An integer world id.
+   */
   public int getGreenWorldId() {
     return this.greenWorldId;
   }
@@ -71,6 +91,11 @@ public class MatchInfo {
     this.greenWorldId = greenWorldId;
   }
 
+  /**
+   * The time the World vs World match started. This time is set to UTC.
+   *
+   * @return An instance of {@link org.threeten.bp.OffsetDateTime}.
+   */
   public OffsetDateTime getStartTime() {
     return this.startTime;
   }
@@ -83,6 +108,11 @@ public class MatchInfo {
     this.startTime = OffsetDateTime.parse(startTime);
   }
 
+  /**
+   * The time when the match is scheduled to end. This time is set to UTC.
+   *
+   * @return An instance of {@link org.threeten.bp.OffsetDateTime}.
+   */
   public OffsetDateTime getEndTime() {
     return this.endTime;
   }

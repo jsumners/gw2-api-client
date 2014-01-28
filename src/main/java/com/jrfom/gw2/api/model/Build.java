@@ -4,9 +4,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.jrfom.gw2.annotations.Gw2ApiVersion;
 
 /**
- * <a href="http://wiki.guildwars2.com/wiki/API:1/build">
- *   http://wiki.guildwars2.com/wiki/API:1/build
- * </a>
+ * Represents a game build number as returned by
+ * <a href="http://wiki.guildwars2.com/wiki/API:1/build">/v1/build</a>.
  */
 @Gw2ApiVersion("v1")
 public class Build {
@@ -19,6 +18,11 @@ public class Build {
     this.buildId = buildId;
   }
 
+  /**
+   * The game build number.
+   *
+   * @return An integer build number.
+   */
   public int getBuildId() {
     return this.buildId;
   }

@@ -6,6 +6,10 @@ import com.jrfom.gw2.annotations.Gw2ApiVersion;
 import com.jrfom.gw2.jackson.deserializers.MatchScoresDeserializer;
 import com.jrfom.gw2.jackson.serializers.MatchScoresSerializer;
 
+/**
+ * Represents World vs World match scores as returned by
+ * <a href="http://wiki.guildwars2.com/wiki/API:1/wvw/match_details">/v1/wvw/match_details</a>.
+ */
 @JsonDeserialize(using = MatchScoresDeserializer.class)
 @JsonSerialize(using = MatchScoresSerializer.class)
 @Gw2ApiVersion("v1")
