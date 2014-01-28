@@ -23,17 +23,19 @@ dependency on Spring (as little of it as possible, though).
 
 ## Quick Usage Demonstration
 
-    import com.jrfom.gw2.ApiClient;
-    import com.jrfom.gw2.api.model.Build;
+```java
+import com.jrfom.gw2.ApiClient;
+import com.jrfom.gw2.api.model.Build;
 
-    public class Demo {
-      public static void main(String[] args) {
-        ApiClient apiClient = new ApiClient();
-        Build build = apiClient.getBuild();
+public class Demo {
+  public static void main(String[] args) {
+    ApiClient apiClient = new ApiClient();
+    Build build = apiClient.getBuild();
 
-        System.out.println("Build number: " + build.getBuildId());
-      }
-    }
+    System.out.println("Build number: " + build.getBuildId());
+  }
+}
+```
 
 ## Library API Stability
 
@@ -53,13 +55,15 @@ However, all such changes will be clearly illustrated when they occur.
 as intuitive way as possible. For example, if the API method is "/v1/foobar.json"
 and returns:
 
-    {
-      "foobar": {
-        "1": {...},
-        "2": {...},
-        "3": {...}
-      }
-    }
+```json
+{
+  "foobar": {
+    "1": {...},
+    "2": {...},
+    "3": {...}
+  }
+}
+```
 
 Then this library will decode the JSON to an array list of objects with the
 numeric keys added to the respective objects as an identifier property. A good
