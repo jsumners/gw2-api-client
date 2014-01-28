@@ -19,6 +19,8 @@ import com.jrfom.gw2.api.model.geography.*;
 import com.jrfom.gw2.api.model.items.GenericItem;
 import com.jrfom.gw2.api.model.items.Item;
 import com.jrfom.gw2.api.model.items.ItemIdList;
+import com.jrfom.gw2.api.model.wvw.MatchDetails;
+import com.jrfom.gw2.api.model.wvw.MatchesList;
 import com.jrfom.gw2.api.model.wvw.ObjectiveNamesList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -1000,5 +1002,47 @@ public class ApiClient extends RestTemplate {
     }
 
     return this.getForObject(this.baseUrl + url, ObjectiveNamesList.class, lang);
+  }
+
+  /**
+   * Retrieve a list of World vs World matches that are currently running.
+   * @return
+   */
+  public MatchesList getMatches() {
+    log.debug("Attempting to get list of WvW matches");
+    String url ="wvw/matches.json";
+
+    return this.getForObject(this.baseUrl + url, MatchesList.class);
+  }
+
+  /**
+   * Retrieve details for a specific WvW {@code matchId}. The {@code matchId}
+   * can be determined by inspecting the results of
+   * {@link ApiClient#getMatches()}.
+   *
+   * @param matchId A valid match identifier.
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.wvw.MatchDetails}
+   * wrapped in an {@link com.google.common.base.Optional} or an empty
+   * {@code Optional} if the {@code matchId} was invalid. If the {@code matchId}
+   * was invalid, an instance of {@link com.jrfom.gw2.api.model.GwApiError} will
+   * haven been thrown.
+   *
+   * @throws {@link com.jrfom.gw2.api.model.GwApiError}
+   */
+  public Optional<MatchDetails> getMatchDetails(String matchId) {
+    log.debug("Attempting to get details for WvW match: `{}`", matchId);
+    Optional<MatchDetails> result = Optional.absent();
+    String url = "wvw/match_details.json?match_id={match_id}";
+
+    try {
+      MatchDetails details = this.getForObject(this.baseUrl + url, MatchDetails.class, matchId);
+      result = Optional.of(details);
+    } catch (RestClientException e) {
+      log.error("Could not fetch match details: `{}`", e.getMessage());
+      log.debug(e.toString());
+    }
+
+    return result;
   }
 }
