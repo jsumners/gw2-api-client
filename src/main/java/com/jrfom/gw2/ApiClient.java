@@ -19,6 +19,7 @@ import com.jrfom.gw2.api.model.geography.*;
 import com.jrfom.gw2.api.model.items.GenericItem;
 import com.jrfom.gw2.api.model.items.Item;
 import com.jrfom.gw2.api.model.items.ItemIdList;
+import com.jrfom.gw2.api.model.wvw.ObjectiveNamesList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -966,5 +967,38 @@ public class ApiClient extends RestTemplate {
     }
 
     return this.getForObject(this.baseUrl + url, WorldNamesList.class, lang);
+  }
+
+  /**
+   * Retrieve a list of World vs World
+   * {@link com.jrfom.gw2.api.model.wvw.ObjectiveName}s localized to the
+   * English language.
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.wvw.ObjectiveNamesList}.
+   */
+  public ObjectiveNamesList getObjectiveNames() {
+    return this.getObjectiveNamesInLang(null);
+  }
+
+  /**
+   * Retrieve a list of World vs World
+   * {@link com.jrfom.gw2.api.model.wvw.ObjectiveName}s localized to the
+   * specified {@code lang}.
+   *
+   * @param lang A valid language abbreviation. For example, "en" for English or
+   *             "de" for German. An invalid abbreviation will equate to using
+   *             "en".
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.wvw.ObjectiveNamesList}.
+   */
+  public ObjectiveNamesList getObjectiveNamesInLang(String lang) {
+    log.debug("Attempting to get list of objective names with lang: `{}`", lang);
+    String url = "wvw/objective_names.json";
+
+    if (lang != null) {
+      url = url + "?lang={lang}";
+    }
+
+    return this.getForObject(this.baseUrl + url, ObjectiveNamesList.class, lang);
   }
 }
