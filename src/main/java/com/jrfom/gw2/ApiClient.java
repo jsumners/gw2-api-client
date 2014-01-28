@@ -167,6 +167,8 @@ public class ApiClient extends RestTemplate {
    * error, then the {@code Optional} will be empty. In this case, a
    * {@link com.jrfom.gw2.api.model.GwApiError} will be thrown. You can trap
    * that exception if you need more details.
+   *
+   * @throws {@link com.jrfom.gw2.api.model.GwApiError}
    */
   public Optional<EventDetails> getEventDetails() {
     return this.getEventDetailsForEventIdInLang(null, null);
@@ -186,6 +188,8 @@ public class ApiClient extends RestTemplate {
    * error, then the {@code Optional} will be empty. In this case, a
    * {@link com.jrfom.gw2.api.model.GwApiError} will be thrown. You can trap
    * that exception if you need more details.
+   *
+   * @throws {@link com.jrfom.gw2.api.model.GwApiError}
    */
   public Optional<EventDetails> getEventDetailsForEventId(String eventId) {
     return this.getEventDetailsForEventIdInLang(eventId, null);
@@ -209,6 +213,8 @@ public class ApiClient extends RestTemplate {
    * error, then the {@code Optional} will be empty. In this case, a
    * {@link com.jrfom.gw2.api.model.GwApiError} will be thrown. You can trap
    * that exception if you need more details.
+   *
+   * @throws {@link com.jrfom.gw2.api.model.GwApiError}
    */
   public Optional<EventDetails> getEventDetailsForEventIdInLang(String eventId, String lang) {
     log.debug("Attempting to get event details with [eventId: `{}`, lang: `{}`]", eventId, lang);
@@ -457,6 +463,8 @@ public class ApiClient extends RestTemplate {
    * @return An instance of {@link com.jrfom.gw2.api.model.Guild} wrapped in
    * an {@link com.google.common.base.Optional} on success. On failure, the
    * {@code Optional} will be empty.
+   *
+   * @throws {@link com.jrfom.gw2.api.model.GwApiError}
    */
   public Optional<Guild> getGuildDetailsForGuildId(String guildId) {
     log.debug("Attempting to get guild information for guildId: `{}`", guildId);
@@ -490,6 +498,8 @@ public class ApiClient extends RestTemplate {
    * @return An instance of {@link com.jrfom.gw2.api.model.Guild} wrapped in
    * an {@link com.google.common.base.Optional} on success. On failure, the
    * {@code Optional} will be empty.
+   *
+   * @throws {@link com.jrfom.gw2.api.model.GwApiError}
    */
   public Optional<Guild> getGuildDetailsForGuildName(String name) {
     log.debug("Attempting to get guild information for guild named: `{}`", name);
@@ -531,6 +541,8 @@ public class ApiClient extends RestTemplate {
    * @return An instance of {@link com.jrfom.gw2.api.model.items.Item} wrapped
    * in an {@link com.google.common.base.Optional} if successful, otherwise an
    * empty {@code Optional}.
+   *
+   * @throws {@link com.jrfom.gw2.api.model.GwApiError}
    */
   public Optional<Item> getItemDetails(int itemId) {
     return this.getItemDetailsInLang(itemId, null);
@@ -578,6 +590,8 @@ public class ApiClient extends RestTemplate {
    * @return An instance of {@link com.jrfom.gw2.api.model.items.Item} wrapped
    * in an {@link com.google.common.base.Optional} if successful, otherwise an
    * empty {@code Optional}.
+   *
+   * @throws {@link com.jrfom.gw2.api.model.GwApiError}
    */
   public Optional<Item> getItemDetailsInLang(int itemId, String lang) {
     log.debug("Attempting to get details for [itemId: `{}`, lang: `{}`]", itemId, lang);
@@ -613,6 +627,8 @@ public class ApiClient extends RestTemplate {
    * @return An instance of {@link com.jrfom.gw2.api.model.geography.Map}
    * wrapped in an {@link com.google.common.base.Optional} or an empty
    * {@code Optional}.
+   *
+   * @throws {@link com.jrfom.gw2.api.model.GwApiError}
    */
   public Optional<Map> getMap(int mapId) {
     return this.getMapInLang(mapId, null);
@@ -637,6 +653,8 @@ public class ApiClient extends RestTemplate {
    * @return An instance of {@link com.jrfom.gw2.api.model.geography.Map}
    * wrapped in an {@link com.google.common.base.Optional} or an empty
    * {@code Optional}.
+   *
+   * @throws {@link com.jrfom.gw2.api.model.GwApiError}
    */
   public Optional<Map> getMapInLang(int mapId, String lang) {
     Optional<Map> result = Optional.absent();
@@ -659,6 +677,8 @@ public class ApiClient extends RestTemplate {
    * @return An instance of {@link com.jrfom.gw2.api.model.geography.MapsList}
    * wrapped in an {@link com.google.common.base.Optional} or an empty
    * {@code Optional}.
+   *
+   * @throws {@link com.jrfom.gw2.api.model.GwApiError}
    */
   public Optional<MapsList> getMaps() {
     return this.getMapsInLang(-1, null);
@@ -676,6 +696,8 @@ public class ApiClient extends RestTemplate {
    * @return An instance of {@link com.jrfom.gw2.api.model.geography.MapsList}
    * wrapped in an {@link com.google.common.base.Optional} or an empty
    * {@code Optional}.
+   *
+   * @throws {@link com.jrfom.gw2.api.model.GwApiError}
    */
   public Optional<MapsList> getMapsInLang(String lang) {
     return this.getMapsInLang(-1, lang);
@@ -703,6 +725,8 @@ public class ApiClient extends RestTemplate {
    * @return An instance of {@link com.jrfom.gw2.api.model.geography.MapsList}
    * wrapped in an {@link com.google.common.base.Optional} or an empty
    * {@code Optional}.
+   *
+   * @throws {@link com.jrfom.gw2.api.model.GwApiError}
    */
   public Optional<MapsList> getMapsInLang(int mapId, String lang) {
     log.debug("Attempting to get maps for [mapId: `{}`, lang: `{}`]", mapId, lang);
@@ -774,6 +798,8 @@ public class ApiClient extends RestTemplate {
    *                identifier.
    *
    * @return
+   *
+   * @throws {@link com.jrfom.gw2.api.model.GwApiError}
    */
   public Optional<Floor> getTyriaFloor(int floorId) {
     return this.getFloorInLang(1, floorId, null);
@@ -791,6 +817,8 @@ public class ApiClient extends RestTemplate {
    *             "en".
    *
    * @return
+   *
+   * @throws {@link com.jrfom.gw2.api.model.GwApiError}
    */
   public Optional<Floor> getTyriaFloorInLang(int floorId, String lang) {
     return this.getFloorInLang(1, floorId, lang);
@@ -805,6 +833,8 @@ public class ApiClient extends RestTemplate {
    *                identifier.
    *
    * @return
+   *
+   * @throws {@link com.jrfom.gw2.api.model.GwApiError}
    */
   public Optional<Floor> getMistsFloor(int floorId) {
     return this.getFloorInLang(2, floorId, null);
@@ -822,6 +852,8 @@ public class ApiClient extends RestTemplate {
    *             "en".
    *
    * @return
+   *
+   * @throws {@link com.jrfom.gw2.api.model.GwApiError}
    */
   public Optional<Floor> getMistsFloorInLang(int floorId, String lang) {
     return this.getFloorInLang(2, floorId, lang);
@@ -847,6 +879,8 @@ public class ApiClient extends RestTemplate {
    * will <em>not</em> throw an instance of
    * {@link com.jrfom.gw2.api.model.GwApiError} in such instances. This is
    * because the remote ArenaNet API does not generate an error in this case.
+   *
+   * @throws {@link com.jrfom.gw2.api.model.GwApiError}
    */
   public Optional<Floor> getFloorInLang(int continentId, int floorId, String lang) {
     log.debug(
@@ -896,6 +930,8 @@ public class ApiClient extends RestTemplate {
    * wrapped in an {@link com.google.common.base.Optional} or an empty
    * {@code Optional}. If an empty {@code Optional} was returned, an instance
    * of {@link com.jrfom.gw2.api.model.GwApiError} was also thrown.
+   *
+   * @throws {@link com.jrfom.gw2.api.model.GwApiError}
    */
   public Optional<Recipe> getRecipe(int recipeId) {
     return this.getRecipeInLang(recipeId, null);
@@ -916,6 +952,8 @@ public class ApiClient extends RestTemplate {
    * wrapped in an {@link com.google.common.base.Optional} or an empty
    * {@code Optional}. If an empty {@code Optional} was returned, an instance
    * of {@link com.jrfom.gw2.api.model.GwApiError} was also thrown.
+   *
+   * @throws {@link com.jrfom.gw2.api.model.GwApiError}
    */
   public Optional<Recipe> getRecipeInLang(int recipeId, String lang) {
     log.debug("Attempting to get recipe with [recipeId: `{}`, lang: `{}`]", recipeId, lang);
