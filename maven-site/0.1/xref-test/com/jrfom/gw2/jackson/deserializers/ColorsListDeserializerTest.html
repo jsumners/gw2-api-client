@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>ColorsListDeserializerTest xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../../testapidocs/com/jrfom/gw2/jackson/deserializers/ColorsListDeserializerTest.html">View Javadoc</a></div><pre>
+
+<a class="jxr_linenumber" name="1" href="#1">1</a>   <strong class="jxr_keyword">package</strong> com.jrfom.gw2.jackson.deserializers;
+<a class="jxr_linenumber" name="2" href="#2">2</a>   
+<a class="jxr_linenumber" name="3" href="#3">3</a>   <strong class="jxr_keyword">import</strong> java.io.IOException;
+<a class="jxr_linenumber" name="4" href="#4">4</a>   
+<a class="jxr_linenumber" name="5" href="#5">5</a>   <strong class="jxr_keyword">import</strong> com.fasterxml.jackson.databind.ObjectMapper;
+<a class="jxr_linenumber" name="6" href="#6">6</a>   <strong class="jxr_keyword">import</strong> com.google.common.base.Optional;
+<a class="jxr_linenumber" name="7" href="#7">7</a>   <strong class="jxr_keyword">import</strong> com.jrfom.gw2.api.model.colors.Color;
+<a class="jxr_linenumber" name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> com.jrfom.gw2.api.model.colors.ColorsList;
+<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> com.jrfom.gw2.api.model.colors.MaterialColor;
+<a class="jxr_linenumber" name="10" href="#10">10</a>  <strong class="jxr_keyword">import</strong> com.jrfom.gw2.api.model.colors.RGB;
+<a class="jxr_linenumber" name="11" href="#11">11</a>  <strong class="jxr_keyword">import</strong> org.junit.Test;
+<a class="jxr_linenumber" name="12" href="#12">12</a>  <strong class="jxr_keyword">import</strong> org.slf4j.Logger;
+<a class="jxr_linenumber" name="13" href="#13">13</a>  <strong class="jxr_keyword">import</strong> org.slf4j.LoggerFactory;
+<a class="jxr_linenumber" name="14" href="#14">14</a>  
+<a class="jxr_linenumber" name="15" href="#15">15</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> org.junit.Assert.assertNotNull;
+<a class="jxr_linenumber" name="16" href="#16">16</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> org.junit.Assert.assertTrue;
+<a class="jxr_linenumber" name="17" href="#17">17</a>  
+<a class="jxr_linenumber" name="18" href="#18">18</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../com/jrfom/gw2/jackson/deserializers/ColorsListDeserializerTest.html">ColorsListDeserializerTest</a> {
+<a class="jxr_linenumber" name="19" href="#19">19</a>    <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger log = LoggerFactory.getLogger(ColorsListDeserializerTest.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="20" href="#20">20</a>  
+<a class="jxr_linenumber" name="21" href="#21">21</a>    <strong class="jxr_keyword">private</strong> String json;
+<a class="jxr_linenumber" name="22" href="#22">22</a>  
+<a class="jxr_linenumber" name="23" href="#23">23</a>  <em class="jxr_comment">/*<em class="jxr_comment">  @Before</em></em>
+<a class="jxr_linenumber" name="24" href="#24">24</a>  <em class="jxr_comment">  public void setup() throws IOException {</em>
+<a class="jxr_linenumber" name="25" href="#25">25</a>  <em class="jxr_comment">    InputStream jsonStream = this.getClass().getResourceAsStream("/json/ColorsList.json");</em>
+<a class="jxr_linenumber" name="26" href="#26">26</a>  <em class="jxr_comment">    BufferedReader reader = new BufferedReader(new InputStreamReader(jsonStream));</em>
+<a class="jxr_linenumber" name="27" href="#27">27</a>  <em class="jxr_comment">    StringBuilder builder = new StringBuilder();</em>
+<a class="jxr_linenumber" name="28" href="#28">28</a>  
+<a class="jxr_linenumber" name="29" href="#29">29</a>  <em class="jxr_comment">    String line;</em>
+<a class="jxr_linenumber" name="30" href="#30">30</a>  <em class="jxr_comment">    while ( (line = reader.readLine()) != null ) {</em>
+<a class="jxr_linenumber" name="31" href="#31">31</a>  <em class="jxr_comment">      builder.append(line);</em>
+<a class="jxr_linenumber" name="32" href="#32">32</a>  <em class="jxr_comment">    }</em>
+<a class="jxr_linenumber" name="33" href="#33">33</a>  
+<a class="jxr_linenumber" name="34" href="#34">34</a>  <em class="jxr_comment">    json = builder.toString();</em>
+<a class="jxr_linenumber" name="35" href="#35">35</a>  <em class="jxr_comment">    reader.close();</em>
+<a class="jxr_linenumber" name="36" href="#36">36</a>  <em class="jxr_comment">  }*/</em>
+<a class="jxr_linenumber" name="37" href="#37">37</a>  
+<a class="jxr_linenumber" name="38" href="#38">38</a>    @Test
+<a class="jxr_linenumber" name="39" href="#39">39</a>    <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> test() <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="40" href="#40">40</a>      ObjectMapper mapper = <strong class="jxr_keyword">new</strong> ObjectMapper();
+<a class="jxr_linenumber" name="41" href="#41">41</a>      ColorsList colorsList = mapper.readValue(
+<a class="jxr_linenumber" name="42" href="#42">42</a>        <strong class="jxr_keyword">this</strong>.getClass().getResourceAsStream(<span class="jxr_string">"/json/ColorsList.json"</span>),
+<a class="jxr_linenumber" name="43" href="#43">43</a>        ColorsList.<strong class="jxr_keyword">class</strong>
+<a class="jxr_linenumber" name="44" href="#44">44</a>      );
+<a class="jxr_linenumber" name="45" href="#45">45</a>  
+<a class="jxr_linenumber" name="46" href="#46">46</a>      assertTrue(colorsList.size() &gt; 0);
+<a class="jxr_linenumber" name="47" href="#47">47</a>  
+<a class="jxr_linenumber" name="48" href="#48">48</a>      Optional&lt;Color&gt; result = colorsList.getColorWithName(<span class="jxr_string">"Pink Ice"</span>);
+<a class="jxr_linenumber" name="49" href="#49">49</a>      assertTrue(result.isPresent());
+<a class="jxr_linenumber" name="50" href="#50">50</a>  
+<a class="jxr_linenumber" name="51" href="#51">51</a>      Color color = result.get();
+<a class="jxr_linenumber" name="52" href="#52">52</a>      assertTrue(color.getName().equals(<span class="jxr_string">"Pink Ice"</span>));
+<a class="jxr_linenumber" name="53" href="#53">53</a>  
+<a class="jxr_linenumber" name="54" href="#54">54</a>      RGB baseRGB = color.getBaseRgb();
+<a class="jxr_linenumber" name="55" href="#55">55</a>      assertNotNull(baseRGB);
+<a class="jxr_linenumber" name="56" href="#56">56</a>      assertTrue(baseRGB.getRed() == 128);
+<a class="jxr_linenumber" name="57" href="#57">57</a>      assertTrue(baseRGB.getGreen() == 26);
+<a class="jxr_linenumber" name="58" href="#58">58</a>      assertTrue(baseRGB.getBlue() == 26);
+<a class="jxr_linenumber" name="59" href="#59">59</a>  
+<a class="jxr_linenumber" name="60" href="#60">60</a>      MaterialColor cloth = color.getCloth();
+<a class="jxr_linenumber" name="61" href="#61">61</a>      assertNotNull(cloth);
+<a class="jxr_linenumber" name="62" href="#62">62</a>      assertTrue(cloth.getBrightness() == 50);
+<a class="jxr_linenumber" name="63" href="#63">63</a>      assertTrue(cloth.getContrast() == 1.36719);
+<a class="jxr_linenumber" name="64" href="#64">64</a>      assertTrue(cloth.getHue() == 8);
+<a class="jxr_linenumber" name="65" href="#65">65</a>      assertTrue(cloth.getSaturation() == 0.351563);
+<a class="jxr_linenumber" name="66" href="#66">66</a>      assertTrue(cloth.getLightness() == 1.36719);
+<a class="jxr_linenumber" name="67" href="#67">67</a>      RGB clothRGB = cloth.getRgb();
+<a class="jxr_linenumber" name="68" href="#68">68</a>      assertNotNull(clothRGB);
+<a class="jxr_linenumber" name="69" href="#69">69</a>      assertTrue(clothRGB.getRed() == 216);
+<a class="jxr_linenumber" name="70" href="#70">70</a>      assertTrue(clothRGB.getGreen() == 172);
+<a class="jxr_linenumber" name="71" href="#71">71</a>      assertTrue(clothRGB.getBlue() == 164);
+<a class="jxr_linenumber" name="72" href="#72">72</a>  
+<a class="jxr_linenumber" name="73" href="#73">73</a>      <em class="jxr_comment">// That should be good enough.</em>
+<a class="jxr_linenumber" name="74" href="#74">74</a>    }
+<a class="jxr_linenumber" name="75" href="#75">75</a>  }
+</pre>
+<hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
+</html>
+

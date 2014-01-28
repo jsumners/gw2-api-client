@@ -1,0 +1,9 @@
+com.jrfom.gw2
+com.jrfom.gw2.api.model
+com.jrfom.gw2.api.model.colors
+com.jrfom.gw2.api.model.crafting
+com.jrfom.gw2.api.model.events
+com.jrfom.gw2.api.model.geography
+com.jrfom.gw2.api.model.wvw
+com.jrfom.gw2.jackson.deserializers
+com.jrfom.gw2.jackson.serializers
