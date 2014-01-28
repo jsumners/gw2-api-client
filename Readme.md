@@ -21,6 +21,20 @@ API's JSON responses. Since Restlet's documentation is worse than Spring's
 (which is a feat), I did not waste my time figuring that problem out. Thus, the
 dependency on Spring (as little of it as possible, though).
 
+## Quick Usage Demonstration
+
+    import com.jrfom.gw2.ApiClient;
+    import com.jrfom.gw2.api.model.Build;
+
+    public class Demo {
+      public static void main(String[] args) {
+        ApiClient apiClient = new ApiClient();
+        Build build = apiClient.getBuild();
+
+        System.out.println("Build number: " + build.getBuildId());
+      }
+    }
+
 ## Library API Stability
 
 It is possible that this library's API may have to change. It is designed to be
