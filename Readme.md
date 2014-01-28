@@ -10,7 +10,7 @@ This library hopes to meet the following goals:
 
 1. Be easy to use
 2. Be comprehensive
-3. Have minimal dependencies
+3. Have minimal [dependencies](http://jsumners.github.io/gw2-api-client/maven-site/0.1/dependencies.html)
 
 In regard to #3, I know that [Spring](http://spring.io/) is not a lightweight
 dependency. I started out with the intention of using [Restlet](http://restlet.org/)
@@ -36,6 +36,9 @@ public class Demo {
   }
 }
 ```
+
+Other examples are available by inspecting the
+[client unit tests](http://jsumners.github.io/gw2-api-client/maven-site/0.1/xref-test/com/jrfom/gw2/package-summary.html).
 
 ## Installation
 
@@ -66,6 +69,15 @@ dependency:
 
 Other than that, you can download the source code from this Github repository
 and build it yourself.
+
+## Documentation
+
+At this time, the only documentation available is the
+[generated documentation](http://jsumners.github.io/gw2-api-client/maven-site/0.1/apidocs/index.html).
+However, it is very complete and should be easy to use.
+
+The is also the Maven generated
+[project website](http://jsumners.github.io/gw2-api-client/maven-site/0.1/).
 
 ## Library API Stability
 
@@ -98,7 +110,8 @@ and returns:
 Then this library will decode the JSON to an array list of objects with the
 numeric keys added to the respective objects as an identifier property. A good
 example is the [Colors](http://wiki.guildwars2.com/wiki/API:1/colors) API
-method. ***{{todo: add link to gw2-api-client's `ColorsList` Javadoc}}***
+method. This is implemented in ***GW2-API-Client*** as
+[ColorsList](http://jsumners.github.io/gw2-api-client/maven-site/0.1/apidocs/com/jrfom/gw2/api/model/colors/ColorsList.html).
 
 Additionally, instances where the GW2 API returns integers as strings get
 automatically converted to real integers (or similar) by ***GW2-API-Client***.
