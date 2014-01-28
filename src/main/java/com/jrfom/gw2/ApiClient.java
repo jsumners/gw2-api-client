@@ -5,10 +5,7 @@ import java.util.HashMap;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.base.Optional;
-import com.jrfom.gw2.api.model.Build;
-import com.jrfom.gw2.api.model.Guild;
-import com.jrfom.gw2.api.model.GwApiError;
-import com.jrfom.gw2.api.model.WorldNamesList;
+import com.jrfom.gw2.api.model.*;
 import com.jrfom.gw2.api.model.colors.ColorsList;
 import com.jrfom.gw2.api.model.crafting.Recipe;
 import com.jrfom.gw2.api.model.crafting.RecipesList;
@@ -1082,5 +1079,21 @@ public class ApiClient extends RestTemplate {
     }
 
     return result;
+  }
+
+  /**
+   * Retrieve a list of commonly requested game asset files. Each
+   * {@link com.jrfom.gw2.api.model.GameAssetFile} has methods for retrieving
+   * a URL to the
+   * <a href="http://wiki.guildwars2.com/wiki/API:Render_service">render service</a>
+   * for that specific asset.
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.Files}.
+   */
+  public Files getFiles() {
+    log.debug("Attempting to get list of commonly requested game files");
+    String url = "files.json";
+
+    return this.getForObject(this.baseUrl + url, Files.class);
   }
 }
