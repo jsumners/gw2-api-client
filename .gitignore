@@ -1,6 +1,7 @@
 .idea/
 *.iml
 target/
+distribution.properties
 
 # The Java REPL plugin for IntelliJ leaves these lying around the source
 *.class

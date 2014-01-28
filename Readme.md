@@ -37,6 +37,36 @@ public class Demo {
 }
 ```
 
+## Installation
+
+This library is distributed through [Maven](http://maven.apache.org/). You can
+add it to your project's pom.xml by adding the following repositories and
+dependency:
+
+```xml
+<dependencies>
+  <dependency>
+    <groupId>com.jrfom</groupId>
+    <artifactId>GW2-API-Client</artifactId>
+    <version>0.1</version> <!-- or whatever version you desire -->
+  </dependency>
+</dependencies>
+
+<repositories>
+  <repository>
+    <id>jsumners-github-releases</id>
+    <url>https://github.com/jsumners/mvn-repo/raw/master/releases/</url>
+  </repository>
+  <repository>
+    <id>jsumners-github-snapshots</id>
+    <url>https://github.com/jsumners/mvn-repo/raw/master/snapshots/</url>
+  </repository>
+</repositories>
+```
+
+Other than that, you can download the source code from this Github repository
+and build it yourself.
+
 ## Library API Stability
 
 It is possible that this library's API may have to change. It is designed to be
