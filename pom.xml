@@ -207,10 +207,12 @@
       <plugin>
         <groupId>com.github.github</groupId>
         <artifactId>site-maven-plugin</artifactId>
-        <version>0.8</version>
+        <version>0.9</version>
         <configuration>
           <message>Creating site for ${project.version}</message>
           <path>maven-site/${project.version}</path>
+          <repositoryName>gw2-api-client</repositoryName>
+          <repositoryOwner>jsumners</repositoryOwner>
           <merge>true</merge>
         </configuration>
         <executions>
