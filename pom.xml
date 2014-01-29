@@ -6,7 +6,7 @@
 
   <groupId>com.jrfom</groupId>
   <artifactId>GW2-API-Client</artifactId>
-  <version>0.1</version>
+  <version>0.2-SNAPSHOT</version>
 
   <name>GW2-API-Client</name>
   <url>https://github.com/jsumners/gw2-api-client</url>
