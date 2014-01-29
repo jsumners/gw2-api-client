@@ -24,7 +24,8 @@ public class Continent {
 
   /**
    * The in-game name of the continent. For example, "Tyria".
-   * @return
+   *
+   * @return String continent name.
    */
   public String getName() {
     return this.name;

@@ -60,7 +60,8 @@ public interface Item {
    * implementation of {@link com.jrfom.gw2.api.model.items.Item}. Each POJO is
    * named in the format {@code TypeItem}. For example, an "Armor" item is
    * represented by the {@link com.jrfom.gw2.api.model.items.ArmorItem} object.</p>
-   * @return
+   *
+   * @return A string type name.
    */
   @JsonProperty("type")
   String getType();

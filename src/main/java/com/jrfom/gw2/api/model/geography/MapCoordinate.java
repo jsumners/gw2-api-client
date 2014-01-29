@@ -23,7 +23,7 @@ public class MapCoordinate extends ArrayList<Number> {
    * To be used during deserialization.
    *
    * @param value
-   * @return
+   * @return Always true.
    */
   public boolean add(Number value) {
     int index = this.indexOf(Integer.MIN_VALUE);

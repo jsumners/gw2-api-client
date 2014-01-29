@@ -23,7 +23,7 @@ public class MapRectangle extends ArrayList<MapCoordinate> {
    * To be used during deserialization.
    *
    * @param coordinate
-   * @return
+   * @return Always true.
    */
   public boolean add(MapCoordinate coordinate) {
     int index = this.indexOf(null);

@@ -23,7 +23,8 @@ public class GizmoItem extends GenericItem {
   /**
    * Retrieve the set of properties that is specific to
    * {@link com.jrfom.gw2.api.model.items.GizmoItem}.
-   * @return
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.items.GizmoItemProperties}.
    */
   public GizmoItemProperties getGizmo() {
     return this.gizmo;

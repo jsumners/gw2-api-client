@@ -34,7 +34,8 @@ public class InfixUpgrade {
    * Retrieve details on any skill buff the
    * {@link com.jrfom.gw2.api.model.items.InfixUpgrade} applies. For example,
    * "+1 Agony Resistance".
-   * @return
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.items.UpgradeBuff}.
    */
   public UpgradeBuff getBuff() {
     return this.buff;

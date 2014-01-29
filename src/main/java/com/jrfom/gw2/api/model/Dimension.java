@@ -24,7 +24,7 @@ public class Dimension extends ArrayList<Integer> {
    * To be used during deserialization.
    *
    * @param value
-   * @return
+   * @return Always true.
    */
   public boolean add(Integer value) {
     int index = this.indexOf(Integer.MIN_VALUE);

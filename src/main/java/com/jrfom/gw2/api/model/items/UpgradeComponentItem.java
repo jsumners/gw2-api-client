@@ -25,7 +25,8 @@ public class UpgradeComponentItem extends GenericItem {
   /**
    * Retrieve the set of properties that are specific to an
    * {@link com.jrfom.gw2.api.model.items.UpgradeComponentItem}.
-   * @return
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.items.UpgradeComponentItemProperties}.
    */
   public UpgradeComponentItemProperties getUpgradeComponent() {
     return this.upgradeComponent;

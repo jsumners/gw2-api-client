@@ -69,7 +69,7 @@ public class ChatLink {
   /**
    * Retrieve the current link text. For example, "[&AgEAWgAA]".
    *
-   * @return
+   * @return The string the chat link was set to.
    */
   public String getLinkString() {
     return this.linkString;

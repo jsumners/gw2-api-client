@@ -183,7 +183,9 @@ public class GenericItem implements Item {
 
   /**
    * See {@link com.jrfom.gw2.api.model.items.ArmorItem}.
-   * @return
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.items.ArmorItemProperties}
+   * or null.
    */
   @Override
   public ArmorItemProperties getArmor() {
@@ -192,7 +194,9 @@ public class GenericItem implements Item {
 
   /**
    * See {@link com.jrfom.gw2.api.model.items.BagItem}.
-   * @return
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.items.BagItemProperties}
+   * or null.
    */
   @Override
   public BagItemProperties getBag() {
@@ -201,7 +205,9 @@ public class GenericItem implements Item {
 
   /**
    * See {@link com.jrfom.gw2.api.model.items.ConsumableItem}.
-   * @return
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.items.ConsumableItemProperties}
+   * or null.
    */
   @Override
   public ConsumableItemProperties getConsumable() {
@@ -210,7 +216,9 @@ public class GenericItem implements Item {
 
   /**
    * See {@link com.jrfom.gw2.api.model.items.ContainerItem}.
-   * @return
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.items.ContainerItemProperties}
+   * or null.
    */
   @Override
   public ContainerItemProperties getContainer() {
@@ -219,7 +227,9 @@ public class GenericItem implements Item {
 
   /**
    * See {@link com.jrfom.gw2.api.model.items.GizmoItem}.
-   * @return
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.items.GizmoItemProperties}
+   * or null.
    */
   @Override
   public GizmoItemProperties getGizmo() {
@@ -228,7 +238,9 @@ public class GenericItem implements Item {
 
   /**
    * See {@link com.jrfom.gw2.api.model.items.TrinketItem}.
-   * @return
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.items.TrinketItemProperties}
+   * or null.
    */
   @Override
   public TrinketItemProperties getTrinket() {
@@ -237,7 +249,9 @@ public class GenericItem implements Item {
 
   /**
    * See {@link com.jrfom.gw2.api.model.items.UpgradeComponentItem}.
-   * @return
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.items.UpgradeComponentItemProperties}
+   * or null.
    */
   @Override
   public UpgradeComponentItemProperties getUpgradeComponent() {
@@ -246,7 +260,9 @@ public class GenericItem implements Item {
 
   /**
    * See {@link com.jrfom.gw2.api.model.items.WeaponItem}.
-   * @return
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.items.WeaponItemProperties}
+   * or null.
    */
   @Override
   public WeaponItemProperties getWeapon() {

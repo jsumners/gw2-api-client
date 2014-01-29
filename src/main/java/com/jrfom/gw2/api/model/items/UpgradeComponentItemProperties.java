@@ -70,7 +70,7 @@ public class UpgradeComponentItemProperties extends ItemProperties {
    *   <li>Utility</li>
    * </ul>
    *
-   * @return
+   * @return A an array of strings detailing the infusion slot flags.
    */
   public ArrayList<String> getInfusionUpgradeFlags() {
     return this.infusionUpgradeFlags;

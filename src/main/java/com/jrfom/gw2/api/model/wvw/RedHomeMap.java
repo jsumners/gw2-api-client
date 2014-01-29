@@ -7,7 +7,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.jrfom.gw2.annotations.Gw2ApiVersion;
 
 /**
- * {@inheritDoc}
+ * See {@link com.jrfom.gw2.api.model.wvw.WvwMap}.
  */
 @JsonDeserialize(using = JsonDeserializer.None.class)
 @Gw2ApiVersion("v1")
@@ -24,6 +24,7 @@ public class RedHomeMap implements WvwMap {
   /**
    * {@inheritDoc}
    */
+  @Override
   public String getType() {
     return type;
   }
@@ -31,13 +32,11 @@ public class RedHomeMap implements WvwMap {
   /**
    * {@inheritDoc}
    */
+  @Override
   public MatchScores getScores() {
     return scores;
   }
 
-  /**
-   * {@inheritDoc}
-   */
   public void setScores(MatchScores scores) {
     this.scores = scores;
   }
@@ -45,13 +44,11 @@ public class RedHomeMap implements WvwMap {
   /**
    * {@inheritDoc}
    */
+  @Override
   public ArrayList<Objective> getObjectives() {
     return objectives;
   }
 
-  /**
-   * {@inheritDoc}
-   */
   public void setObjectives(ArrayList<Objective> objectives) {
     this.objectives = objectives;
   }
@@ -59,13 +56,11 @@ public class RedHomeMap implements WvwMap {
   /**
    * {@inheritDoc}
    */
+  @Override
   public ArrayList<Bonus> getBonuses() {
     return bonuses;
   }
 
-  /**
-   * {@inheritDoc}
-   */
   public void setBonuses(ArrayList<Bonus> bonuses) {
     this.bonuses = bonuses;
   }

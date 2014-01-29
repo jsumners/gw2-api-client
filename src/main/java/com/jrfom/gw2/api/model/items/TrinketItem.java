@@ -23,7 +23,8 @@ public class TrinketItem extends GenericItem {
   /**
    * Retrieve the set of properties that is specific to a
    * {@link com.jrfom.gw2.api.model.items.TrinketItem}.
-   * @return
+   *
+   * @return An instance of {@link com.jrfom.gw2.api.model.items.TrinketItemProperties}.
    */
   public TrinketItemProperties getTrinket() {
     return this.trinket;
