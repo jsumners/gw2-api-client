@@ -1,0 +1,32 @@
+{
+  "item_id": "30690",
+  "name": "The Juggernaut",
+  "description": "",
+  "type": "Weapon",
+  "level": "80",
+  "rarity": "Legendary",
+  "vendor_value": "100000",
+  "icon_file_id": "456015",
+  "icon_file_signature": "F9FAEDF77052A514E876145908B3B3346314A13E",
+  "game_types": ["Activity",
+  "Dungeon",
+  "Pve",
+  "Wvw"], "flags": ["HideSuffix",
+  "NoSalvage",
+  "NoSell",
+  "SoulBindOnUse"], "restrictions": [], "weapon": {
+  "type": "Hammer",
+  "damage_type": "Physical",
+  "min_power": "1034",
+  "max_power": "1166",
+  "defense": "0",
+  "infusion_slots": [
+    {
+      "flags": ["Offense"]
+    },
+    {
+      "flags": ["Offense"]
+    }
+  ],
+  "suffix_item_id": "24584"
+}}

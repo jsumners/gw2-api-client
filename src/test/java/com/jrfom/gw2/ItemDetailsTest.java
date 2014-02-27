@@ -58,4 +58,18 @@ public class ItemDetailsTest extends BaseApiClientTestClass {
       assertTrue(e.getText().equals("invalid item_id"));
     }
   }
+
+  @Test
+  public void testGetLegendaryItemDetails() throws IOException {
+    log.info("Running ApiClient.getItemDetails(itemId) for legendary item test");
+    String expectedResponse = this.loadExpectedResponse("/json/LegendaryWeaponItem.json");
+    this.setupMockServerSuccess("item_details.json?item_id=30690", expectedResponse);
+
+    Optional<Item> result = this.apiClient.getItemDetails(30690);
+    assertTrue(result.isPresent());
+
+    Item item = result.get();
+    assertTrue(item.getType().equals("Weapon"));
+    assertTrue(item.getWeapon().getType().equals("Hammer"));
+  }
 }

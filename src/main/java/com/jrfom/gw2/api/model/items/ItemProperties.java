@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public abstract class ItemProperties {
   private String type;
   @JsonProperty("infusion_slots")
-  private ArrayList<ArrayList<String>> infusionSlots;
+  private ArrayList<InfusionSlot> infusionSlots;
   @JsonProperty("infix_upgrade")
   private InfixUpgrade infixUpgrade;
   @JsonProperty("suffix_item_id")
@@ -123,27 +123,18 @@ public abstract class ItemProperties {
   }
 
   /**
-   * <p>An array of infusion slots available on the item. Each infusion slot is
-   * represented by an array of flags that indicate the type of infusions
-   * possible in that slot. For example, if an item has three infusion slots,
+   * <p>An array of {@link com.jrfom.gw2.api.model.items.InfusionSlot}s
+   * available on the item. For example, if an item has three infusion slots,
    * then this will return an array of three arrays.</p>
-   *
-   * <p>The possible flags for each infusion slot are:</p>
-   *
-   * <ul>
-   *   <li>Defense</li>
-   *   <li>Offense</li>
-   *   <li>Utility</li>
-   * </ul>
    *
    * @return A list of lists indicating the possible infusion slots and their
    * infusion types. Otherwise, and empty list.
    */
-  public ArrayList<ArrayList<String>> getInfusionSlots() {
+  public ArrayList<InfusionSlot> getInfusionSlots() {
     return this.infusionSlots;
   }
 
-  public void setInfusionSlots(ArrayList<ArrayList<String>> infusionSlots) {
+  public void setInfusionSlots(ArrayList<InfusionSlot> infusionSlots) {
     this.infusionSlots = infusionSlots;
   }
 
