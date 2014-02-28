@@ -72,4 +72,19 @@ public class ItemDetailsTest extends BaseApiClientTestClass {
     assertTrue(item.getType().equals("Weapon"));
     assertTrue(item.getWeapon().getType().equals("Hammer"));
   }
+
+  @Test
+  public void testGetConsumableColorItemDetails() throws IOException {
+    log.info("Running ApiClient.getItemDetails(itemId) for consumable color item test");
+    String expectedResponse = this.loadExpectedResponse("/json/ConsumableColorItem.json");
+    this.setupMockServerSuccess("item_details.json?item_id=20551", expectedResponse);
+
+    Optional<Item> result = this.apiClient.getItemDetails(20551);
+    assertTrue(result.isPresent());
+
+    Item item = result.get();
+    assertTrue(item.getType().equals("Consumable"));
+    assertTrue(item.getConsumable().getType().equals("Unlock"));
+    assertTrue(item.getConsumable().getColorId() == 76);
+  }
 }

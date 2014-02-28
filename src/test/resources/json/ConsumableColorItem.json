@@ -1,0 +1,18 @@
+{"item_id": "20551",
+  "name": "Midnight Blue Dye",
+  "description": "Double-click to unlock this dye color for this character.",
+  "type": "Consumable",
+  "level": "0",
+  "rarity": "Rare",
+  "vendor_value": "50",
+  "icon_file_id": "66650",
+  "icon_file_signature": "6E262204244D033C2C38DF3F026654B49BFE4EA4",
+  "game_types": ["Dungeon",
+  "Pve",
+  "Pvp",
+  "PvpLobby",
+  "Wvw"], "flags": ["NoSell"], "restrictions": [], "consumable": {
+  "type": "Unlock",
+  "unlock_type": "Dye",
+  "color_id": "76"
+}}

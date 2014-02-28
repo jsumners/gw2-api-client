@@ -14,6 +14,8 @@ public class ConsumableItemProperties {
   private String unlockType;
   @JsonProperty("recipe_id")
   private int recipeId;
+  @JsonProperty("color_id")
+  private int colorId;
 
   public ConsumableItemProperties() {}
 
@@ -69,5 +71,19 @@ public class ConsumableItemProperties {
 
   public void setRecipeId(int recipeId) {
     this.recipeId = recipeId;
+  }
+
+  /**
+   * If the consumable is a color, this returns the identifier for the
+   * {@link com.jrfom.gw2.api.model.colors.Color}.
+   *
+   * @return A {@link com.jrfom.gw2.api.model.colors.Color} identifier.
+   */
+  public int getColorId() {
+    return colorId;
+  }
+
+  public void setColorId(int colorId) {
+    this.colorId = colorId;
   }
 }
