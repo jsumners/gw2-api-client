@@ -67,6 +67,20 @@ public class ChatLink {
   }
 
   /**
+   * Create an instance of {@code ChatLink} with the link set to the
+   * provided {@code itemId} and {@code itemCount}. Use
+   * {@link ChatLink#getLinkString()} to retrieve the encoded chat link.
+   *
+   * @param itemId An {@link com.jrfom.gw2.api.model.items.Item} identifier.
+   * @param itemCount The number of the item to represent in the chat link.
+   */
+  public ChatLink(int itemId, int itemCount) {
+    this.id = itemId;
+    this.count = itemCount;
+    this.encodeItem();
+  }
+
+  /**
    * Retrieve the current link text. For example, "[&AgEAWgAA]".
    *
    * @return The string the chat link was set to.
@@ -302,6 +316,32 @@ public class ChatLink {
     result = bb.getInt();
 
     return result;
+  }
+
+  private void encodeItem() {
+    StringBuilder stringBuilder = new StringBuilder();
+    stringBuilder.append("[&");
+
+    byte[] bytes = new byte[6];
+    bytes[0] = 0x02;
+    bytes[1] = (byte) this.count;
+
+    bytes[2] = (byte) (this.id % 256);
+    bytes[3] = (byte) (this.id / 256);
+
+    bytes[4] = 0x00;
+    bytes[5] = 0x00;
+
+    ByteBuffer bb = ByteBuffer.allocate(6);
+    bb.order(ByteOrder.LITTLE_ENDIAN);
+    bb.clear();
+    bb.put(bytes);
+    bb.flip();
+
+    stringBuilder.append(BaseEncoding.base64().encode(bb.array()));
+    stringBuilder.append("]");
+
+    this.linkString = stringBuilder.toString();
   }
 
   private String toHex(byte[] bytes) {

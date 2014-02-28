@@ -58,4 +58,14 @@ public class ChatLinkTest {
     ChatLink chatLink = new ChatLink("[&CgEAAAA=]");
     assertTrue(chatLink.getRecipeId() == 1);
   }
+
+  @Test
+  public void testEncodeItemToLink() {
+    log.info("running ChatLink(itemId, itemCount) test");
+    ChatLink chatLink = new  ChatLink(46735, 250);
+    assertTrue(chatLink.getLinkString().equals("[&AvqPtgAA]"));
+
+    chatLink = new ChatLink(29137, 1);
+    assertTrue(chatLink.getLinkString().equals("[&AgHRcQAA]"));
+  }
 }
